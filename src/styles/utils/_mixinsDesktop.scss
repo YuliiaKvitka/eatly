@@ -1,0 +1,22 @@
+// Определение брейкпоинтов desktop first
+$breakpoints: (
+  tv: 1920px,
+  large-desktop: 1600px,
+  desktop: 1200px,
+  laptop: 992px,
+  tablet-landscape: 992px, // assuming tablet-landscape is same as laptop
+  tablet-portrait: 768px,
+  mobile-landscape: 480px,
+  mobile-portrait: 0px    // default
+);
+
+// Миксин для медиазапросов
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint #{$breakpoint} not found in $breakpoints map.";
+  }
+}

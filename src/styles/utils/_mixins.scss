@@ -1,0 +1,147 @@
+// src/styles/utils/_mixins.scss
+
+
+// Центровка с использованием Flexbox
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Центровка с использованием Grid
+@mixin grid-center {
+  display: grid;
+  place-items: center;
+}
+
+// Адаптивная типографика
+@mixin responsive-font($min-size, $max-size) {
+  font-size: $min-size;
+
+  @media (min-width: 768px) {
+    font-size: $max-size;
+  }
+}
+
+// Медиа-запросы
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == small {
+    @media (max-width: 576px) { @content; }
+  } @else if $breakpoint == medium {
+    @media (max-width: 768px) { @content; }
+  } @else if $breakpoint == large {
+    @media (max-width: 992px) { @content; }
+  } @else if $breakpoint == xlarge {
+    @media (max-width: 1200px) { @content; }
+  }
+}
+
+// Отступы
+@mixin margin($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  margin: $top $right $bottom $left;
+}
+
+// Поля
+@mixin padding($top: 0, $right: 0, $bottom: 0, $left: 0) {
+  padding: $top $right $bottom $left;
+}
+
+// Анимация изменения цвета фона
+@mixin background-color-transition($duration: 0.3s) {
+  transition: background-color $duration ease-in-out;
+}
+
+// Полосы прокрутки для WebKit-браузеров
+@mixin custom-scrollbar($width: 10px, $bg-color: #ccc, $thumb-color: #888) {
+  &::-webkit-scrollbar {
+    width: $width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $bg-color;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb-color;
+    border-radius: 10px;
+    border: 2px solid $bg-color;
+  }
+}
+
+// Тени
+@mixin box-shadow($shadow: 0 4px 6px rgba(0, 0, 0, 0.1)) {
+  box-shadow: $shadow;
+}
+
+// Границы
+@mixin border-radius($radius: 5px) {
+  border-radius: $radius;
+}
+
+
+// ----------------------------------
+
+// _mixins.scss
+
+// Очень малые устройства (меньше 360px)
+@mixin very-small {
+  @media (max-width: 359.98px) {
+    @content;
+  }
+}
+
+// Малые устройства (360px - 575.98px)
+@mixin small {
+  @media (min-width: 360px) and (max-width: 575.98px) {
+    @content;
+  }
+}
+
+// Планшеты в портретной ориентации (576px - 767.98px)
+@mixin tablet-portrait {
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    @content;
+  }
+}
+
+// Средние устройства (планшеты в ландшафтной ориентации, 768px - 991.98px)
+@mixin tablet-landscape {
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+// Большие устройства (настольные компьютеры, 992px - 1199.98px)
+@mixin desktop {
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+// Очень большие устройства (настольные компьютеры, 1200px и выше)
+@mixin large-desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+// Очень широкие мониторы (1440px и выше)
+@mixin very-large-desktop {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+// Широкоформатные мониторы (1920px и выше)
+@mixin hd-desktop {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
+// 2K мониторы и выше (2560px и выше)
+@mixin ultra-hd-desktop {
+  @media (min-width: 2560px) {
+    @content;
+  }
+}

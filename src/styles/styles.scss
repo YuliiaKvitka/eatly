@@ -1,0 +1,34 @@
+// src/styles/globals.scss
+
+// Import reset styles
+@import 'base/reset';
+
+// Import typography styles
+@import 'base/typography';
+
+// Import utility styles
+@import 'utils/variables';
+@import 'utils/mixins';
+
+// Import layout styles
+@import 'layout/header';
+@import 'layout/footer';
+
+
+// Import component styles
+@import 'components/Header.module';
+@import 'components/Footer.module';
+
+// Import global styles
+@import 'base/globals';
+
+
+
+
+
+
+
+
+
+
+
