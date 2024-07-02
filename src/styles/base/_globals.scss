@@ -2,6 +2,7 @@
 body {
   margin: 0;
   //font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: $font-light;
 }
 
 a {
@@ -24,19 +25,20 @@ html, body {
   width: 100%;
   overflow-x: hidden; // предотвратить горизонтальный скролл
 }
-.wrapper {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-}
+
 .container {
   padding: 0 10px;
-  // max-width: 1200px;
-  width: 100vw;
+  max-width: 1440px;
+  padding-inline:96px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .main {
   flex-grow: 1; //прижали футер вниз
 }
 
+h1{
+  margin: 0;
+  padding: 0;
+}
