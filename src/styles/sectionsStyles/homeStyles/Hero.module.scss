@@ -42,19 +42,28 @@
     width: 156px;
     height: 59px;
     border-radius: 12.41px;
-    background: $color-brand;
+    border: 0;
+    background-color: $color-brand;
     font-family: $font-family-brand;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 0.01em;
     text-transform: capitalize;
     color: $font-color-white;
+
+    &:hover {
+        color: $font-color;
+        background-color: transparent;
+        border: 1.5px solid $color-brand;
+        border-radius: 12.41px;;
+    }
 }
 
 &__btn-go-pro {
     width: 110px;
     height: 59px;
     box-sizing: border-box;
+    background-color: transparent;
     border: 1.5px solid $color-brand;
     border-radius: 12.41px;
     font-family: $font-family-brand;
@@ -63,6 +72,12 @@
     letter-spacing: 0.01em;
     text-transform: capitalize;
     color: $color-brand;
+
+    &:hover {
+        background-color: $color-brand;
+        color: $font-color-white;
+        border: 0;
+    }
 }
 
 &__rating {
@@ -105,6 +120,7 @@
     position: relative;
     width: 422px;
     height: 424px;
+    left: -42px;
 }
 }
 
@@ -128,7 +144,7 @@
     position: absolute;
     z-index: 2;
     top: -54px;
-    right: -115px;
+    right: -87px;
     width: 329px;
     height: auto;
     box-sizing: border-box;
@@ -146,7 +162,7 @@
     .wave-image {
         position: absolute;
         top: -73px;
-        right: -86px;
+        right: -122px;
         z-index: 2;
         // transform: scale(1.5); /* Увеличить штрих в 1.5 раза */
     }
