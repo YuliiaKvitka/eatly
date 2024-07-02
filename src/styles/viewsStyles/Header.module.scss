@@ -23,7 +23,7 @@
     }
 }
 
-.actions {
+.buttons-actions {
     font-family: $font-family-second;
     font-size: 17.83px;
     font-weight: 700;
@@ -43,6 +43,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &:hover {
+            border: 1.5px solid $color-brand;
+            border-radius: 12.41px;;
+        }
     }
 
     &__sign-up {
@@ -53,7 +58,14 @@
         color: $font-light;
         display: flex;
         justify-content: center;
-        align-items: center
+        align-items: center;
+
+        &:hover {
+            color: $font-color;
+            background-color: transparent;
+            border: 1.5px solid $color-brand;
+            border-radius: 12.41px;;
+        }
     }
 
 }
