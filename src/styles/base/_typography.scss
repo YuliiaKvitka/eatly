@@ -1,15 +1,36 @@
 // src/styles/base/_typography.scss
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
+@import '../utils/variables';
+
+// body {
+//   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+//   line-height: 1.6;
+// }
+
+// h1, h2, h3, h4, h5, h6 {
+//   font-weight: 600;
+//   line-height: 1.25;
+// }
+
+// p {
+//   margin-bottom: 1rem;
+// }
+
+.hero-title {
+  font-family: $font-family-brand;
+font-size: 75px;
+font-weight: 600;
+line-height: 1.2;
+letter-spacing: -3px;
+text-align: left;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 600;
-  line-height: 1.25;
-}
+.text {
+  font-family: $font-family-second;
+font-weight: 400;
+font-size: 18px;
+line-height: 1.55556;
+text-align: justify;
+color: #676767;
 
-p {
-  margin-bottom: 1rem;
 }
