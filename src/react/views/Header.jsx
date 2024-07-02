@@ -27,6 +27,7 @@ const Header = () => {
             <Link className={styles['buttons-actions__login']} href='##'>login</Link>
             <Link className={styles['buttons-actions__sign-up']} href='##'>sign up</Link>
           </div>
+          
         </div>
       </div>
       

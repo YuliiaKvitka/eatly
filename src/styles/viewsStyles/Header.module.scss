@@ -4,37 +4,16 @@
 .header {
     padding-top: 48px;
     
-
-    @include respond-to(mobile-portrait) {//0px
-        padding-block: 33px 30px;
-        }
-
-        @include respond-to(mobile) {//320px
-        } 
-
-        @include respond-to(mobile-landscape) {//480px
-          
-        }
-
+        @include respond-to(mobile-portrait) {//0px
+            padding-block: 33px 30px;
+            }
         @include respond-to(tablet-portrait) {//768px
-            padding-block: 34px 17px;
-        }
-
-        @include respond-to(tablet-landscape) {//992px
-            
-
-        }
+                padding-block: 34px 17px;
+            }
         @include respond-to(desktop) {//1200px
             padding-block: 48px 24px;
-
-
         }
-        @include respond-to(large-desktop) {//1600px
-            max-width: 1248px;
-        }
-        @include respond-to(tv) {//1920px
-            max-width: 1248px;
-        }
+      
 
     &__inner {
         max-width: 1248px;

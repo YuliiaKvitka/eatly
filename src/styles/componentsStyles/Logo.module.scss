@@ -6,13 +6,9 @@
     align-items: center;
     gap: 15px;
 
-        @include respond-to(mobile-landscape) {//480px
-    }
-
-    @include respond-to(tablet-portrait) {//768px
+    @include respond-to(mobile-portrait) {//0px
         gap: 11px;
-    }
-
+        }
     @include respond-to(tablet-landscape) {//992px
         gap: 8px;
     }
@@ -25,30 +21,16 @@
         height: 43px;
 
         @include respond-to(mobile-portrait) {//0px
-        }
-
-        @include respond-to(mobile) {//320px
-        } 
-
-        @include respond-to(mobile-landscape) {//480px
             width: 46px;
             height: 43px;
         }
-
-        @include respond-to(tablet-portrait) {//768px
-        }
-
         @include respond-to(tablet-landscape) {//992px
             width: 33px;
             height: 30px;
         }
         @include respond-to(desktop) {//1200px
-             width: 46px;
-        height: 43px
-        }
-        @include respond-to(large-desktop) {//1600px
-        }
-        @include respond-to(tv) {//1920px
+            width: 46px;
+            height: 43px
         }
     }
 
@@ -62,26 +44,13 @@
     text-align: left;
 
         @include respond-to(mobile-portrait) {//0px
+            font-size: 15px;
         }
-
-        @include respond-to(mobile) {//320px
-        } 
-
-        @include respond-to(mobile-landscape) {//480px
-        }
-
-        @include respond-to(tablet-portrait) {//768px
-        }
-
         @include respond-to(tablet-landscape) {//992px
             font-size: 15px;
         }
         @include respond-to(desktop) {//1200px
             font-size: 21px;
-        }
-        @include respond-to(large-desktop) {//1600px
-        }
-        @include respond-to(tv) {//1920px
         }
         }
 

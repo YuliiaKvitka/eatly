@@ -1,0 +1,74 @@
+@import '../utils/variables.scss';
+@import '../utils/_mixinsMobile.scss';
+
+.wrapper {
+    max-width: 235px;
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to(mobile-portrait) {//0px
+        // width: 130px;
+    }
+    @include respond-to(mobile-landscape) {//480px
+        // width: 184px;
+
+    }
+    }
+
+.icon {
+    position: relative;
+    background: transparent;
+    border-radius: 50%;
+    padding: 20px;
+    width:30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    @include respond-to(mobile-portrait) {//0px
+        width:20px;
+        height: 20px;
+        padding: 15px;
+        gap: 20px;
+    }
+    @include respond-to(mobile-landscape) {//480px
+        padding: 20px;
+        gap: 20px;
+    }
+    @include respond-to(tablet-landscape) {//992px
+        width:30px;
+        height: 30px;
+    }
+    }
+
+.facebook:hover {
+    background-color: #1877F2;
+}
+.instagram:hover {
+    background-color: #E4405F;
+}
+.twitter:hover {
+    background-color: #1DA1F2;
+}
+.linkedln:hover {
+    background-color: rgb(108, 95, 188);
+}
+
+.image {
+    width: 22px;
+    height: 22px;
+
+    @include respond-to(mobile-portrait) {//0px
+        width: 16px;
+        height: 16px;
+    }
+    @include respond-to(tablet-landscape) {//992px
+        width: 22px;
+        height: 22px;
+    }
+}
+

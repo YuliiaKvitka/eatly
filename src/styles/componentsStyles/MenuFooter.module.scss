@@ -1,0 +1,57 @@
+@import '../utils/variables.scss';
+@import '../utils/mixinsMobile.scss';
+
+.list {
+    display: flex;
+    max-width: 375px;
+    justify-content: space-between;
+	gap: 53px;
+
+	@include respond-to(mobile-portrait) {//0px
+		flex-direction: column;
+		gap: 36px;
+	}
+	@include respond-to(tablet-portrait) {//768px
+		flex-direction: row;
+		font-size: 16px;
+		gap: 35px;
+    }
+	@include respond-to(tablet-landscape) {//992px
+		font-size: 18px;
+		gap: 53px;
+	}
+    }
+
+.item {
+    color: $font-color;
+    font-family: $font-family-second;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26.74px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: capitalize;
+    // ---------------
+	transition: transform .3s cubic-bezier(.51, .92, .24, 1);
+
+	@include respond-to(mobile-portrait) {//0px
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 1.35;
+	}
+	@include respond-to(tablet-portrait) {//768px
+		font-size: 12px;
+		line-height: 1.5;
+		text-transform: capitalize;
+	}
+	@include respond-to(tablet-landscape) {//992px
+		font-size: 17px;
+		line-height: 1.5;
+	}
+
+	&:hover {
+		opacity: .7;
+		transform: scaleX(1.2);
+	}
+
+}
