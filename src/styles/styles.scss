@@ -16,8 +16,8 @@
 
 
 // Import component styles
-@import 'components/Header.module';
-@import 'components/Footer.module';
+@import 'viewsStyles/Header.module.scss';
+@import 'viewsStyles/Footer.module.scss';
 
 // Import global styles
 @import 'base/globals';
