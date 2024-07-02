@@ -1,31 +1,175 @@
-@import '../utils/variables';
-// @import '../utils/mixins';
+@import '../utils/variables.scss';
+@import '../utils/mixinsMobile.scss';
 
 .header {
-    padding-block: 48px 24px;
-    border-bottom: 1px solid $color-border;
+    padding-top: 48px;
+    
+
+    @include respond-to(mobile-portrait) {//0px
+        padding-block: 33px 30px;
+        }
+
+        @include respond-to(mobile) {//320px
+        } 
+
+        @include respond-to(mobile-landscape) {//480px
+          
+        }
+
+        @include respond-to(tablet-portrait) {//768px
+            padding-block: 34px 17px;
+        }
+
+        @include respond-to(tablet-landscape) {//992px
+            
+
+        }
+        @include respond-to(desktop) {//1200px
+            padding-block: 48px 24px;
+
+
+        }
+        @include respond-to(large-desktop) {//1600px
+            max-width: 1248px;
+        }
+        @include respond-to(tv) {//1920px
+            max-width: 1248px;
+        }
 
     &__inner {
-        width: 1248px;
+        max-width: 1248px;
         box-sizing: border-box;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border: 1px solid black;
+        // border: 1px solid black;
+        padding-bottom: 24px;
+        border-bottom: 1px solid $color-border;
+
+        @include respond-to(mobile-portrait) {//0px
+        }
+
+        @include respond-to(mobile) {//320px
+        } 
+
+        @include respond-to(mobile-landscape) {//480px
+        }
+
+        @include respond-to(tablet-portrait) {//768px
+        }
+
+        @include respond-to(tablet-landscape) {//992px
+
+        }
+        @include respond-to(desktop) {//1200px
+
+
+        }
+        @include respond-to(large-desktop) {//1600px
+            max-width: 1248px;
+        }
+        @include respond-to(tv) {//1920px
+            max-width: 1248px;
+        }
     }
 
     &__logo {
         margin-right: 103px;
+
+        @include respond-to(mobile-portrait) {//0px
+  }
+
+  @include respond-to(mobile) {//320px
+  } 
+
+@include respond-to(mobile-landscape) {//480px
+  }
+
+  @include respond-to(tablet-portrait) {//768px
+    margin-right: 0px;
+  }
+
+@include respond-to(tablet-landscape) {//992px
+    margin-right: 50px;
+  }
+@include respond-to(desktop) {//1200px
+    margin-right: 50px;
+  }
+@include respond-to(large-desktop) {//1600px
+    margin-right: 103px;
+  }
+@include respond-to(tv) {//1920px
+    margin-right: 103px;
+  }
     }
 
     &__menu {
         margin-right: 425px;
+
+        @include respond-to(mobile-portrait) {//0px
+            display: none;
+        }
+        @include respond-to(tablet-portrait) {//768px
+            margin-right: 0px;
+            display: block;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            margin-right: 50px;
+        }
+        @include respond-to(desktop) {//1200px
+            margin-right: 100px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            margin-right: 425px;
+        }
     }
-}
+
+    &__burger {
+
+      @include respond-to(mobile-portrait) {//0px
+        display: block;
+      }
+      @include respond-to(tablet-portrait) {//768px
+        display: none;
+      }
+    }
+
+    &__burger-item {
+        width: 32px;
+        height: 22px;
+    }
+
+    &__burger-line {
+        transition: all 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        height: 0px;
+        width: 32px;
+        border: 2px solid rgb(40, 40, 40);
+        background-color: rgb(145, 143, 143);
+        margin: 5px auto;
+    }
+
+    &__burger--item {
+          &:hover,
+            &:focus {
+              .line:nth-child(1) {
+                transform: rotate(45deg) translate(1px, 12px);
+              }
+              .line:nth-child(2) {
+                visibility: hidden;
+              }
+              .line:nth-child(3) {
+                transform: rotate(-45deg) translate(1px, -12px);
+              }
+            }
+    }
+    }
+
+
+
 
 .buttons-actions {
     font-family: $font-family-second;
-    font-size: 17.83px;
+    font-size: 18px;
     font-weight: 700;
     line-height: 26.74px;
     letter-spacing: 0%;
@@ -35,14 +179,48 @@
     align-items: center;
     gap: 9px;
 
+        @include respond-to(mobile-portrait) {//0px
+            display: none;
+        }
+        @include respond-to(tablet-portrait) {//768px
+            font-size: 12px;
+            display: flex;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            font-size: 16px;
+        }
+
     &__login {
-        width: 102.49px;
-        height: 62.66px;
+        width: 102px;
+        height: 62px;
         font-family: $font-family-second;
         color: $font-color;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include respond-to(mobile-portrait) {//0px
+  }
+
+  @include respond-to(mobile) {//320px
+  } 
+
+@include respond-to(mobile-landscape) {//480px
+  }
+
+  @include respond-to(tablet-portrait) {//768px
+    width: 73px;
+    height: 45px;
+  }
+
+@include respond-to(tablet-landscape) {//992px
+  }
+@include respond-to(desktop) {//1200px
+  }
+@include respond-to(large-desktop) {//1600px
+  }
+@include respond-to(tv) {//1920px
+  }
 
         &:hover {
             border: 1.5px solid $color-brand;
@@ -51,14 +229,41 @@
     }
 
     &__sign-up {
-        width: 121.49px;
-        height: 62.66px;
-        border-radius: 17.83px;
+        width: 121px;
+        height: 62px;
+        border-radius: 18px;
         background-color: $color-brand;
         color: $font-light;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include respond-to(mobile-portrait) {//0px
+  }
+
+  @include respond-to(mobile) {//320px
+  } 
+
+@include respond-to(mobile-landscape) {//480px
+  }
+
+  @include respond-to(tablet-portrait) {//768px
+    width: 86px;
+    height: 45px;
+    border-radius: 13px;
+  }
+
+@include respond-to(tablet-landscape) {//992px
+    
+  }
+@include respond-to(desktop) {//1200px
+    border-radius: 18px;
+  }
+@include respond-to(large-desktop) {//1600px
+  }
+@include respond-to(tv) {//1920px
+  }
+
 
         &:hover {
             color: $font-color;
@@ -69,3 +274,25 @@
     }
 
 }
+
+
+@include respond-to(mobile-portrait) {//0px
+  }
+
+  @include respond-to(mobile) {//320px
+  } 
+
+@include respond-to(mobile-landscape) {//480px
+  }
+
+  @include respond-to(tablet-portrait) {//768px
+  }
+
+@include respond-to(tablet-landscape) {//992px
+  }
+@include respond-to(desktop) {//1200px
+  }
+@include respond-to(large-desktop) {//1600px
+  }
+@include respond-to(tv) {//1920px
+  }
