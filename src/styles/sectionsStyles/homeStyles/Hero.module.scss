@@ -1,0 +1,165 @@
+@import './utils/variables.scss';
+
+.hero {
+    width: 100%;
+
+    &__inner{
+        width: 1285px;
+        margin-top: 74px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__wrapper-left{
+        margin-top: 70px;
+        width: 567px;
+        height: 607px;
+    }
+
+    &__title {
+        color: #201F1F;
+        margin-bottom: 16px;
+            span {
+                color: $color-brand-dark;
+            }
+    }
+
+    &__text {
+        margin-bottom: 53px;
+        span {
+            font-weight: 500;
+            color: $color-brand-dark; 
+        }
+    }
+
+    &__wrapper-buttons {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 33px;
+}
+
+&__btn-get-started {
+    width: 156px;
+    height: 59px;
+    border-radius: 12.41px;
+    background: $color-brand;
+    font-family: $font-family-brand;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: $font-color-white;
+}
+
+&__btn-go-pro {
+    width: 110px;
+    height: 59px;
+    box-sizing: border-box;
+    border: 1.5px solid $color-brand;
+    border-radius: 12.41px;
+    font-family: $font-family-brand;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    text-transform: capitalize;
+    color: $color-brand;
+}
+
+&__rating {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    span {
+        font-family: $font-family-rating;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        color: $font-rating;
+        opacity: 0.7;
+    }
+}
+
+    &__wrapper-right {
+        width: 630px;
+        height: 607px;
+        padding-inline: 125px;
+        padding-top: 40px;
+    }
+
+    &__ellipse {
+        width: 100%;
+    
+        height:100%;
+    border-radius: 100%;
+    background: linear-gradient(137deg, #6c5fbc 0%, #5144a0 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden; /* Чтобы скрыть часть изображения, выходящую за границы эллипса */
+}
+
+
+&__ellipse-container {
+    position: relative;
+    width: 422px;
+    height: 424px;
+}
+
+
+}
+
+.food-image {
+     width: 100%;
+    height: auto;
+    object-fit: contain;
+    transform: translate(-16px, 20px);
+
+ 
+}
+.graph-image {
+    position: absolute;
+    z-index: 2;
+    bottom:-54px;
+    left: -94px;
+    width: 208px;
+    height:auto;
+    box-shadow: 13px -17px 28px 0 rgba(0, 0, 0, 0.15);
+}
+
+.note-image {
+    position: absolute;
+    z-index: 2;
+    top: -54px;
+    right: -115px;
+    width: 329px;
+    height: auto;
+    box-sizing: border-box;
+    box-shadow: -10px 12px 21px 0 rgba(0, 0, 0, 0.15);
+}
+
+    .stroke-image{
+        position: absolute;
+        bottom: -84px;
+        left: -120px;
+        z-index: 2;
+        // transform: scale(1.5); /* Увеличить штрих в 1.5 раза */
+    }
+
+    .wave-image {
+        position: absolute;
+        top: -73px;
+        right: -86px;
+        z-index: 2;
+        // transform: scale(1.5); /* Увеличить штрих в 1.5 раза */
+    }
+
+    .arrow-image {
+        position: absolute;
+        top: 142px;
+        right: -60px;
+        z-index: 5;
+        // transform: scale(1.5); /* Увеличить штрих в 1.5 раза */
+    }
