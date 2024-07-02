@@ -1,0 +1,59 @@
+@import '../utils/variables';
+// @import '../utils/mixins';
+
+.header {
+    padding-block: 48px 24px;
+    border-bottom: 1px solid $color-border;
+
+    &__inner {
+        width: 1248px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid black;
+    }
+
+    &__logo {
+        margin-right: 103px;
+    }
+
+    &__menu {
+        margin-right: 425px;
+    }
+}
+
+.actions {
+    font-family: $font-family-second;
+    font-size: 17.83px;
+    font-weight: 700;
+    line-height: 26.74px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    &__login {
+        width: 102.49px;
+        height: 62.66px;
+        font-family: $font-family-second;
+        color: $font-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__sign-up {
+        width: 121.49px;
+        height: 62.66px;
+        border-radius: 17.83px;
+        background-color: $color-brand;
+        color: $font-light;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+
+}
