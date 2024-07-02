@@ -4,8 +4,8 @@ import { Inter, Poppins, Manrope, Roboto, Public_Sans, Quicksand, Plus_Jakarta_S
 
 import '../styles/styles.scss';
 import Head from "next/head";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/react/views/Header";
+import Footer from "@/react/views/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 const poppins = Poppins({ subsets: ["latin"] , weight:['600', '700']});
@@ -37,11 +37,11 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
       </Head>
       <body className={inter.className}>
-        <div className="wrapper container">
-          <Header />
+        <Header />
+        <div className="container">
           <main className="main">{children}</main>
-          <Footer/>
         </div>
+        <Footer/>
       </body>
     </html>
   );
