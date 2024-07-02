@@ -1,6 +1,23 @@
 // src/styles/utils/_variables.scss
 
-$primary-color: #0070f3;
-$secondary-color: #005bb5;
-$font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-$font-size-base: 16px;
+// $primary-color: #0070f3;
+// $secondary-color: #005bb5;
+// $font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+// $font-size-base: 16px;
+
+$color-brand: rgb(108, 95, 188);
+$color-brand-dark: rgb(92, 78, 174);
+$color-border: rgb(203, 203, 203);
+$font-color: rgb(96, 96, 96);
+$font-light: rgb(249, 249, 249);
+$font-color-white: rgb(255, 255, 255);
+$font-rating: rgb(51, 65, 85);
+
+
+
+
+
+
+$font-family-brand: Poppins,sans-serif;
+$font-family-second: Inter, sans-serif;
+$font-family-rating: Plus Jakarta Sans, sans-serif;
