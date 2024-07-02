@@ -15,9 +15,9 @@ const Header = () => {
           <nav className={styles["header__menu"]}>
             <Menu />
           </nav>
-          <div className={styles["actions"]}>
-            <Link className={styles['actions__login']} href='##'>login</Link>
-            <Link className={styles['actions__sign-up']} href='##'>sign up</Link>
+          <div className={styles["buttons-actions"]}>
+            <Link className={styles['buttons-actions__login']} href='##'>login</Link>
+            <Link className={styles['buttons-actions__sign-up']} href='##'>sign up</Link>
           </div>
         </div>
       </div>
