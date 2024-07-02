@@ -1,0 +1,18 @@
+@import '../utils/variables';
+
+.list {
+    display: flex;
+    width: 375px;
+    justify-content: space-between;
+    }
+
+.item {
+    color: $font-color;
+    font-family: $font-family-second;
+    font-size: 17.83px;
+    font-weight: 500;
+    line-height: 26.74px;
+    letter-spacing: 0%;
+    text-align: left;
+    text-transform: capitalize;
+}
