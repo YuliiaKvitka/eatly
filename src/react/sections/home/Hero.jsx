@@ -7,6 +7,10 @@ const Hero = () => {
 
             <div className={styles['hero__inner']}>
                 <div className={styles['hero__wrapper-left']}>
+                    <div className={styles['hero__wrapper-subtitle']}>
+                        <hr/>
+                        <p className={`${styles['hero__subtitle']} hero-subtitle`}>OVER 1000 USERS</p>
+                    </div>
                     <h1 className={`${styles['hero__title']} hero-title`}>Enjoy Foods All Over The <span>World</span></h1>
                     <div className={`${styles['hero__text']} text`}>
                         <p>EatLy help you set saving goals, earn cash back offers, Go to disclaimer for more details and get paychecks up to two days early. Get a <span>$20 bonus</span>.</p>
@@ -17,8 +21,8 @@ const Hero = () => {
                     </div>
 
                     <div className={styles['hero__rating']}>
-                        <Image src='/assets/hero/trustpilot.png' alt='star' width={123} height={30} />
-                        <Image src='/assets/hero/star.png' alt='star' width={96} height={16} />
+                        <Image className={styles['hero__rating-trustpilot']} src='/assets/hero/trustpilot.png' alt='star' width={123} height={30} />
+                        <Image className={styles['hero__rating-stars']} src='/assets/hero/star.png' alt='star' width={96} height={16} />
                         <span>4900+</span>
                     </div>
                 </div>

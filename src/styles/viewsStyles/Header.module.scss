@@ -5,13 +5,13 @@
     padding-top: 48px;
     
         @include respond-to(mobile-portrait) {//0px
-            padding-block: 33px 30px;
+            padding-top: 33px;
             }
         @include respond-to(tablet-portrait) {//768px
-                padding-block: 34px 17px;
+                padding-top: 34px;
             }
         @include respond-to(desktop) {//1200px
-            padding-block: 48px 24px;
+            padding-top: 48px ;
         }
       
 
@@ -26,6 +26,7 @@
         border-bottom: 1px solid $color-border;
 
         @include respond-to(mobile-portrait) {//0px
+          padding-bottom: 30px;
         }
 
         @include respond-to(mobile) {//320px
@@ -38,9 +39,11 @@
         }
 
         @include respond-to(tablet-landscape) {//992px
+          padding-bottom: 17px;
 
         }
         @include respond-to(desktop) {//1200px
+           padding-bottom: 24px;
 
 
         }
@@ -195,6 +198,8 @@
 @include respond-to(tablet-landscape) {//992px
   }
 @include respond-to(desktop) {//1200px
+  width: 102px;
+  height: 62px;
   }
 @include respond-to(large-desktop) {//1600px
   }
@@ -237,6 +242,8 @@
   }
 @include respond-to(desktop) {//1200px
     border-radius: 18px;
+    width: 121px;
+    height: 62px;
   }
 @include respond-to(large-desktop) {//1600px
   }
