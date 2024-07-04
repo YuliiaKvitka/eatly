@@ -78,7 +78,7 @@ text-align: left;
    font-size: 53px;
   }
 @include respond-to(desktop) {//1200px
-  font-size: 53px;
+  font-size: 75px;
   }
 @include respond-to(large-desktop) {//1600px
   font-size: 75px;

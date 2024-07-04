@@ -31,9 +31,11 @@ html, body {
 .container {
   padding: 0 10px;
   max-width: 1440px;
-  padding-inline:96px;
+  // padding-inline:96px;
   margin: 0 auto;
   box-sizing: border-box;
+  width: 100%;
+  height: 100%;
 
   @include respond-to(mobile-portrait) {//0px
     padding-inline:30px;

@@ -3,6 +3,7 @@
 
 .hero {
     width: 100%;
+    border: 1px solid black;
 
     &__inner{
         max-width: 1285px;
@@ -38,14 +39,16 @@
         
         @include respond-to(desktop) {//1200px
           margin-top: 49px;
+          margin-bottom: 85px;
           height: 100%;
+          gap: 26px;
         
             
         }
         @include respond-to(large-desktop) {//1600px
             padding-bottom: 0;
             margin-bottom: 85px;
-            gap: 73px;
+            gap: 134px;
             
         }
         @include respond-to(tv) {//1920px
@@ -88,14 +91,14 @@
     padding-bottom: 31px;
   }
 @include respond-to(desktop) {//1200px
-    max-width: 404px;
-    height: 432px;
+    max-width:533px;
+     height: 607px;
     padding-top: 50px;
     padding-bottom: 31px;
     
   }
 @include respond-to(large-desktop) {//1600px
-    max-width:568px;
+    max-width:533px;
     height: 607px;
     padding-top: 70px;
     padding-bottom: 45px;
@@ -608,7 +611,7 @@
     height: auto;
   }
 @include respond-to(desktop) {//1200px
-    width: 305px;
+    width: 422px;
     margin-top: 31px;
     height: auto;
     
@@ -687,7 +690,7 @@
 @include respond-to(tablet-landscape) {//992px
   }
 @include respond-to(desktop) {//1200px
-    transform: translate(-16px, 15px);
+    transform: translate(-16px, 20px);
   }
 @include respond-to(large-desktop) {//1600px
     transform: translate(-16px, 20px);
@@ -732,10 +735,10 @@
     left: -75px;
   }
 @include respond-to(desktop) {//1200px
-    width: 147px;
-    height: 146px;
-    bottom:-92px;
-    left: -75px;
+     width: 207px;
+    height: 205px;
+    bottom:-102px;
+    left: -94px;
   }
 @include respond-to(large-desktop) {//1600px
     width: 207px;
@@ -779,8 +782,8 @@
                 left: -103px;
             }
             @include respond-to(desktop) {//1200px
-                bottom: -124px;
-                left: -103px;
+                 bottom: -134px;
+                left: -120px;
                 width: 38px;
                 height: 33px;
             }
@@ -833,9 +836,10 @@
     
   }
 @include respond-to(desktop) {//1200px
-    width: 234px;
+     width: 329px;
     height: auto;
-    top: 29px;
+    top: 21px;
+     right: -60px;
   }
 @include respond-to(large-desktop) {//1600px
     width: 329px;
@@ -884,7 +888,7 @@
   }
 @include respond-to(desktop) {//1200px
     top: 10px;
-    right: -139px;
+    right: -100px;
     width: 42px;
     height: 24px;
   }

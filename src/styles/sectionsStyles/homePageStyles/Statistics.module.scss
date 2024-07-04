@@ -1,0 +1,156 @@
+@import '/src/styles/utils/_variables.scss';
+@import '/src/styles/utils/_mixinsMobile.scss';
+
+.statistics {
+    // background-color: $color-brand;
+    height: 220px;
+    max-width:100%;
+    background-image: url('../../../../public/assets/statistics/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; // Центрируем фон
+
+    @include respond-to(mobile-portrait) {//0px
+        background-image: url('../../../../public/assets/statistics/bg-mob.png');
+        height: 748px;
+    }
+    @include respond-to(tablet-portrait) {//768px
+        background-image: url('../../../../public/assets/statistics/bg.png');
+        height: 156px;
+    }
+    @include respond-to(desktop) {//1200px
+        height: 220px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__list {
+        margin-top: 56px;
+        display: flex;
+        justify-content: space-between;
+        max-width: 942px;
+        width: 100%;
+
+        @include respond-to(mobile-portrait) {//0px
+            flex-direction: column;
+            margin-top: 99px;
+            height: 566px;
+            align-items: center;
+            justify-content: flex-start;
+            max-width: 100%;
+            margin-bottom: 82px;
+            gap: 61px;
+        }
+
+        @include respond-to(tablet-portrait) {//768px
+            flex-direction: row;
+            margin-top: 35px;
+            height: auto;
+            margin-bottom: 0;
+            justify-content: space-between;
+            max-width: 942px;
+        }
+        @include respond-to(desktop) {//1200px
+            margin-top: 56px;
+        }
+    }
+
+    &__item {
+        text-align: center;
+        border-right: 1px solid rgb(197, 197, 197, .15);
+        height: 123px;
+        padding-right: 67px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+
+        @include respond-to(mobile-portrait) {//0px
+            border-right: 0;
+            border-bottom: 1px solid rgb(197, 197, 197, .15);
+            width: 246px;
+            padding-bottom:61px ;
+            padding-right: 0;
+            height: auto;
+        }
+        @include respond-to(tablet-portrait) {//768px
+            height: 87px;
+            border-right: 1px solid rgb(197, 197, 197, .15);
+            padding-right: 67px;
+            padding-bottom: 0;
+            border-bottom: 0;
+            padding-bottom:0 ;
+            width: auto;
+        }
+        @include respond-to(desktop) {//1200px
+            height: 123px;
+        }
+
+        &:last-child {
+            border-right: 0;
+            // height: 0;
+            // padding-right:0;
+
+            @include respond-to(mobile-portrait) {//0px
+              border-bottom: 0;
+            // height: 0;
+            // padding-bottom:0;
+            }
+            @include respond-to(tablet-portrait) {//768px
+                border-right: 0;
+                // height:auto;
+                // padding-right:0;
+                // align-items: center;
+                // padding-top: 0;
+                // margin-top: 0;
+            }
+        }
+
+        span {
+            font-family:$font-family-stat;
+            font-weight: 700;
+            font-size: 43px;
+            line-height: 1.25;
+            text-align: center;
+            color: #fff;  
+            margin-bottom: 11px;
+
+            @include respond-to(mobile-portrait) {//0px
+                font-size: 43px;
+            }
+            @include respond-to(tablet-portrait) {//768px
+                font-size: 30px;
+                margin-bottom: 7px;
+            }
+            @include respond-to(desktop) {//1200px
+                font-size: 43px;
+                margin-bottom: 11px;
+            }
+        }
+
+        p {
+            font-family: $font-family-second;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: center;
+            color: #c5bfed;
+
+            @include respond-to(mobile-portrait) {//0px
+                font-size: 14px;
+            }
+
+            @include respond-to(tablet-portrait) {//768px
+                font-size: 10px;
+            }
+            @include respond-to(desktop) {//1200px
+                font-size: 14px;
+            }
+        }
+    }
+}
