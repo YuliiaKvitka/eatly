@@ -38,7 +38,7 @@ html, body {
   height: 100%;
 
   @include respond-to(mobile-portrait) {//0px
-    padding-inline:30px;
+    padding-left:30px;
   }
 
   @include respond-to(mobile) {//320px
@@ -49,20 +49,20 @@ html, body {
   }
 
   @include respond-to(tablet-portrait) {//768px
-    padding-inline:30px;
+    padding-left:30px;
   }
 
 @include respond-to(tablet-landscape) {//992px
-   padding-inline:50px;
+   padding-left:50px;
   }
 @include respond-to(desktop) {//1200px
-  padding-inline:50px;
+  padding-left:50px;
   }
 @include respond-to(large-desktop) {//1600px
-  padding-inline:96px;
+  padding-left:96px;
   }
 @include respond-to(tv) {//1920px
-  padding-inline:96px;
+  padding-left:96px;
   }
 }
 

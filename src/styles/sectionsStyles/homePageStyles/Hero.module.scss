@@ -3,272 +3,161 @@
 
 .hero {
     width: 100%;
-    border: 1px solid black;
 
     &__inner{
-        max-width: 1285px;
-        margin-top: 74px;
-        display: flex;
+      max-width: 1285px;
+      margin-top: 74px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 85px;
+
+      @include respond-to(mobile-portrait) {//0px
+        flex-direction: column;
+        height: 670px;
+        margin-top: 57px;
+        margin-bottom: 75px;
+      }
+      @include respond-to(tablet-portrait) {//768px
+        flex-direction: row;
         justify-content: space-between;
+        margin-top: 35px;
+        height: 100%;
+        gap: 26px;
+      }
+      @include respond-to(large-desktop) {//1600px
+        padding-bottom: 0;
         margin-bottom: 85px;
-
-        @include respond-to(mobile-portrait) {//0px
-          flex-direction: column;
-          height: 670px;
-          margin-top: 57px;
-          margin-bottom: 75px;
-        }
-
-        @include respond-to(mobile) {//320px
-        } 
-
-        @include respond-to(mobile-landscape) {//480px
-        }
-
-        @include respond-to(tablet-portrait) {//768px
-            flex-direction: row;
-            justify-content: space-between;
-            margin-top: 35px;
-            height: 100%;
-            gap: 26px;
-        }
-
-        @include respond-to(tablet-landscape) {//992px
-            
-        }
-        
-        @include respond-to(desktop) {//1200px
-          margin-top: 49px;
-          margin-bottom: 85px;
-          height: 100%;
-          gap: 26px;
-        
-            
-        }
-        @include respond-to(large-desktop) {//1600px
-            padding-bottom: 0;
-            margin-bottom: 85px;
-            gap: 134px;
-            
-        }
-        @include respond-to(tv) {//1920px
-        }
-
+        gap: 134px;
+        margin-top: 49px;
+        height: 100%;
+        gap: 107px;
+      }
+      @include respond-to(tv) {//1920px
+        gap: 90px;
+  }
     }
 // ----------------wrapper-left -----------------
     &__wrapper-left{
+      padding-top: 70px;
+      padding-bottom: 45px;
+      max-width: 568px;
+      height: 607px;
+
+      @include respond-to(mobile-portrait) {//0px
+        max-width: 333px;
+        margin: 0 auto;
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+      @include respond-to(tablet-portrait) {//768px
+        max-width: 301px;
+        height: 400px;
+        padding-top: 50px;
+        padding-bottom: 31px;
+        margin: 0;
+      }
+      @include respond-to(tablet-landscape) {//992px
+        max-width: 355px;
+        height: 432px;
+        padding-top: 50px;
+        padding-bottom: 31px;
+        }
+      @include respond-to(desktop) {//1200px
+        max-width:533px;
+        height: 607px;
+        padding-top: 50px;
+        padding-bottom: 31px;
+        }
+      @include respond-to(large-desktop) {//1600px
         padding-top: 70px;
         padding-bottom: 45px;
-        max-width: 568px;
-        height: 607px;
-
-        @include respond-to(mobile-portrait) {//0px
-            max-width: 333px;
-            margin: 0 auto;
-            padding-top: 0px;
-        padding-bottom: 0px;
-  }
-
-  @include respond-to(mobile) {//320px
-  } 
-
-@include respond-to(mobile-landscape) {//480px
-  }
-
-  @include respond-to(tablet-portrait) {//768px
-     max-width: 301px;
-    height: 400px;
-    padding-top: 50px;
-    padding-bottom: 31px;
-    margin: 0;
-    
-  }
-
-@include respond-to(tablet-landscape) {//992px
-      max-width: 355px;
-   height: 432px;
-    padding-top: 50px;
-    padding-bottom: 31px;
-  }
-@include respond-to(desktop) {//1200px
-    max-width:533px;
-     height: 607px;
-    padding-top: 50px;
-    padding-bottom: 31px;
-    
-  }
-@include respond-to(large-desktop) {//1600px
-    max-width:533px;
-    height: 607px;
-    padding-top: 70px;
-    padding-bottom: 45px;
-  }
-@include respond-to(tv) {//1920px
-  }
+        }
     }
 
     &__wrapper-subtitle {
       position: relative;
       margin-bottom: 5px;
 
-  
-
     & hr {
-        position: absolute;
-        border: 0.71px solid #201f1f;
-        width: 54px;
+      position: absolute;
+      border: 0.71px solid #201f1f;
+      width: 54px;
+      height: 0px;
+      opacity: 0.2;
+      top: 262px;
+
+      @include respond-to(mobile-portrait) {//0px
+        top: -3px;
+        left: 37px;
+        width: 33px;
+        opacity: 1;
+      }
+      @include respond-to(mobile-landscape) {//480px
+        top: -3px;
+        border: 0.62px solid #201f1f;
+        width: 33px;
         height: 0px;
-        opacity: 0.2;
-        top: 262px;
-
-        @include respond-to(mobile-portrait) {//0px
-            top: -3px;
-            left: 37px;
-            width: 33px;
-            opacity: 1;
-  }
-
-  @include respond-to(mobile) {//320px
-  } 
-
-@include respond-to(mobile-landscape) {//480px
-          top: -3px;
-          border: 0.62px solid #201f1f;
-          width: 33px;
-          height: 0px;
-          opacity: 1;
-          left: 70px;
-  }
-
-  @include respond-to(tablet-portrait) {//768px
-      top: -3px;
-    left: 0px;
-    width: 54px;
-    opacity: .2;
-  }
-
-@include respond-to(tablet-landscape) {//992px
-      top: -3px;
-    left: 0px;
-    width: 54px;
-  }
-@include respond-to(desktop) {//1200px
-     top: -3px;
-    left: 0px;
-    width: 54px;
-  }
-@include respond-to(large-desktop) {//1600px
-    top: -3px;
-    left: 0px;
-    width: 54px;
-  }
-@include respond-to(tv) {//1920px
-   
-  }
+        opacity: 1;
+        left: 70px;
+      }
+      @include respond-to(tablet-portrait) {//768px
+        top: -3px;
+        left: 0px;
+        width: 54px;
+        opacity: .2;
+      }
+      @include respond-to(tablet-landscape) {//992px
+        top: -3px;
+        left: 0px;
+        width: 54px;
+        }
   }
     }
 
-&__subtitle {
-    position: relative;
+    &__subtitle {
+        position: relative;
 
-    @include respond-to(mobile-portrait) {//0px
-      left: 0;
-      opacity: 1;
-  }
-
-  @include respond-to(mobile) {//320px
-  } 
-
-@include respond-to(mobile-landscape) {//480px
-  }
-
-  @include respond-to(tablet-portrait) {//768px
-     left: 68px;
-     opacity: .2;
-  }
-
-@include respond-to(tablet-landscape) {//992px
-  left: 68px;
-  }
-@include respond-to(desktop) {//1200px
-   left: 68px;
-  }
-@include respond-to(large-desktop) {//1600px
-  left: 68px;
-  }
-@include respond-to(tv) {//1920px
-  }
-
-}
+        @include respond-to(mobile-portrait) {//0px
+          left: 0;
+          opacity: 1;
+        }
+        @include respond-to(tablet-portrait) {//768px
+          left: 68px;
+          opacity: .2;
+        }
+    }
 
     &__title {
         color: #201F1F;
         margin-bottom: 16px;
 
-        @include respond-to(mobile-portrait) {//0px
-  }
-
-  @include respond-to(mobile) {//320px
-  } 
-
-@include respond-to(mobile-landscape) {//480px
-  }
-
-  @include respond-to(tablet-portrait) {//768px
-    margin-bottom: 11px;
-  }
-
-@include respond-to(tablet-landscape) {//992px
-  }
-@include respond-to(desktop) {//1200px
-  margin-bottom: 11px;
-  }
-@include respond-to(large-desktop) {//1600px
-  margin-bottom: 16px;
-  }
-@include respond-to(tv) {//1920px
-  }
-
-            span {
-                color: $color-brand-dark;
-            }
-    }
+        @include respond-to(tablet-portrait) {//768px
+          margin-bottom: 11px;
+        }
+        @include respond-to(large-desktop) {//1600px
+          margin-bottom: 16px;
+          }
+        }
 
     &__text {
+      margin-bottom: 53px;
+
+      @include respond-to(mobile-portrait) {//0px
+        text-align: center;
+        margin-bottom: 41px;
+      }
+      @include respond-to(tablet-portrait) {//768px
+        margin-bottom: 37px;
+        text-align: left;
+      }
+      @include respond-to(large-desktop) {//1600px
         margin-bottom: 53px;
-
-        @include respond-to(mobile-portrait) {//0px
-          text-align: center;
-          margin-bottom: 41px;
-  }
-
-  @include respond-to(mobile) {//320px
-  } 
-
-@include respond-to(mobile-landscape) {//480px
-  }
-
-  @include respond-to(tablet-portrait) {//768px
-    margin-bottom: 37px;
-    text-align: left;
-  }
-
-@include respond-to(tablet-landscape) {//992px
-  margin-bottom: 37px;
-  }
-@include respond-to(desktop) {//1200px
-  margin-bottom: 37px;
-  }
-@include respond-to(large-desktop) {//1600px
-  margin-bottom: 53px;
-  }
-@include respond-to(tv) {//1920px
-  }
-
-        span {
-            font-weight: 500;
-            color: $color-brand-dark; 
         }
+
+      span {
+          font-weight: 500;
+          color: $color-brand-dark; 
+      }
     }
 
     &__wrapper-buttons {
@@ -276,180 +165,104 @@
     gap: 18px;
     margin-bottom: 33px;
 
-    @include respond-to(mobile-portrait) {//0px
-      justify-content: center;
-  }
-
-  @include respond-to(mobile) {//320px
-  } 
-
-@include respond-to(mobile-landscape) {//480px
-  }
-
-  @include respond-to(tablet-portrait) {//768px
-    margin-bottom: 23px;
-    justify-content: flex-start;
-  }
-
-@include respond-to(tablet-landscape) {//992px
-  }
-@include respond-to(desktop) {//1200px
-  }
-@include respond-to(large-desktop) {//1600px
-  margin-bottom: 33px;
-  }
-@include respond-to(tv) {//1920px
-  }
-
-}
-
-&__btn-get-started {
-    width: 156px;
-    height: 59px;
-    border-radius: 12.41px;
-    border: 0;
-    background-color: $color-brand;
-    font-family: $font-family-brand;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 0.01em;
-    text-transform: capitalize;
-    color: $font-color-white;
-
-    @include respond-to(mobile-portrait) {//0px
-        width: 125px;
-        height: 47px;
-    }
-
-    @include respond-to(mobile) {//320px
-    } 
-
-    @include respond-to(mobile-landscape) {//480px
-    }
-
-    @include respond-to(tablet-portrait) {//768px
-    }
-
-    @include respond-to(tablet-landscape) {//992px
-        width: 111px;
-        height: 42px;
-    }
-    @include respond-to(desktop) {//1200px
-        width: 156px;
-        height: 59px;
-    }
-    @include respond-to(large-desktop) {//1600px
-        width: 156px;
-        height: 59px;
-    }
-    @include respond-to(tv) {//1920px
-    }
-
-
-    &:hover {
-        color: $font-color;
-        background-color: transparent;
-        border: 1.5px solid $color-brand;
-        border-radius: 12.41px;;
-    }
-}
-
-&__btn-go-pro {
-    width: 110px;
-    height: 59px;
-    box-sizing: border-box;
-    background-color: transparent;
-    border: 1.5px solid $color-brand;
-    border-radius: 12.41px;
-    font-family: $font-family-brand;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 0.01em;
-    text-transform: capitalize;
-    color: $color-brand;
-
-    @include respond-to(mobile-portrait) {//0px
-        width: 88px;
-        height: 47px;
-  }
-
-  @include respond-to(mobile) {//320px
-  } 
-
-@include respond-to(mobile-landscape) {//480px
-  }
-
-  @include respond-to(tablet-portrait) {//768px
-  }
-
-@include respond-to(tablet-landscape) {//992px
-     width: 78px;
-    height: 42px;
-  }
-@include respond-to(desktop) {//1200px
-    width: 110px;
-    height: 59px;
-   
-  }
-@include respond-to(large-desktop) {//1600px
-    width: 110px;
-    height: 59px;
-  }
-@include respond-to(tv) {//1920px
-  }
-
-
-    &:hover {
-        background-color: $color-brand;
-        color: $font-color-white;
-        border: 0;
-    }
-}
-
-&__rating {
-  width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-    @include respond-to(mobile-portrait) {//0px
-      justify-content: center;
+      @include respond-to(mobile-portrait) {//0px
+        justify-content: center;
       }
-
-      @include respond-to(mobile) {//320px
-      } 
-
-    @include respond-to(mobile-landscape) {//480px
-      }
-
       @include respond-to(tablet-portrait) {//768px
+        margin-bottom: 23px;
         justify-content: flex-start;
       }
+      @include respond-to(large-desktop) {//1600px
+        margin-bottom: 33px;
+      }
+    }
 
-    @include respond-to(tablet-landscape) {//992px
-      }
-    @include respond-to(desktop) {//1200px
-      }
-    @include respond-to(large-desktop) {//1600px
-      }
-    @include respond-to(tv) {//1920px
-      }
+    &__btn-get-started {
+        width: 156px;
+        height: 59px;
+        border-radius: 12.41px;
+        border: 0;
+        background-color: $color-brand;
+        font-family: $font-family-brand;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.01em;
+        text-transform: capitalize;
+        color: $font-color-white;
 
+        @include respond-to(mobile-portrait) {//0px
+            width: 125px;
+            height: 47px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            width: 111px;
+            height: 42px;
+        }
+        @include respond-to(desktop) {//1200px
+            width: 156px;
+            height: 59px;
+        }
+      
+        &:hover {
+            color: $font-color;
+            background-color: transparent;
+            border: 1.5px solid $color-brand;
+            border-radius: 12.41px;;
+        }
+    }
+
+    &__btn-go-pro {
+        width: 110px;
+        height: 59px;
+        box-sizing: border-box;
+        background-color: transparent;
+        border: 1.5px solid $color-brand;
+        border-radius: 12.41px;
+        font-family: $font-family-brand;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.01em;
+        text-transform: capitalize;
+        color: $color-brand;
+
+        @include respond-to(mobile-portrait) {//0px
+            width: 88px;
+            height: 47px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            width: 78px;
+            height: 42px;
+          }
+        @include respond-to(desktop) {//1200px
+            width: 110px;
+            height: 59px;
+          }
+
+        &:hover {
+            background-color: $color-brand;
+            color: $font-color-white;
+            border: 0;
+        }
+    }
+
+    &__rating {
+      width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include respond-to(mobile-portrait) {//0px
+          justify-content: center;
+          }
+        @include respond-to(tablet-portrait) {//768px
+          justify-content: flex-start;
+        }
+    
     &-trustpilot {
         @include respond-to(mobile-portrait) {//0px
           width: 99px;
           height: 24px;
         }
-
-        @include respond-to(mobile) {//320px
-        } 
-
-        @include respond-to(mobile-landscape) {//480px
-        }
-
-        @include respond-to(tablet-portrait) {//768px
-        }
-
         @include respond-to(tablet-landscape) {//992px
               width: 87px;
             height: 21px;
@@ -457,13 +270,6 @@
         @include respond-to(desktop) {//1200px
             width: 123px;
             height: 30px;
-          
-        }
-        @include respond-to(large-desktop) {//1600px
-            width: 123px;
-            height: 30px;
-        }
-        @include respond-to(tv) {//1920px
         }
     }
 
@@ -472,16 +278,6 @@
           width: 77px;
           height: 13px;
         }
-
-        @include respond-to(mobile) {//320px
-        } 
-
-        @include respond-to(mobile-landscape) {//480px
-        }
-
-        @include respond-to(tablet-portrait) {//768px
-        }
-
         @include respond-to(tablet-landscape) {//992px
             width: 68px;
             height: 11px;
@@ -490,13 +286,6 @@
             width: 96px;
             height: 16px;
         }
-        @include respond-to(large-desktop) {//1600px
-            width: 96px;
-            height: 16px;
-        }
-        @include respond-to(tv) {//1920px
-        }
-
     }
 
     span {
@@ -510,25 +299,6 @@
         @include respond-to(mobile-portrait) {//0px
           font-size: 13px;
         }
-
-        @include respond-to(mobile) {//320px
-        } 
-
-        @include respond-to(mobile-landscape) {//480px
-        }
-
-        @include respond-to(tablet-portrait) {//768px
-        }
-
-        @include respond-to(tablet-landscape) {//992px
-          }
-        @include respond-to(desktop) {//1200px
-          }
-        @include respond-to(large-desktop) {//1600px
-          }
-        @include respond-to(tv) {//1920px
-          }
-
     }
 }
 // ----------wrapper-right ------------------
@@ -543,40 +313,21 @@
           padding-inline: 0px;
           margin-inline:auto;
           margin-top: 62px;
-  }
-
-  @include respond-to(mobile) {//320px
-  } 
-
-@include respond-to(mobile-landscape) {//480px
-  }
-
-  @include respond-to(tablet-portrait) {//768px
-    height: 431px;
-    margin-top: 0;
-    
-  }
-
-@include respond-to(tablet-landscape) {//992px
-     height: 431px;
-     width: auto;
-    margin-top: 0;
-  }
-@include respond-to(desktop) {//1200px
-    height: 432px;
-    //  padding-inline: 100px;
-
-  }
-@include respond-to(large-desktop) {//1600px
-    height: 607px;
-    width: auto;
-  }
-@include respond-to(tv) {//1920px
-  }
-
+        }
+        @include respond-to(tablet-portrait) {//768px
+          height: 431px;
+          margin-top: 0;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            height: 431px;
+            width: auto;
+            margin-top: 0;
+          }
+        @include respond-to(large-desktop) {//1600px
+            height: 607px;
+            width: auto;
+          }
     }
-
-  
 
     &__ellipse-container {
         position: relative;
@@ -588,84 +339,46 @@
           width: 203px;
           height: 210px;
           left: 0;
-          
-  }
-
-  @include respond-to(mobile) {//320px
-   
-
-  } 
-
-@include respond-to(mobile-landscape) {//480px
-  }
-
-  @include respond-to(tablet-portrait) {//768px
-    width: 305px;
-    margin-top: 22px;
-    height: auto;
-  }
-
-@include respond-to(tablet-landscape) {//992px
-    width: 305px;
-    margin-top: 22px;
-    height: auto;
-  }
-@include respond-to(desktop) {//1200px
-    width: 422px;
-    margin-top: 31px;
-    height: auto;
-    
-  }
-@include respond-to(large-desktop) {//1600px
-    left: -42px;
-    width: 422px;
-    height: 424px;
-  }
-@include respond-to(tv) {//1920px
-  }
-
-    }
-
-
-  &__ellipse {
-      position: relative;
-        width: 100%;
-        height:100%;
-        border-radius: 100%;
-        background: $linear-gradient;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1;
-        overflow: hidden; /* Чтобы скрыть часть изображения, выходящую за границы эллипса */
-
-        @include respond-to(mobile-portrait) {//0px
-          margin-inline:auto;
-          
         }
-
-        @include respond-to(mobile) {//320px
-        } 
-
-      @include respond-to(mobile-landscape) {//480px
-        }
-
         @include respond-to(tablet-portrait) {//768px
-          top: 50px;
+          width: 305px;
+          margin-top: 22px;
+          height: auto;
         }
-
-      @include respond-to(tablet-landscape) {//992px
-         top: 50px;
-        }
-      @include respond-to(desktop) {//1200px
-        // margin-top: 58px;
-        }
-      @include respond-to(large-desktop) {//1600px
-        }
-      @include respond-to(tv) {//1920px
-        }
-
+        @include respond-to(desktop) {//1200px
+            width: 422px;
+            margin-top: 31px;
+            height: auto;
+          }
+        @include respond-to(large-desktop) {//1600px
+            left: -42px;
+            width: 422px;
+            height: 424px;
+          }
     }
+
+    &__ellipse {
+      position: relative;
+      width: 100%;
+      height:100%;
+      border-radius: 100%;
+      background: $linear-gradient;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      overflow: hidden; /* Чтобы скрыть часть изображения, выходящую за границы эллипса */
+
+      @include respond-to(mobile-portrait) {//0px
+        margin-inline:auto;
+      }
+      @include respond-to(tablet-portrait) {//768px
+        top: 50px;
+      }
+    @include respond-to(tablet-landscape) {//992px
+      top: 50px;
+      }
+      }
   }
 .food-image {
     width: 100%;
@@ -674,30 +387,14 @@
     transform: translate(-16px, 20px);
 
     @include respond-to(mobile-portrait) {//0px
-       transform: translate(-10px, 9px);
-  }
-
-  @include respond-to(mobile) {//320px
-  } 
-
-@include respond-to(mobile-landscape) {//480px
-  }
-
-  @include respond-to(tablet-portrait) {//768px
-    transform: translate(-13px, 13px);
-  }
-
-@include respond-to(tablet-landscape) {//992px
-  }
-@include respond-to(desktop) {//1200px
-    transform: translate(-16px, 20px);
-  }
-@include respond-to(large-desktop) {//1600px
-    transform: translate(-16px, 20px);
-  }
-@include respond-to(tv) {//1920px
-  }
-
+      transform: translate(-10px, 9px);
+    }
+    @include respond-to(tablet-portrait) {//768px
+      transform: translate(-13px, 13px);
+    }
+    @include respond-to(desktop) {//1200px
+      transform: translate(-16px, 20px);
+    }
 }
 .graph-image {
     position: absolute;
@@ -708,238 +405,178 @@
     height:auto;
     box-shadow: 13px -17px 28px 0 rgba(0, 0, 0, 0.15);
 
-            @include respond-to(mobile-portrait) {//0px
-              width: 98px;
-              height: 98px;
-              bottom:-22px;
-              left: -42px;
+    @include respond-to(mobile-portrait) {//0px
+      width: 98px;
+      height: 98px;
+      bottom:-22px;
+      left: -42px;
+    }
+    @include respond-to(tablet-portrait) {//768px
+      width: 98px;
+      height: 98px;
+      bottom:-35px;
+      left: -22px;
+    }
+    @include respond-to(tablet-landscape) {//992px
+        width: 147px;
+        height: 146px;
+        bottom:-80px;
+        left: -75px;
+      }
+    @include respond-to(desktop) {//1200px
+        width: 207px;
+        height: 205px;
+        bottom:-102px;
+        left: -94px;
+      }
+    @include respond-to(large-desktop) {//1600px
+        width: 207px;
+        height: 205px;
+        bottom:-102px;
+        left: -94px;
   }
-
-  @include respond-to(mobile) {//320px
-  } 
-
-@include respond-to(mobile-landscape) {//480px
-  }
-
-  @include respond-to(tablet-portrait) {//768px
-    width: 98px;
-    height: 98px;
-    bottom:-35px;
-    left: -22px;
-  }
-
-@include respond-to(tablet-landscape) {//992px
-    width: 147px;
-    height: 146px;
-    bottom:-80px;
-    left: -75px;
-  }
-@include respond-to(desktop) {//1200px
-     width: 207px;
-    height: 205px;
-    bottom:-102px;
-    left: -94px;
-  }
-@include respond-to(large-desktop) {//1600px
-    width: 207px;
-    height: 205px;
-    bottom:-102px;
-    left: -94px;
-  }
-@include respond-to(tv) {//1920px
-  }
-
 }
 
- .stroke-image{
-        position: absolute;
-        bottom: -84px;
-        left: -120px;
-        z-index: 2;
-            @include respond-to(mobile-portrait) {//0px
-              width: 18px;
-              height: 16px;
-              bottom: -38px;
-              left: -56px;
-            }
+.stroke-image{
+  position: absolute;
+  bottom: -84px;
+  left: -120px;
+  z-index: 2;
 
-            @include respond-to(mobile) {//320px
-            } 
-
-            @include respond-to(mobile-landscape) {//480px
-            }
-
-            @include respond-to(tablet-portrait) {//768px
-                bottom: -59px;
-                left: -51px;
-                width: 27px;
-                height: 24px;
-                
-            }
-
-            @include respond-to(tablet-landscape) {//992px
-                bottom: -102px;
-                left: -103px;
-            }
-            @include respond-to(desktop) {//1200px
-                 bottom: -134px;
-                left: -120px;
-                width: 38px;
-                height: 33px;
-            }
-            @include respond-to(large-desktop) {//1600px
-                bottom: -134px;
-                left: -120px;
-            }
-            @include respond-to(tv) {//1920px
-            }
+  @include respond-to(mobile-portrait) {//0px
+    width: 18px;
+    height: 16px;
+    bottom: -38px;
+    left: -56px;
+  }
+  @include respond-to(tablet-portrait) {//768px
+    bottom: -59px;
+    left: -51px;
+    width: 27px;
+    height: 24px;
+  }
+  @include respond-to(tablet-landscape) {//992px
+    bottom: -102px;
+    left: -103px;
+  }
+  @include respond-to(desktop) {//1200px
+    bottom: -134px;
+    left: -120px;
+    width: 38px;
+    height: 33px;
+  }
     }
 
-
 .note-image {
-    position: absolute;
-    z-index: 2;
-    top: -54px;
-    right: -87px;
-    width: 329px;
-    height: auto;
-    box-sizing: border-box;
-    box-shadow: -10px 12px 21px 0 rgba(0, 0, 0, 0.15);
+  position: absolute;
+  z-index: 2;
+  top: -54px;
+  right: -87px;
+  width: 329px;
+  height: auto;
+  box-sizing: border-box;
+  box-shadow: -10px 12px 21px 0 rgba(0, 0, 0, 0.15);
 
-    @include respond-to(mobile-portrait) {//0px
-      width: 156px;
-      height: 43px;
-      top: -24px;
-      right: -24px;
+  @include respond-to(mobile-portrait) {//0px
+    width: 156px;
+    height: 43px;
+    top: -24px;
+    right: -24px;
   }
-
-  @include respond-to(mobile) {//320px
-  } 
-
   @include respond-to(mobile-landscape) {//480px
     top: -16px;
     right: -55px;
     }
-
   @include respond-to(tablet-portrait) {//768px
     width: 156px;
     height: 43px;
     top: 50px;
     right: -2px;
   }
-
-@include respond-to(tablet-landscape) {//992px
+  @include respond-to(tablet-landscape) {//992px
     width: 234px;
     height: auto;
     top: 18px;
     right: -87px;
     
   }
-@include respond-to(desktop) {//1200px
-     width: 329px;
-    height: auto;
-    top: 21px;
-     right: -60px;
-  }
-@include respond-to(large-desktop) {//1600px
+  @include respond-to(desktop) {//1200px
     width: 329px;
     height: auto;
     top: 21px;
-     right: -137px;
+    right: -60px;
   }
-@include respond-to(tv) {//1920px
+  @include respond-to(large-desktop) {//1600px
+    right: -137px;
   }
-
 }
 
 .wave-image {
-        position: absolute;
-        top: -73px;
-        right: -122px;
-        z-index: 2;
+  position: absolute;
+  top: -73px;
+  right: -122px;
+  z-index: 2;
 
-        @include respond-to(mobile-portrait) {//0px
-          width: 20px;
-          height: 12px;
-          top: -34px;
-        right: -50px;
+  @include respond-to(mobile-portrait) {//0px
+    width: 20px;
+    height: 12px;
+    top: -34px;
+  right: -50px;
   }
-
-  @include respond-to(mobile) {//320px
-  } 
-
-@include respond-to(mobile-landscape) {//480px
-  width: 20px;
-          height: 12px;
-          top: -25px;
-        right: -77px;
-  }
-
+  @include respond-to(mobile-landscape) {//480px
+      width: 20px;
+      height: 12px;
+      top: -25px;
+      right: -77px;
+    }
   @include respond-to(tablet-portrait) {//768px
     right: -43px;
     top: 36px;
     width: 30px;
     height: 17px;
   }
-
-@include respond-to(tablet-landscape) {//992px
-     top: 18px;
+  @include respond-to(tablet-landscape) {//992px
+    top: 18px;
     right: -122px;
-  }
-@include respond-to(desktop) {//1200px
+    }
+  @include respond-to(desktop) {//1200px
     top: 10px;
     right: -100px;
     width: 42px;
     height: 24px;
-  }
-@include respond-to(large-desktop) {//1600px
+    }
+  @include respond-to(large-desktop) {//1600px
     top: 11px;
-     right: -185px;
-  }
-@include respond-to(tv) {//1920px
-  }
-
+    right: -185px;
     }
+      }
 
-    .arrow-image {
-        position: absolute;
-        top: 142px;
-        right: -60px;
-        z-index: 5;
-        // transform: scale(1.5); /* Увеличить штрих в 1.5 раза */
+.arrow-image {
+  position: absolute;
+  top: 142px;
+  right: -60px;
+  z-index: 5;
+  // transform: scale(1.5); /* Увеличить штрих в 1.5 раза */
 
-        @include respond-to(mobile-portrait) {//0px
-          width: 48px;
-          height: 46px;
-          top: 40px;
-          right: -35px;
-          }
-
-          @include respond-to(mobile) {//320px
-          } 
-
-        @include respond-to(mobile-landscape) {//480px
-          }
-
-          @include respond-to(tablet-portrait) {//768px
-            width: 72px;
-            height: 69px;
-            top: 129px;
-          right: -50px;
-          }
-
-        @include respond-to(tablet-landscape) {//992px
-          }
-        @include respond-to(desktop) {//1200px
-          width: 101px;
-          height: 98px;
-          top: 117px;
-          right: -71px;
-          }
-        @include respond-to(large-desktop) {//1600px
-          top: 177px;
-          }
-        @include respond-to(tv) {//1920px
-          }
-
+  @include respond-to(mobile-portrait) {//0px
+    width: 48px;
+    height: 46px;
+    top: 40px;
+    right: -35px;
     }
+  @include respond-to(tablet-portrait) {//768px
+    width: 72px;
+    height: 69px;
+    top: 129px;
+    right: -50px;
+  }
+  @include respond-to(desktop) {//1200px
+    width: 101px;
+    height: 98px;
+    top: 117px;
+    right: -71px;
+    }
+  @include respond-to(large-desktop) {//1600px
+    top: 177px;
+    }
+}

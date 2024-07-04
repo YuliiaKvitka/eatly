@@ -3,16 +3,16 @@ import styles from '../../../styles/sectionsStyles/homePageStyles/Hero.module.sc
 
 const Hero = () => {
     return (
-        <div className={styles['hero']}>
+        <section className={styles['hero']}>
 
-           <div className='container'>
+            <div className='container'>
                 <div className={styles['hero__inner']}>
                     <div className={styles['hero__wrapper-left']}>
                         <div className={styles['hero__wrapper-subtitle']}>
                             <hr/>
                             <p className={`${styles['hero__subtitle']} hero-subtitle`}>OVER 1000 USERS</p>
                         </div>
-                        <h1 className={`${styles['hero__title']} hero-title`}>Enjoy Foods All Over The <span>World</span></h1>
+                        <h1 className={`${styles['hero__title']} hero-title`}>Enjoy Foods All Over The <span className='accent'>World</span></h1>
                         <div className={`${styles['hero__text']} text`}>
                             <p>EatLy help you set saving goals, earn cash back offers, Go to disclaimer for more details and get paychecks up to two days early. Get a <span>$20 bonus</span>.</p>
                         </div>
@@ -48,8 +48,8 @@ const Hero = () => {
                     </div>
                 </div>
     
-           </div>
-        </div>
+            </div>
+        </section>
     )
 }
 

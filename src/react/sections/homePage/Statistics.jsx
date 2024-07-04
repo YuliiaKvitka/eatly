@@ -3,7 +3,7 @@ import styles from '../../../styles/sectionsStyles/homePageStyles/Statistics.mod
 
 const Statistics = () => {
     return (
-        <div className={styles['statistics']}>
+        <section className={styles['statistics']}>
             
                 <div className="container">
                     <div className={styles["statistics__inner"]}>
@@ -30,7 +30,7 @@ const Statistics = () => {
                         </ul>
                     </div>
                 </div>
-            </div>
+            </section>
     )
 }
 
