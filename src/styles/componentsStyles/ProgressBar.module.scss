@@ -1,0 +1,27 @@
+// componentsStyles/ProgressBar.module.scss
+
+.progress-bar-container {
+    width: 100%;
+    height: 9.42px;
+    border-radius: 78.53px;
+    position: relative;
+}
+
+.progress-bar-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 78.53px; /* Скопируйте радиус из основного прогресс-бара, если нужно */
+    background-color: var(--background-color, #6C5FBC); /* Цвет фоновой части прогресс-бара */
+    opacity: 0.2; /* Прозрачность */
+}
+
+.progress-bar {
+    width: 100%;
+    height: 100%;
+    border-radius: 78.53px;
+    background-color: var(--background-color, #6C5FBC); /* Цвет текущего прогресса */
+}

@@ -1,0 +1,10 @@
+
+@mixin button-hover($bg-color-hover,$border-color-hover, $text-color-hover) {
+  &:hover {
+    background-color: $bg-color-hover;
+    color: $text-color-hover;
+    // border-color: $border-color-hover ;
+    border: 1px solid $border-color-hover;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}

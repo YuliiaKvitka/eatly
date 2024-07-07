@@ -1,0 +1,46 @@
+@import '../utils/variables.scss';
+@import '../utils/mixinsMobile.scss';
+@import '../utils/mixinHoverButton';
+
+.input__email, .input__submit {
+    border-radius: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.input__email {
+    color: #59546A;
+    width: 440px;
+    height: 68px;
+    box-shadow: 0 7px 45px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border:none;
+
+    &::placeholder {
+        font-family: $font-family-brand;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0.03em;
+        text-transform: capitalize;
+        color: #878787;
+    }
+}
+
+.input__submit {
+    border-radius: 11px;
+    width: 132px;
+    height: 53px;
+    background-color: #6c5fbc;
+    margin-left: -140px;
+    border: none;
+    //--------------------
+    font-family: $font-family-brand;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #f7f8fa;
+}
+
+.input__email::selection {
+    background-color: #614CE6;
+}

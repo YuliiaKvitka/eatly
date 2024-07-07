@@ -1,0 +1,168 @@
+
+@import '/src/styles/utils/variables';
+@import '/src/styles/utils/mixinsMobile';
+
+
+.top-dishes {
+  
+
+    &__wrapper {
+        max-width: 1248px;
+        width: 100%;
+        padding: 0;
+        margin-top: 100px;
+
+        @include respond-to(mobile-portrait) {//0px
+            margin-top: 85px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            margin-top: 71px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            margin-top: 100px;
+        }
+        } 
+
+    &__inner{
+        max-width: 1248px;
+        width: 100%;
+        padding: 0;
+        margin-top: 100px;
+
+        @include respond-to(mobile-portrait) {//0px
+            margin-top: 85px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            margin-top: 71px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            margin-top: 100px;
+        }
+    }
+
+    &__cards {
+        max-width: 1249px;
+        margin-top: 86px;
+        display: flex;
+        justify-content: space-between;
+        // flex: 1 1 calc(33.333% - 20px); // для 3 карточек на 100% ширины контейнера
+
+            @include respond-to(mobile-portrait) {//0px
+                // flex: 1 1 calc(33.333% - 20px); // для 3 карточек на 480px
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                gap: 40px;
+                align-items: center;
+                margin-top: 59px;
+            }
+            @include respond-to(mobile-landscape) { // 480px
+                // flex: 1 1 calc(33.333% - 20px); // для 3 карточек на 480px
+                flex-wrap: wrap;
+                flex-direction: row;
+            }
+
+            @include respond-to(tablet-portrait) {//768px
+                flex-wrap: wrap;
+                flex-direction: row;
+                }
+
+            @include respond-to(tablet-landscape) {//992px
+                // flex: 1 1 calc(50% - 20px); // для 2 карточек на 768px
+                flex-direction: row;
+                justify-content: space-between;
+                gap: 1.25rem;
+                flex-wrap: nowrap;
+            }
+            @include respond-to(desktop) { // 1200px
+                margin-left: 0px;
+                margin-right: 0px;
+                justify-content: space-between;
+                gap: 10px;
+            }
+            @include respond-to(large-desktop) {//1600px
+                margin-top: 86px;
+                // flex: 1 1 calc(33.333% - 20px); // для 3 карточек на 1200px
+            }
+        }
+
+    &__wrapper-link{
+        margin-top: 66px;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+
+        @include respond-to(mobile-portrait) {//0px
+            max-width: 300px;
+            margin-top: 61px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            max-width: 100%;
+            margin-top: 47px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            margin-top: 66px;
+        }
+    }
+
+    
+}
+
+
+
+// $ease_out: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+// @mixin transition() {
+//     transition: 700ms $ease_out;
+
+//     &:hover{
+//         transition: 400ms $ease_out;
+//     }
+// }
+
+// .arrow-btn{
+// 	position: relative;
+// 	display: inline-block;
+//   	border-radius: 0;
+// 	// color: #b2876f;
+//   	margin-top:2rem;
+//   	// font-weight: bold;
+//   	// font-size: 0.8rem;
+//   	// letter-spacing: 2px;
+//   	// text-decoration: none;
+
+
+// 	@include transition;
+// 	padding-right: 2rem;
+// 	// vertical-align: top;
+	
+	
+// 	&:hover{
+// 		&:after{
+// 			transition: 400ms $ease_out;
+// 			transform: translateX(15px);
+// 			opacity: 0;
+// 		}
+// 		&:before{
+// 			transition: 700ms $ease_out;
+// 			transform: translateX(0);
+// 			opacity: 1;
+// 		}
+// 	}
+	
+// 	&:before,&:after{
+// 		content: url(../../../../public/assets/restaurant-cards/arrow.png);
+// 		position: absolute;
+// 		right: 0;
+// 		top:0;
+// 	}
+	
+// 	&:before{
+// 		transform: translateX(-15px);
+// 		opacity: 0;
+// 	}
+// 	&:after{
+// 		transform: none;
+// 	}
+// }
+

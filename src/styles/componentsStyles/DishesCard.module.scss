@@ -1,0 +1,408 @@
+
+@import '/src/styles/utils/variables';
+@import '/src/styles/utils/mixinsMobile';
+
+.card {
+    border: 1.44px solid #f4f4f6;
+    border-radius: 35px;
+    width: 224px;
+    height: 390px;
+    box-shadow: 7px 82px 41px 0 rgba(229, 229, 229, 0.7);
+    background: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+
+    @include respond-to(mobile-portrait) {//0px
+         width: 160px;
+        height: 278px;
+        border-radius: 25px;
+        
+        padding-top: 10px;
+    }
+
+      @include respond-to(tablet-portrait) {//768px
+         width: 160px;
+        height: 278px;
+        border-radius: 25px;
+  }
+
+    @include respond-to(tablet-landscape) {//992px
+        width: 160px;
+        height: 278px;
+        border-radius: 25px;
+    }
+    @include respond-to(desktop) {//1200px
+       border-radius: 30px;
+        width: 200px;
+        height: 370px;
+        padding-top: 26px;
+    }
+    @include respond-to(large-desktop) {//1600px
+        border-radius: 35px;
+        width: 224px;
+        height: 390px;
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    &__figure {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__image {
+        width: 201px;
+        height: 208px;
+
+        @include respond-to(mobile-portrait) {//0px
+            width: 131px;
+            height: 131px;
+            border-radius: 21px 21px 0 0;
+            
+        }
+
+        @include respond-to(tablet-portrait) {//768px
+            width: 131px;
+            height: 131px;
+            border-radius: 21px 21px 0 0;
+         }
+        @include respond-to(tablet-landscape) {//992px
+            width: 131px;
+            height: 131px;
+            border-radius: 21px 21px 0 0;
+            
+        }
+        @include respond-to(desktop) {//1200px
+            width: 180px;
+            height: 190px;
+            
+        }
+        @include respond-to(large-desktop) {//1600px
+            width: 201px;
+            height: 208px;
+        }
+    }
+
+    &__header {
+    
+        @include respond-to(mobile-portrait) {//0px
+            padding-left: 12px;
+        }
+        @include respond-to(desktop) {//1200px
+            padding-left: 23px;
+    }
+}
+    &__status {
+        width: 65px;
+        height: 24px;
+        font-family: $font-family-brand;
+        font-weight: 400;
+        font-size: 12px;
+        color: #daa31a;
+        border-radius: 5.4px;
+        background-color: rgb(247, 237, 208);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s, color 0.3s;
+
+        @include respond-to(mobile-portrait) {//0px
+            font-size: 10px;
+            width: 59px;
+            height: 20px;
+            border-radius: 4px;
+        }
+        @include respond-to(tablet-portrait) {//768px
+            font-size: 9.08px;
+            width: 53px;
+            height: 17px;
+            border-radius: 3.84px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            font-size: 9.08px;
+            width: 53px;
+            height: 17px;
+            border-radius: 3.84px;
+        }
+        @include respond-to(desktop) {//1200px
+            font-size: 12px;
+            width: 65px;
+            height: 24px;
+            border-radius: 5.4px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            font-size: 12px;
+            width: 65px;
+            height: 24px;
+            border-radius: 5.4px;
+        }
+
+        &.healthy:hover {
+            background-color: #c3e6cb;
+            color: #0b2e13;
+        }
+
+        &.supreme:hover {
+            background-color: #f5c6cb;
+            color: #491217;
+        }
+
+        &.trending:hover {
+            background-color: #FB471D;
+            color: #F7C5BA;
+        }
+
+    }
+
+    &__title {
+        color: rgb(50, 49, 66);
+        font-family: $font-family-brand;
+        font-size: 25.79px;
+        font-weight: 600;
+        line-height: 1.62;
+        letter-spacing: 0px;
+        text-align: left;
+
+        @include respond-to(mobile-portrait) {//0px
+            font-size: 20px;
+        }
+        @include respond-to(tablet-portrait) {//768px
+            font-size: 18.34px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            font-size: 18.34px;
+        }
+        @include respond-to(desktop) {//1200px
+            font-size: 25.79px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            font-size: 25.79px;
+        }
+    }
+
+    &__footer {
+        padding-left: 23px;
+        padding-top: 2px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @include respond-to(mobile-portrait) {//0px
+            padding-left: 12px;
+        }
+        @include respond-to(desktop) {//1200px
+            padding-left: 23px; 
+        }
+
+        &-top {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 11px;
+            width: 100%;
+            gap: 16px;
+        }
+        &-bottom {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__price {
+        width: 115px;
+        height: 40px;
+    }
+
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 18px;
+
+        div {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100%;
+
+            @include respond-to(desktop) {//1200px
+                margin-right: 20px;
+            }
+        }
+    }
+
+    &__rating-image {
+
+        @include respond-to(mobile-portrait) {//0px
+            width: 21px;
+            height: 21px;
+        }
+        @include respond-to(tablet-portrait) {//768px
+            width: 13px;
+            height: 13px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            width: 13px;
+            height: 13px;
+        }
+        @include respond-to(desktop) {//1200px
+            width: 26px;
+            height: 26px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            width: 26px;
+            height: 26px;
+        }
+    }
+
+    &__deadline-wrapper {
+        margin-right: 11px;
+
+        @include respond-to(tablet-portrait) {//768px
+            margin-right: 5px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            margin-right: 5px;
+        }
+        @include respond-to(desktop) {//1200px
+            margin-right: 11px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            margin-right: 11px;
+        }
+    }
+
+    &__rating-wrapper {
+        margin-right: 156px;
+    }
+
+    &__deadline {
+        color: rgb(142, 151, 166);
+        font-family: $font-family-deadline;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 1.33;
+        letter-spacing: 0px;
+        text-align: left;
+        white-space: nowrap;
+
+        @include respond-to(mobile-portrait) {//0px
+            font-size: 15px;
+        }
+        @include respond-to(tablet-portrait) {//768px
+            font-size: 13px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            font-size: 13px;
+        }
+        @include respond-to(desktop) {//1200px
+            font-size: 19px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            font-size: 19px;
+        }
+    }
+
+    &__rating {
+        color: rgb(142, 151, 166);
+        font-family: $font-family-deadline;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 1.33;
+        letter-spacing: 0px;
+        text-align: left;
+
+        @include respond-to(mobile-portrait) {//0px
+            font-size: 15px;
+        }
+        @include respond-to(tablet-portrait) {//768px
+            font-size: 13px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            font-size: 13px;
+        }
+        @include respond-to(desktop) {//1200px
+            font-size: 19px
+        }
+        @include respond-to(large-desktop) {//1600px
+            font-size: 19px;
+        }
+    }
+
+
+
+    &__bookmark {
+        transition: transform .3s ease-in-out;
+
+        @include respond-to(mobile-portrait) {//0px
+            width: 30px;
+            height: 30px;
+        }
+        @include respond-to(tablet-portrait) {//768px
+            width: 29px;
+            height: 29px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            width: 29px;
+            height: 29px;
+        }
+        @include respond-to(desktop) {//1200px
+            width: 40px;
+            height: 40px;
+            margin-left: 35px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            width: 44px;
+            height: 40px;
+            margin-left: 50px;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+// -----------------------
+.integer-part {
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.56;
+    color: #323142;
+    white-space: nowrap;
+    }
+
+.decimal-part {
+    font-size: 18px;
+    color: #8e97a6;
+}
+
+.dot {
+    display: block;
+    width: 4px;
+    height: 4px;
+    background-color: rgb(142, 151, 166);
+    border-radius: 50%;
+    margin-left: 4px;
+}
+
+.healthy {
+    background-color: #F7EDD0;
+    color: #DAA31A
+    }
+
+.trending {
+    background-color: #F7C5BA;
+    color: #FB471D;
+    }
+
+.supreme {
+    background-color: #b9e3ca;
+    color: #309D5B;
+}

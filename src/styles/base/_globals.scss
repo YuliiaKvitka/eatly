@@ -38,7 +38,8 @@ html, body {
   height: 100%;
 
   @include respond-to(mobile-portrait) {//0px
-    padding-left:30px;
+    // padding-left:30px;
+    padding-left: 10px;
   }
 
   @include respond-to(mobile) {//320px
@@ -73,4 +74,12 @@ html, body {
 h1{
   margin: 0;
   padding: 0;
+}
+
+
+.section-line {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1px solid $color-border;
 }

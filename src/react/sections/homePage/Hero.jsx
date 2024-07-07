@@ -1,13 +1,17 @@
+
+'use client'
 import Image from 'next/image'
 import styles from '../../../styles/sectionsStyles/homePageStyles/Hero.module.scss'
 
+
 const Hero = () => {
+
     return (
         <section className={styles['hero']}>
 
             <div className='container'>
                 <div className={styles['hero__inner']}>
-                    <div className={styles['hero__wrapper-left']}>
+                    <div  className={styles['hero__wrapper-left']}>
                         <div className={styles['hero__wrapper-subtitle']}>
                             <hr/>
                             <p className={`${styles['hero__subtitle']} hero-subtitle`}>OVER 1000 USERS</p>
@@ -43,8 +47,6 @@ const Hero = () => {
                             <Image src='/assets/hero/arrow.png' alt='' width={101} height={98} className={styles['arrow-image']} />
                             
                         </div>
-        
-        
                     </div>
                 </div>
     

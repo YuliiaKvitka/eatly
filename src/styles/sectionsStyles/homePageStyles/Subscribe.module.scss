@@ -1,0 +1,39 @@
+@import '/src/styles/utils/variables';
+@import '/src/styles/utils/mixinsMobile.scss';
+
+.subscribe {
+
+    &__inner {
+        position: relative;
+        margin-top: 182px;
+        margin-bottom: 156px;
+        background: url(../../../../public/assets/subscribe/mask-bg.png) #6C5FBC;
+        border-radius: 30px;
+        width: 1214px;
+        height: 280px;
+        padding-top: 37px;
+        padding-left: 66px;
+
+        &::after {
+            content: url('../../../../public/assets/subscribe/food.png');
+            position: absolute;
+            top: 86px;
+            right: 72px;
+            width: 274px;
+            height: 276px;
+        }
+    }
+
+    &__action {
+        font-family: $font-family-brand;
+        font-weight: 800;
+        font-size: 70px;
+        line-height:1.5;
+        text-align: center;
+        color: #fff;
+    }
+
+    &__form {
+        margin-top: 9px;
+    }
+}

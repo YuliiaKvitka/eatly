@@ -1,0 +1,61 @@
+@import '/src/styles/utils/variables';
+// components/SelectComponent.module.scss
+
+.select-wrapper {
+    width: 300px;
+    position: relative;
+    height: 38px;
+    color: #444;
+    background: transparent;
+    border: 1px solid #bcbcbc;
+    border-radius: 0;
+}
+
+.select-list {
+    border-radius: 13px;
+    padding: 12px 18px;
+    width: 175px; /* Устанавливаем фиксированную ширину */
+    height: 53px;
+    background: #fafafa;
+    border: 1px solid #d3d3d3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-right: 40px; /* Увеличиваем отступ справа для размещения стрелки */
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.03em;
+    text-align: right;
+    color: #1a202c;
+    transition: all 0.3s ease;
+    -webkit-appearance: none; /* Убираем стандартную стрелку */
+    -moz-appearance: none; /* Убираем стандартную стрелку */
+    appearance: none; /* Убираем стандартную стрелку */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 50l40 40 40-40' stroke='%231a202c' stroke-width='10' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px 20px; /* Размер стрелки */
+    max-width: 175px; /* Устанавливаем максимальную ширину для уменьшения окна списка */
+    overflow: hidden; /* Убираем горизонтальный скролл */
+
+    &:hover {
+        background: #f0f0f0;
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    &:focus {
+        outline: none;
+        border: 1px solid #007BFF;
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+    }
+}
+
+.option {
+    font-size: 16px; /* Уменьшаем шрифт */
+    padding-left: 10px; /* Уменьшаем отступ слева */
+    width: 175px; /* Устанавливаем фиксированную ширину для опций */
+}
+
+
+
+

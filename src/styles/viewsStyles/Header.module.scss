@@ -1,5 +1,7 @@
 @import '../utils/variables.scss';
 @import '../utils/mixinsMobile.scss';
+@import '../utils/mixinHoverButton';
+// @import '../base/globals.scss';
 
 .header {
   padding-top: 48px;
@@ -14,23 +16,29 @@
       padding-top: 48px ;
   }
 
+  &__wrapper {
+    max-width: 1248px;
+    width: 100%;
+padding: 0;
+  }
+
   &__inner {
       max-width: 1248px;
       box-sizing: border-box;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 24px;
-      border-bottom: 1px solid $color-border;
+      // padding-bottom: 24px;
+      // border-bottom: 1px solid $color-border;
 
       @include respond-to(mobile-portrait) {//0px
         padding-bottom: 30px;
       }
       @include respond-to(tablet-landscape) {//992px
-        padding-bottom: 17px;
-      }
+      padding-bottom: 17px;
+       }
       @include respond-to(desktop) {//1200px
-        padding-bottom: 24px;
+         padding-bottom: 24px;
       }
       @include respond-to(large-desktop) {//1600px
         max-width: 1248px;
@@ -147,6 +155,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      border-radius: 18px;
+
+      @include button-hover(transparent,#6c5fbc, $font-color);
 
       @include respond-to(tablet-portrait) {//768px
         width: 73px;
@@ -155,11 +166,6 @@
       @include respond-to(desktop) {//1200px
       width: 102px;
       height: 62px;
-      }
-
-        &:hover {
-          border: 1.5px solid $color-brand;
-          border-radius: 12.41px;;
       }
     }
 
@@ -173,6 +179,9 @@
         justify-content: center;
         align-items: center;
 
+        @include button-hover(transparent,#6c5fbc, #606060);
+
+
         @include respond-to(tablet-portrait) {//768px
           width: 86px;
           height: 45px;
@@ -184,12 +193,6 @@
           width: 121px;
           height: 62px;
         }
-
-        &:hover {
-          color: $font-color;
-          background-color: transparent;
-          border: 1.5px solid $color-brand;
-          border-radius: 12.41px;;
-        }
     }
 }
+

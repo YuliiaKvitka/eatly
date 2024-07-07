@@ -1,0 +1,33 @@
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// animation: fadeIn 1s forwards ease-in-out; /* Анимация для всего блока .hero__inner */
+
+// animation: fadeIn 1s forwards ease-in-out; /* Анимация для заголовка h1 */
+
+//  animation: fadeIn 1s forwards ease-in-out; /* Анимация для абзаца текста */
+//     animation-delay: 0.5s; /* Задержка для анимации абзаца текста */
+
+// animation: slideInLeft 1s forwards ease-in-out; /* Анимация для кнопки */
+//     animation-delay: 1s; /* Задержка для анимации кнопки */

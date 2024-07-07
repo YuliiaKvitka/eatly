@@ -1,0 +1,88 @@
+@import '/src/styles/utils/variables';
+@import '/src/styles/utils/mixinsMobile';
+
+
+$ease_out: cubic-bezier(0.165, 0.84, 0.44, 1);
+
+@mixin transition() {
+    transition: 700ms $ease_out;
+
+    &:hover{
+        transition: 400ms $ease_out;
+    }
+}
+
+
+.arrow-btn{
+	position: relative;
+	display: inline-block;
+  	border-radius: 0;
+    margin-top:2rem;
+  	
+
+
+	@include transition;
+	padding-right: 2rem;
+	// vertical-align: top;
+	
+	
+	&:hover{
+		&:after{
+			transition: 400ms $ease_out;
+			transform: translateX(15px);
+			opacity: 0;
+		}
+		&:before{
+			transition: 700ms $ease_out;
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+	
+	&:before,&:after{
+		content: url(/assets/restaurant-cards/arrow.png);
+		position: absolute;
+		right: 0;
+		top:0;
+	}
+	
+	&:before{
+		transform: translateX(-15px);
+		opacity: 0;
+	}
+	&:after{
+		transform: none;
+	}
+}
+
+.link {
+        font-family: $font-family-brand;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 2.26;
+        letter-spacing: -0.01em;
+        color: rgb(172, 173, 185);
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        transition: transform 0.3s;
+        position: relative;
+
+        @include respond-to(mobile-portrait) {//0px
+            font-size: 20px;
+        }
+        @include respond-to(tablet-portrait) {//768px
+            font-size: 14px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            font-size: 20px;
+        }
+        @include respond-to(desktop) {//1200px
+            font-size: 20px;
+        }
+        
+        &:hover {
+            transform: scale(1.2);
+        }
+        
+    }

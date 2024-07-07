@@ -1,5 +1,7 @@
 @import '../../utils/variables.scss';
 @import '../../utils/mixinsMobile.scss';
+@import '../../utils/mixinHoverButton.scss';
+@import '/src/styles/utils/animations';
 
 .hero {
     width: 100%;
@@ -10,6 +12,7 @@
       display: flex;
       justify-content: space-between;
       margin-bottom: 85px;
+      animation: fadeIn 1s forwards ease-in-out; /* Анимация для всего блока .hero__inner */
 
       @include respond-to(mobile-portrait) {//0px
         flex-direction: column;
@@ -71,7 +74,7 @@
       @include respond-to(large-desktop) {//1600px
         padding-top: 70px;
         padding-bottom: 45px;
-        }
+        }      
     }
 
     &__wrapper-subtitle {
@@ -130,6 +133,7 @@
     &__title {
         color: #201F1F;
         margin-bottom: 16px;
+        animation: fadeIn 1s forwards ease-in-out; /* Анимация для заголовка h1 */
 
         @include respond-to(tablet-portrait) {//768px
           margin-bottom: 11px;
@@ -141,6 +145,8 @@
 
     &__text {
       margin-bottom: 53px;
+      animation: fadeIn 1s forwards ease-in-out; /* Анимация для абзаца текста */
+      animation-delay: 0.5s; /* Задержка для анимации абзаца текста */
 
       @include respond-to(mobile-portrait) {//0px
         text-align: center;
@@ -164,6 +170,8 @@
     display: flex;
     gap: 18px;
     margin-bottom: 33px;
+   
+
 
       @include respond-to(mobile-portrait) {//0px
         justify-content: center;
@@ -189,6 +197,12 @@
         letter-spacing: 0.01em;
         text-transform: capitalize;
         color: $font-color-white;
+        opacity: 0;
+    animation: slideInLeft 1s forwards ease-in-out; /* Анимация для кнопки */
+    animation-delay: 1s; /* Задержка для анимации кнопки */
+
+        @include button-hover(transparent,#6c5fbc, $color-brand);
+
 
         @include respond-to(mobile-portrait) {//0px
             width: 125px;
@@ -201,13 +215,6 @@
         @include respond-to(desktop) {//1200px
             width: 156px;
             height: 59px;
-        }
-      
-        &:hover {
-            color: $font-color;
-            background-color: transparent;
-            border: 1.5px solid $color-brand;
-            border-radius: 12.41px;;
         }
     }
 
@@ -224,6 +231,11 @@
         letter-spacing: 0.01em;
         text-transform: capitalize;
         color: $color-brand;
+        opacity: 0;
+    animation: slideInLeft 1s forwards ease-in-out; /* Анимация для кнопки */
+    animation-delay: 1s; /* Задержка для анимации кнопки */
+
+        @include button-hover($color-brand,#6c5fbc, $font-color-white);
 
         @include respond-to(mobile-portrait) {//0px
             width: 88px;
@@ -237,12 +249,6 @@
             width: 110px;
             height: 59px;
           }
-
-        &:hover {
-            background-color: $color-brand;
-            color: $font-color-white;
-            border: 0;
-        }
     }
 
     &__rating {
@@ -580,3 +586,6 @@
     top: 177px;
     }
 }
+
+
+

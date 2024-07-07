@@ -1,0 +1,360 @@
+
+@import '/src/styles/utils/variables';
+@import '/src/styles/utils/mixinsMobile';
+
+.card {
+    border: 1.25px solid #f4f4f6;
+    border-radius: 30px;
+    width: 395px;
+    height: 315px;
+    box-shadow: 6px 71px 36px 0 rgba(229, 229, 229, 0.7);
+    background: #fff;
+    padding-bottom: 18px;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    @include respond-to(mobile-portrait) {//0px
+        width: 300px;
+        height: 237px;
+        border-radius: 24px;
+    }
+
+    @include respond-to(tablet-landscape) {//992px
+        width: 282px;
+        height: 226px;
+        border-radius: 21px;
+    }
+    @include respond-to(desktop) {//1200px
+        width: 350px;
+        height: 289px;
+    }
+    @include respond-to(large-desktop) {//1600px
+        width: 395px;
+        height: 315px;
+        border-radius: 30px;
+    }
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    &__image {
+        border-radius: 30px 30px 0 0;
+        width: 395px;
+        height: 176px;
+
+        @include respond-to(mobile-portrait) {//0px
+            width: 300px;
+            height: 133px;
+            border-radius: 24px 24px 0 0;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            width: 282px;
+            height: 125px;
+            border-radius: 21px 21px 0 0;
+        }
+        @include respond-to(desktop) {//1200px
+            width: 350px;
+            height: 157px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            width: 395px;
+            height: 176px;
+            border-radius: 30px 30px 0 0;
+        }
+    }
+
+    &__header {
+        padding-top: 11px;
+        padding-left: 33px;
+
+        @include respond-to(tablet-portrait) {//768px
+            padding-left: 24px;
+            padding-top: 10px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            padding-left: 24px;
+            padding-top: 10px;
+        }
+        @include respond-to(desktop) {//1200px
+            padding-left: 33px;
+            padding-top: 11px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            padding-left: 33px;
+            padding-top: 11px;
+        }
+    }
+    &__status {
+        width: 65px;
+        height: 24px;
+        font-family: $font-family-brand;
+        font-weight: 400;
+        font-size: 12px;
+        color: #daa31a;
+        border-radius: 5.4px;
+        background-color: rgb(247, 237, 208);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s, color 0.3s;
+
+        @include respond-to(mobile-portrait) {//0px
+            font-size: 10px;
+            width: 59px;
+            height: 20px;
+            border-radius: 4px;
+        }
+        @include respond-to(tablet-portrait) {//768px
+            font-size: 9.08px;
+            width: 53px;
+            height: 17px;
+            border-radius: 3.84px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            font-size: 9.08px;
+            width: 53px;
+            height: 17px;
+            border-radius: 3.84px;
+        }
+        @include respond-to(desktop) {//1200px
+            font-size: 12px;
+            width: 65px;
+            height: 24px;
+            border-radius: 5.4px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            font-size: 12px;
+            width: 65px;
+            height: 24px;
+            border-radius: 5.4px;
+        }
+
+        &.healthy:hover {
+            background-color: #c3e6cb;
+            color: #0b2e13;
+        }
+
+        &.trending:hover {
+            background-color: #f5c6cb;
+            color: #491217;
+        }
+
+    }
+    &__title {
+        color: rgb(50, 49, 66);
+        font-family: $font-family-brand;
+        font-size: 25.79px;
+        font-weight: 600;
+        line-height: 1.62;
+        letter-spacing: 0px;
+        text-align: left;
+
+        @include respond-to(mobile-portrait) {//0px
+            font-size: 20px;
+        }
+        @include respond-to(tablet-portrait) {//768px
+            font-size: 18.34px;
+        }
+
+        @include respond-to(tablet-landscape) {//992px
+            font-size: 18.34px;
+        }
+        @include respond-to(desktop) {//1200px
+           font-size: 25.79px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            font-size: 25.79px;
+        }
+    }
+
+    &__footer {
+        padding-left: 33px;
+        padding-top: 2px;
+        padding-right: 27px;
+
+        @include respond-to(tablet-portrait) {//768px
+            padding-left: 24px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            padding-left: 24px;
+        }
+        @include respond-to(desktop) {//1200px
+            padding-left: 33px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            padding-left: 33px;
+        }
+    }
+
+    &__actions {
+        display: flex;
+
+        padding-bottom: 18px;
+        div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+        }
+    }
+
+    &__rating-image {
+
+        @include respond-to(mobile-portrait) {//0px
+            width: 21px;
+            height: 21px;
+        }
+        @include respond-to(tablet-portrait) {//768px
+            width: 13px;
+            height: 13px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            width: 13px;
+            height: 13px;
+        }
+        @include respond-to(desktop) {//1200px
+            width: 26px;
+            height: 26px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            width: 26px;
+            height: 26px;
+        }
+    }
+
+    &__deadline-wrapper {
+        margin-right: 11px;
+        @include respond-to(tablet-portrait) {//768px
+            margin-right: 5px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            margin-right: 5px;
+        }
+        @include respond-to(desktop) {//1200px
+            margin-right: 11px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            margin-right: 11px;
+        }
+    }
+
+    &__rating-wrapper {
+        margin-right: 156px;
+
+        @include respond-to(mobile-portrait) {//0px
+            margin-right: 85px;
+        }
+        @include respond-to(tablet-portrait) {//768px
+            margin-right: 110px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            margin-right: 110px;
+        }
+        @include respond-to(desktop) {//1200px
+            margin-right: 100px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            margin-right: 156px;
+        }
+    }
+
+    &__deadline {
+        color: rgb(142, 151, 166);
+        font-family: $font-family-deadline;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 1.33;
+        letter-spacing: 0px;
+        text-align: left;
+        white-space: nowrap;
+
+        @include respond-to(mobile-portrait) {//0px
+            font-size: 15px;
+        }
+        @include respond-to(tablet-portrait) {//768px
+            font-size: 13px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            font-size: 13px;
+        }
+        @include respond-to(desktop) {//1200px
+            font-size: 19px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            font-size: 19px;
+        }
+    }
+    &__rating {
+        color: rgb(142, 151, 166);
+        font-family: $font-family-deadline;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 1.33;
+        letter-spacing: 0px;
+        text-align: left;
+
+        @include respond-to(mobile-portrait) {//0px
+            font-size: 15px;
+        }
+        @include respond-to(tablet-portrait) {//768px
+            font-size: 13px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            font-size: 13px;
+        }
+        @include respond-to(desktop) {//1200px
+            font-size: 19px
+        }
+        @include respond-to(large-desktop) {//1600px
+            font-size: 19px;
+        }
+    }
+
+    &__bookmark {
+
+        @include respond-to(mobile-portrait) {//0px
+            width: 30px;
+            height: 30px;
+        }
+        @include respond-to(tablet-portrait) {//768px
+            width: 29px;
+            height: 29px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            width: 29px;
+            height: 29px;
+        }
+        @include respond-to(desktop) {//1200px
+            width: 40px;
+            height: 40px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+.dot {
+    display: block;
+    width: 4px;
+    height: 4px;
+    background-color: rgb(142, 151, 166);
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+.healthy {
+    background-color: #F7EDD0;
+    color: rgb(218, 163, 26);
+    }
+
+.trending {
+    background-color: #F7C5BA;
+    color: rgb(251, 71, 29);
+    }
+
+.featured {
+    background-color: #ffa502;
+}
