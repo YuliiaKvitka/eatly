@@ -19,8 +19,8 @@ export default function Home() {
       <Features />
       <TopRestaurants />
       <TopDishes />
-      <Dashboard />
-      <CustomerSay/>
+      {/* <Dashboard /> */}
+      {/* <CustomerSay/> */}
       <Subscribe/>
     </div>
   );
