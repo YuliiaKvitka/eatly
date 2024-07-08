@@ -1,0 +1,120 @@
+@import '/src/styles/utils/variables.scss';
+
+.slider {
+  position: relative;
+  width: 100%;
+  // overflow: hidden;
+  border-radius: 10px;
+  width: 1722px;
+
+  .inner {
+    display: flex;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 20px; /* Чтобы было место для полосы прокрутки */
+    /* Скрываем стандартную полосу прокрутки */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+
+  .inner::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, and Opera */
+  }
+
+  .slide {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    padding-top: 38px;
+    padding-inline: 43px;
+    box-shadow: 0 7px 45px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 528px;
+    height: 346px;
+    background: rgb(255, 255, 255);
+    scroll-snap-align: start;
+
+    &--no-header {
+      height: 300px; /* Меньшая высота для слайдов без заголовка */
+    }
+
+    .slide-header {
+      display: flex;
+      margin-bottom: 38px;
+    }
+
+    .slide-header-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .avatar {
+      width: 71px;
+      height: 71px;
+      border-radius: 50%;
+      margin-right: 21px;
+    }
+
+    h3 {
+      font-family: $font-family-brand;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.5;
+      color: #030314;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5625;
+      color: #5e5d5d;
+    }
+
+    .img-blockqoute {
+      width: 59px;
+      height: 44px;
+      margin-left: 155px;
+    }
+
+    blockquote {
+      
+      margin-bottom: 40px;
+      max-width: 442px;
+      font-family: $font-family-brand;
+      font-style: italic;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 1.45094;
+      text-align: justify;
+      color: #636363;
+    }
+
+    .rating {
+      span {
+        color: gold;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .pagination {
+    max-width: 667px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 11px;
+    background: #ccc;
+    border-radius: 2.5px;
+    overflow: hidden;
+
+    .pagination-indicator {
+      height: 100%;
+      background: #6c5fbc;
+      transition: width 0.5s;
+    }
+  }
+}
