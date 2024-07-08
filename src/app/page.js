@@ -14,14 +14,14 @@ export default function Home() {
   return (
     <div > 
       
-      <Hero />
+      {/* <Hero />
       <Statistics />
       <Features />
       <TopRestaurants />
-      <TopDishes />
-      {/* <Dashboard /> */}
-      {/* <CustomerSay/> */}
-      <Subscribe/>
+      <TopDishes /> */}
+      <Dashboard /> 
+       {/* <CustomerSay/>
+      <Subscribe/> */}
     </div>
   );
 }

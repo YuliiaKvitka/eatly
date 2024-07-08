@@ -1,0 +1,50 @@
+[33mea19941[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;32mrecovery-branch[m[33m)[m HEAD@{0}: checkout: moving from subscribe-section-recovery to main
+[33m4237dcb[m[33m ([m[1;32msubscribe-section-recovery[m[33m, [m[1;32mrestored-state[m[33m)[m HEAD@{1}: checkout: moving from 4237dcb367aeb8124f084705f6ee9e4a710bcf8e to subscribe-section-recovery
+[33m4237dcb[m[33m ([m[1;32msubscribe-section-recovery[m[33m, [m[1;32mrestored-state[m[33m)[m HEAD@{2}: checkout: moving from main to 4237dcb
+[33mea19941[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;32mrecovery-branch[m[33m)[m HEAD@{3}: checkout: moving from restored-state to main
+[33m4237dcb[m[33m ([m[1;32msubscribe-section-recovery[m[33m, [m[1;32mrestored-state[m[33m)[m HEAD@{4}: checkout: moving from 4237dcb367aeb8124f084705f6ee9e4a710bcf8e to restored-state
+[33m4237dcb[m[33m ([m[1;32msubscribe-section-recovery[m[33m, [m[1;32mrestored-state[m[33m)[m HEAD@{5}: checkout: moving from recovery-branch to 4237dcb
+[33mea19941[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;32mrecovery-branch[m[33m)[m HEAD@{6}: checkout: moving from main to recovery-branch
+[33mea19941[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;32mrecovery-branch[m[33m)[m HEAD@{7}: commit: Normalize line endings
+[33m4237dcb[m[33m ([m[1;32msubscribe-section-recovery[m[33m, [m[1;32mrestored-state[m[33m)[m HEAD@{8}: reset: moving to HEAD
+[33m4237dcb[m[33m ([m[1;32msubscribe-section-recovery[m[33m, [m[1;32mrestored-state[m[33m)[m HEAD@{9}: commit: Responsive Subscribe section
+[33md1acf91[m HEAD@{10}: commit: Home page the end not responsive
+[33m7fb8d49[m HEAD@{11}: commit: Save work
+[33m7440918[m HEAD@{12}: commit: Create and responsive Features section
+[33m7c807a1[m HEAD@{13}: commit: Create and responsive Statistics section
+[33m9cad30c[m HEAD@{14}: commit: Responsive Hero section
+[33m9c4f8a4[m HEAD@{15}: commit: Responsive Header, Footer
+[33mc15faae[m HEAD@{16}: commit: responsive src/react/components/Logo.jsx
+[33mb4960a2[m HEAD@{17}: commit: Responsive src/styles/viewsStyles/Header.module.scss
+[33m8972491[m HEAD@{18}: commit: Responsive src/styles/componentsStyles/Menu.module.scss
+[33mb6c8635[m HEAD@{19}: commit: Responsive src/styles/componentsStyles/Logo.module.scss
+[33m2b79081[m HEAD@{20}: commit: responsive .container src/styles/base/_globals.scss
+[33mdd6bfea[m HEAD@{21}: commit: Create responsive src/react/views/Header.jsx
+[33m0135fea[m HEAD@{22}: commit: Adjusted the main picture of the main window and added hover for buttons of the main window
+[33m9263b50[m HEAD@{23}: commit: Added hover for buttons src/styles/viewsStyles/Header.module.scss
+[33md4dea2f[m HEAD@{24}: commit: Added hover for buttons src/styles/sectionsStyles/homeStyles/Hero.module.scss
+[33m87b4bcb[m HEAD@{25}: commit: Added hover for buttons
+[33m3a9a54e[m HEAD@{26}: commit: Update src/styles/utils/_variables.scss
+[33m934c4e1[m HEAD@{27}: commit: Update src/styles/sectionsStyles/homeStyles/Hero.module.scss
+[33m619415e[m HEAD@{28}: commit: Added hover with underline for menu items
+[33m7edbd8e[m HEAD@{29}: commit: Added hover for logo
+[33m7bc7a9b[m HEAD@{30}: commit: Create src/styles/viewsStyles/'
+[33m23f66b3[m HEAD@{31}: commit: Create src/styles/sectionsStyles/
+[33m4ead92e[m HEAD@{32}: commit: Create src/styles/componentsStyles/
+[33m7d5ae46[m HEAD@{33}: commit: Create src/react/
+[33mbe4a947[m HEAD@{34}: commit: Create public/assets/soc1als/
+[33mb7396c0[m HEAD@{35}: commit: Create public/assets/hero/
+[33ma996370[m HEAD@{36}: commit: Update _variables.scss
+[33m144249c[m HEAD@{37}: commit: Update styles.scss
+[33mec6969f[m HEAD@{38}: commit: Add Header.module.scss
+[33mb4fbeac[m HEAD@{39}: commit: Add Footer.module.scss
+[33m5ed5b22[m HEAD@{40}: commit: Added _typography.scss
+[33m28ca908[m HEAD@{41}: commit: Updated _global.scss
+[33mf8f2731[m HEAD@{42}: commit: Create Header.jsx
+[33mafdb21c[m HEAD@{43}: commit: Create Footer.jsx
+[33m377377f[m HEAD@{44}: commit: Updated page.js
+[33m72f27e8[m HEAD@{45}: commit: Updated layout.js
+[33m0cba68e[m HEAD@{46}: commit: Added fonts
+[33me540de1[m HEAD@{47}: Branch: renamed refs/heads/master to refs/heads/main
+[33me540de1[m HEAD@{49}: commit: Initial Commit
+[33m5e302eb[m HEAD@{50}: commit (initial): Initial commit from Create Next App
