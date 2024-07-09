@@ -72,15 +72,7 @@
             padding-left: 24px;
             padding-top: 10px;
         }
-        @include respond-to(tablet-landscape) {//992px
-            padding-left: 24px;
-            padding-top: 10px;
-        }
         @include respond-to(desktop) {//1200px
-            padding-left: 33px;
-            padding-top: 11px;
-        }
-        @include respond-to(large-desktop) {//1600px
             padding-left: 33px;
             padding-top: 11px;
         }
@@ -111,19 +103,7 @@
             height: 17px;
             border-radius: 3.84px;
         }
-        @include respond-to(tablet-landscape) {//992px
-            font-size: 9.08px;
-            width: 53px;
-            height: 17px;
-            border-radius: 3.84px;
-        }
         @include respond-to(desktop) {//1200px
-            font-size: 12px;
-            width: 65px;
-            height: 24px;
-            border-radius: 5.4px;
-        }
-        @include respond-to(large-desktop) {//1600px
             font-size: 12px;
             width: 65px;
             height: 24px;
@@ -156,14 +136,7 @@
         @include respond-to(tablet-portrait) {//768px
             font-size: 18.34px;
         }
-
-        @include respond-to(tablet-landscape) {//992px
-            font-size: 18.34px;
-        }
         @include respond-to(desktop) {//1200px
-           font-size: 25.79px;
-        }
-        @include respond-to(large-desktop) {//1600px
             font-size: 25.79px;
         }
     }
@@ -176,21 +149,15 @@
         @include respond-to(tablet-portrait) {//768px
             padding-left: 24px;
         }
-        @include respond-to(tablet-landscape) {//992px
-            padding-left: 24px;
-        }
         @include respond-to(desktop) {//1200px
-            padding-left: 33px;
-        }
-        @include respond-to(large-desktop) {//1600px
             padding-left: 33px;
         }
     }
 
     &__actions {
         display: flex;
-
         padding-bottom: 18px;
+
         div {
             display: flex;
             align-items: center;
@@ -209,15 +176,7 @@
             width: 13px;
             height: 13px;
         }
-        @include respond-to(tablet-landscape) {//992px
-            width: 13px;
-            height: 13px;
-        }
         @include respond-to(desktop) {//1200px
-            width: 26px;
-            height: 26px;
-        }
-        @include respond-to(large-desktop) {//1600px
             width: 26px;
             height: 26px;
         }
@@ -228,13 +187,7 @@
         @include respond-to(tablet-portrait) {//768px
             margin-right: 5px;
         }
-        @include respond-to(tablet-landscape) {//992px
-            margin-right: 5px;
-        }
         @include respond-to(desktop) {//1200px
-            margin-right: 11px;
-        }
-        @include respond-to(large-desktop) {//1600px
             margin-right: 11px;
         }
     }
@@ -246,9 +199,6 @@
             margin-right: 85px;
         }
         @include respond-to(tablet-portrait) {//768px
-            margin-right: 110px;
-        }
-        @include respond-to(tablet-landscape) {//992px
             margin-right: 110px;
         }
         @include respond-to(desktop) {//1200px
@@ -275,13 +225,7 @@
         @include respond-to(tablet-portrait) {//768px
             font-size: 13px;
         }
-        @include respond-to(tablet-landscape) {//992px
-            font-size: 13px;
-        }
         @include respond-to(desktop) {//1200px
-            font-size: 19px;
-        }
-        @include respond-to(large-desktop) {//1600px
             font-size: 19px;
         }
     }
@@ -300,14 +244,8 @@
         @include respond-to(tablet-portrait) {//768px
             font-size: 13px;
         }
-        @include respond-to(tablet-landscape) {//992px
-            font-size: 13px;
-        }
         @include respond-to(desktop) {//1200px
             font-size: 19px
-        }
-        @include respond-to(large-desktop) {//1600px
-            font-size: 19px;
         }
     }
 
@@ -321,15 +259,7 @@
             width: 29px;
             height: 29px;
         }
-        @include respond-to(tablet-landscape) {//992px
-            width: 29px;
-            height: 29px;
-        }
         @include respond-to(desktop) {//1200px
-            width: 40px;
-            height: 40px;
-        }
-        @include respond-to(large-desktop) {//1600px
             width: 40px;
             height: 40px;
         }

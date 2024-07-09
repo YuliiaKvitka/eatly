@@ -43,35 +43,35 @@
         justify-content: space-between;
         flex: 1 1 calc(33.333% - 20px); // для 3 карточек на 100% ширины контейнера
 
-            @include respond-to(mobile-portrait) {//0px
-                flex: 1 1 calc(33.333% - 20px); // для 3 карточек на 480px
-                flex-direction: column;
-                justify-content: center;
-                width: 100%;
-                gap: 40px;
-                align-items: center;
-                margin-top: 59px;
-            }
-            @include respond-to(mobile-landscape) { // 480px
-                flex: 1 1 calc(33.333% - 20px); // для 3 карточек на 480px
-                flex-direction: column;
-                gap: 40px;
-            }
-            @include respond-to(tablet-landscape) {//992px
-                flex: 1 1 calc(50% - 20px); // для 2 карточек на 768px
-                flex-direction: row;
-                justify-content: space-between;
-                gap: 1.25rem;
-            }
-            @include respond-to(desktop) { // 1200px
-                margin-left: 0px;
-                margin-right: 0px;
-                justify-content: space-between;
-            }
-            @include respond-to(large-desktop) {//1600px
-                margin-top: 86px;
-                flex: 1 1 calc(33.333% - 20px); // для 3 карточек на 1200px
-            }
+        @include respond-to(mobile-portrait) {//0px
+            flex: 1 1 calc(33.333% - 20px); // для 3 карточек на 480px
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            gap: 40px;
+            align-items: center;
+            margin-top: 59px;
+        }
+        @include respond-to(mobile-landscape) { // 480px
+            flex: 1 1 calc(33.333% - 20px); // для 3 карточек на 480px
+            flex-direction: column;
+            gap: 40px;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            flex: 1 1 calc(50% - 20px); // для 2 карточек на 768px
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 1.25rem;
+        }
+        @include respond-to(desktop) { // 1200px
+            margin-left: 0px;
+            margin-right: 0px;
+            justify-content: space-between;
+        }
+        @include respond-to(large-desktop) {//1600px
+            margin-top: 86px;
+            flex: 1 1 calc(33.333% - 20px); // для 3 карточек на 1200px
+        }
         }
 
     &__wrapper-link{

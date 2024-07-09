@@ -6,31 +6,32 @@ import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 const Subscribe = () => {
-const controls = useAnimation();
-const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3, // Процент видимости элемента для активации анимации
-});
 
-useEffect(() => {
-    if (inView) {
-    controls.start('visible');
-    }
-}, [controls, inView]);
-    
-    const textVariants = {
-    hidden: { opacity: 0, y: -50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' , delay: 0.5 } }
-};
+    const controls = useAnimation();
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.3, // Процент видимости элемента для активации анимации
+    });
 
-const imageVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut', delay: 1 } }
-};
+    useEffect(() => {
+        if (inView) {
+        controls.start('visible');
+        }
+    }, [controls, inView]);
+        
+        const textVariants = {
+        hidden: { opacity: 0, y: -50 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: 'easeOut' , delay: 0.5 } }
+    };
+
+    const imageVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut', delay: 1 } }
+    };
 
     return (
         <section className={styles['subscribe']}>
-        <div className="container">
+        <div className="container centered">
             <div ref={ref} className={styles["subscribe__inner"]}>
             <h2 className='visually-hidden'>Subscribe</h2>
         <motion.span

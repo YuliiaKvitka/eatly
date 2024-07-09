@@ -19,19 +19,7 @@
         width: 260px;
         height: 48px;
     }
-
-    @include respond-to(mobile) {//320px
-    } 
-
-    @include respond-to(mobile-landscape) {//480px
-    }
-
     @include respond-to(tablet-portrait) {//768px
-        width: 313px;
-        height: 48px;
-    }
-
-    @include respond-to(tablet-landscape) {//992px
         width: 313px;
         height: 48px;
     }
@@ -39,11 +27,6 @@
         width: 440px;
         height: 68px;
     }
-    @include respond-to(large-desktop) {//1600px
-    }
-    @include respond-to(tv) {//1920px
-    }
-
 
     &::placeholder {
         font-family: $font-family-brand;
@@ -56,28 +39,12 @@
         @include respond-to(mobile-portrait) {//0px
             font-size: 10px;
         }
-
-        @include respond-to(mobile) {//320px
-        } 
-
-        @include respond-to(mobile-landscape) {//480px
-        }
-
         @include respond-to(tablet-portrait) {//768px
-            font-size: 11px;
-        }
-
-        @include respond-to(tablet-landscape) {//992px
             font-size: 11px;
         }
         @include respond-to(desktop) {//1200px
             font-size: 16px;
         }
-        @include respond-to(large-desktop) {//1600px
-        }
-        @include respond-to(tv) {//1920px
-        }
-
     }
 }
 
@@ -102,21 +69,7 @@
         font-size: 9px;
         margin-left: -90px;
     }
-
-    @include respond-to(mobile) {//320px
-    } 
-
-    @include respond-to(mobile-landscape) {//480px
-    }
-
     @include respond-to(tablet-portrait) {//768px
-        width: 94px;
-        height: 38px;
-        font-size: 10px;
-        margin-left: -100px;
-    }
-
-    @include respond-to(tablet-landscape) {//992px
         width: 94px;
         height: 38px;
         font-size: 10px;
@@ -128,11 +81,6 @@
         font-size: 14px;
         margin-left: -140px;
     }
-    @include respond-to(large-desktop) {//1600px
-    }
-    @include respond-to(tv) {//1920px
-    }
-
 }
 
 .input__email::selection {

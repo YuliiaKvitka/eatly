@@ -12,19 +12,14 @@ $ease_out: cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 }
 
-
 .arrow-btn{
-	position: relative;
-	display: inline-block;
-  	border-radius: 0;
+    position: relative;
+    display: inline-block;
+    border-radius: 0;
     margin-top:2rem;
-  	
-
 
 	@include transition;
 	padding-right: 2rem;
-	// vertical-align: top;
-	
 	
 	&:hover{
 		&:after{
@@ -50,6 +45,7 @@ $ease_out: cubic-bezier(0.165, 0.84, 0.44, 1);
 		transform: translateX(-15px);
 		opacity: 0;
 	}
+    
 	&:after{
 		transform: none;
 	}

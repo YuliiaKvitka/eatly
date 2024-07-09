@@ -2,15 +2,13 @@
 
 
 import styles from '../../../styles/sectionsStyles/homePageStyles/TopDishes.module.scss';
-import Link from 'next/link';
-import Image from 'next/image';
 import dishes from '../../../data/dishes.js';
 import DishesCard from '@/react/components/DishesCard';
 import ArrowView from '@/react/components/ArrowView';
 
 const TopDishes = () => {
 
- const limitedDishes = dishes.slice(0, 5); //В этом коде создается новая переменная limitedDishes, которая содержит только первые 5 элементов из массива dishes. Именно этот массив затем используется для рендеринга карточек блюд.
+    const limitedDishes = dishes.slice(0, 5); //В этом коде создается новая переменная limitedDishes, которая содержит только первые 5 элементов из массива dishes. Именно этот массив затем используется для рендеринга карточек блюд.
 
     return (
         <section className={styles['top-dishes']}>
@@ -42,7 +40,7 @@ const TopDishes = () => {
                     </div>
                     <hr className='section-line'/>
                 </div>
-        </div>
+            </div>
         </section>
     )
 }

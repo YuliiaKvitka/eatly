@@ -4,7 +4,6 @@
 
 
 .top-dishes {
-  
 
     &__wrapper {
         max-width: 1248px;
@@ -107,62 +106,3 @@
 
     
 }
-
-
-
-// $ease_out: cubic-bezier(0.165, 0.84, 0.44, 1);
-
-// @mixin transition() {
-//     transition: 700ms $ease_out;
-
-//     &:hover{
-//         transition: 400ms $ease_out;
-//     }
-// }
-
-// .arrow-btn{
-// 	position: relative;
-// 	display: inline-block;
-//   	border-radius: 0;
-// 	// color: #b2876f;
-//   	margin-top:2rem;
-//   	// font-weight: bold;
-//   	// font-size: 0.8rem;
-//   	// letter-spacing: 2px;
-//   	// text-decoration: none;
-
-
-// 	@include transition;
-// 	padding-right: 2rem;
-// 	// vertical-align: top;
-	
-	
-// 	&:hover{
-// 		&:after{
-// 			transition: 400ms $ease_out;
-// 			transform: translateX(15px);
-// 			opacity: 0;
-// 		}
-// 		&:before{
-// 			transition: 700ms $ease_out;
-// 			transform: translateX(0);
-// 			opacity: 1;
-// 		}
-// 	}
-	
-// 	&:before,&:after{
-// 		content: url(../../../../public/assets/restaurant-cards/arrow.png);
-// 		position: absolute;
-// 		right: 0;
-// 		top:0;
-// 	}
-	
-// 	&:before{
-// 		transform: translateX(-15px);
-// 		opacity: 0;
-// 	}
-// 	&:after{
-// 		transform: none;
-// 	}
-// }
-

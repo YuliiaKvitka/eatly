@@ -5,9 +5,9 @@ const Menu = () => {
     return (
             <ul className={styles['list']}>
                 <li className={styles['item']}><Link href='##'>menu</Link></li>
-                <li className={styles['item']}><Link href='##'>blog</Link></li>
+                <li className={styles['item']}><Link href='/blog'>blog</Link></li>
                 <li className={styles['item']}><Link href='##'>pricing</Link></li>
-                <li className={styles['item']}><Link href='##'>contact</Link></li>
+                <li className={styles['item']}><Link href='/contact'>contact</Link></li>
             </ul>
     )
 }

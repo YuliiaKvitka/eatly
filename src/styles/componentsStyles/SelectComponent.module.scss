@@ -15,24 +15,8 @@
         width: 104px;
         height: 32px;
     }
-
-    @include respond-to(mobile) {//320px
-    } 
-
-    @include respond-to(mobile-landscape) {//480px
-    }
-
     @include respond-to(tablet-portrait) {//768px
         width: 175px;
-    }
-
-    @include respond-to(tablet-landscape) {//992px
-    }
-    @include respond-to(desktop) {//1200px
-    }
-    @include respond-to(large-desktop) {//1600px
-    }
-    @include respond-to(tv) {//1920px
     }
 }
 
@@ -44,7 +28,6 @@
     background: #fafafa;
     border: 1px solid #d3d3d3;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    // padding-right: 40px; /* Увеличиваем отступ справа для размещения стрелки */
     font-family: "Manrope", sans-serif;
     font-weight: 600;
     font-size: 18px;
@@ -70,13 +53,6 @@
         background-size: 10px 10px;
         padding: 7px 20px;
     }
-
-    @include respond-to(mobile) {//320px
-    } 
-
-    @include respond-to(mobile-landscape) {//480px
-    }
-
     @include respond-to(tablet-portrait) {//768px
         width: 175px; /* Устанавливаем фиксированную ширину */
         height: 53px;
@@ -84,16 +60,7 @@
         background-size: 20px 20px;
         padding: 12px 30px;
     }
-
-    @include respond-to(tablet-landscape) {//992px
-    }
-    @include respond-to(desktop) {//1200px
-    }
-    @include respond-to(large-desktop) {//1600px
-    }
-    @include respond-to(tv) {//1920px
-    }
-
+    
     &:hover {
         background: #f0f0f0;
         box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);

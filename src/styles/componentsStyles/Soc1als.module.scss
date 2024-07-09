@@ -5,15 +5,7 @@
     max-width: 235px;
     display: flex;
     justify-content: space-between;
-
-    @include respond-to(mobile-portrait) {//0px
-        // width: 130px;
-    }
-    @include respond-to(mobile-landscape) {//480px
-        // width: 184px;
-
-    }
-    }
+}
 
 .icon {
     position: relative;

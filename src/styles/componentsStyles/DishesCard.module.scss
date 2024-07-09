@@ -13,29 +13,25 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-   
 
     @include respond-to(mobile-portrait) {//0px
-         width: 160px;
+        width: 160px;
         height: 278px;
         border-radius: 25px;
-        
         padding-top: 10px;
     }
-
-      @include respond-to(tablet-portrait) {//768px
-         width: 160px;
+    @include respond-to(tablet-portrait) {//768px
+        width: 160px;
         height: 278px;
         border-radius: 25px;
-  }
-
+    }
     @include respond-to(tablet-landscape) {//992px
         width: 160px;
         height: 278px;
         border-radius: 25px;
     }
     @include respond-to(desktop) {//1200px
-       border-radius: 30px;
+        border-radius: 30px;
         width: 200px;
         height: 370px;
         padding-top: 26px;
@@ -65,24 +61,20 @@
             width: 131px;
             height: 131px;
             border-radius: 21px 21px 0 0;
-            
         }
-
         @include respond-to(tablet-portrait) {//768px
             width: 131px;
             height: 131px;
             border-radius: 21px 21px 0 0;
-         }
+        }
         @include respond-to(tablet-landscape) {//992px
             width: 131px;
             height: 131px;
             border-radius: 21px 21px 0 0;
-            
         }
         @include respond-to(desktop) {//1200px
             width: 180px;
             height: 190px;
-            
         }
         @include respond-to(large-desktop) {//1600px
             width: 201px;
@@ -158,7 +150,6 @@
             background-color: #FB471D;
             color: #F7C5BA;
         }
-
     }
 
     &__title {
@@ -176,15 +167,10 @@
         @include respond-to(tablet-portrait) {//768px
             font-size: 18.34px;
         }
-        @include respond-to(tablet-landscape) {//992px
-            font-size: 18.34px;
-        }
         @include respond-to(desktop) {//1200px
             font-size: 25.79px;
         }
-        @include respond-to(large-desktop) {//1600px
-            font-size: 25.79px;
-        }
+
     }
 
     &__footer {
@@ -247,15 +233,7 @@
             width: 13px;
             height: 13px;
         }
-        @include respond-to(tablet-landscape) {//992px
-            width: 13px;
-            height: 13px;
-        }
         @include respond-to(desktop) {//1200px
-            width: 26px;
-            height: 26px;
-        }
-        @include respond-to(large-desktop) {//1600px
             width: 26px;
             height: 26px;
         }
@@ -267,13 +245,7 @@
         @include respond-to(tablet-portrait) {//768px
             margin-right: 5px;
         }
-        @include respond-to(tablet-landscape) {//992px
-            margin-right: 5px;
-        }
         @include respond-to(desktop) {//1200px
-            margin-right: 11px;
-        }
-        @include respond-to(large-desktop) {//1600px
             margin-right: 11px;
         }
     }
@@ -298,13 +270,7 @@
         @include respond-to(tablet-portrait) {//768px
             font-size: 13px;
         }
-        @include respond-to(tablet-landscape) {//992px
-            font-size: 13px;
-        }
         @include respond-to(desktop) {//1200px
-            font-size: 19px;
-        }
-        @include respond-to(large-desktop) {//1600px
             font-size: 19px;
         }
     }
@@ -324,14 +290,8 @@
         @include respond-to(tablet-portrait) {//768px
             font-size: 13px;
         }
-        @include respond-to(tablet-landscape) {//992px
-            font-size: 13px;
-        }
         @include respond-to(desktop) {//1200px
             font-size: 19px
-        }
-        @include respond-to(large-desktop) {//1600px
-            font-size: 19px;
         }
     }
 
@@ -345,10 +305,6 @@
             height: 30px;
         }
         @include respond-to(tablet-portrait) {//768px
-            width: 29px;
-            height: 29px;
-        }
-        @include respond-to(tablet-landscape) {//992px
             width: 29px;
             height: 29px;
         }

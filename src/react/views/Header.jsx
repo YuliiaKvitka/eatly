@@ -1,4 +1,4 @@
-import Image from 'next/image'
+
 import styles from '../../styles/viewsStyles/Header.module.scss'
 import Link from 'next/link'
 import Logo from '../components/Logo'

@@ -8,17 +8,52 @@
 
 // Import utility styles
 @import 'utils/variables';
-@import 'utils/mixins';
+@import 'utils/mixinsMobile';
 @import 'utils/utils';
+@import '/src/styles/utils/animations';
+@import '/src/styles/utils/mixinHoverButton';
 
 // Import layout styles
-@import 'layout/header';
-@import 'layout/footer';
 
 
-// Import component styles
+
+// Import view styles
 @import 'viewsStyles/Header.module.scss';
 @import 'viewsStyles/Footer.module.scss';
+
+// Import components.styles
+@import '/src/styles/componentsStyles/Avatar.module.scss';
+@import '/src/styles/componentsStyles/ArrowView.module';
+@import '/src/styles/componentsStyles/DishesCard.module.scss';
+@import '/src/styles/componentsStyles/FormSubscribe.module.scss';
+@import '/src/styles/componentsStyles/Soc1als.module.scss';
+@import '/src/styles/componentsStyles/SliderCustomer.module.scss';
+@import '/src/styles/componentsStyles/SelectComponent.module.scss';
+@import '/src/styles/componentsStyles/RestaurantCard.module.scss';
+@import '/src/styles/componentsStyles/ProgressBar.module.scss';
+@import '/src/styles/componentsStyles/MenuFooter.module.scss';
+@import '/src/styles/componentsStyles/Menu.module.scss';
+@import '/src/styles/componentsStyles/SliderCustomer.module.scss';
+
+// Import section styles
+// Home Page
+@import '/src/styles/sectionsStyles/homePageStyles/Hero.module.scss';
+@import '/src/styles/sectionsStyles/homePageStyles/Statistics.module.scss';
+@import '/src/styles/sectionsStyles/homePageStyles/Features.module.scss';
+@import '/src/styles/sectionsStyles/homePageStyles/TopRestaurants.module.scss';
+@import '/src/styles/sectionsStyles/homePageStyles/TopDishes.module.scss';
+@import '/src/styles/sectionsStyles/homePageStyles/Dashboard.module.scss';
+@import '/src/styles/sectionsStyles/homePageStyles/CustomerSay.module.scss';
+@import '/src/styles/sectionsStyles/homePageStyles/Subscribe.module.scss';
+
+
+
+
+
+
+
+
+
 
 // Import global styles
 @import 'base/globals';

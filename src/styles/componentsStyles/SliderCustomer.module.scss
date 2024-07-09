@@ -1,11 +1,17 @@
 @import '/src/styles/utils/variables.scss';
+@import '/src/styles/utils/mixinsMobile';
 
 .slider {
   position: relative;
   width: 100%;
-  // overflow: hidden;
   border-radius: 10px;
-  width: 1722px;
+  max-width: 1722px;
+
+  &.dragging {
+    user-select: none; // Отключаем выделение текста при перетаскивании
+    -webkit-user-select: none; // Отключаем выделение текста в Webkit-браузерах
+    -ms-user-select: none; // Отключаем выделение текста в IE/Edge
+  }
 
   .inner {
     display: flex;
@@ -18,6 +24,18 @@
     /* Скрываем стандартную полосу прокрутки */
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE and Edge */
+
+    @include respond-to(mobile-portrait) {//0px
+      padding-bottom: 40px;
+      max-width: 100%;
+    }
+    @include respond-to(tablet-portrait) {//768px
+      max-width: 100%;
+      height: auto;
+    }
+    @include respond-to(desktop) {//1200px
+      padding-bottom: 40px;
+    }
   }
 
   .inner::-webkit-scrollbar {
@@ -36,25 +54,60 @@
     background: rgb(255, 255, 255);
     scroll-snap-align: start;
 
-    &--no-header {
-      height: 300px; /* Меньшая высота для слайдов без заголовка */
+    @include respond-to(mobile-portrait) {//0px
+      width: 315px;
+      height: 206px;
+      padding-top: 22px;
+      padding-inline: 25px;
+      padding-bottom: 23px;
+    }
+    @include respond-to(tablet-portrait) {//768px
+      width: 375px;
+      height: 246px;
+      padding-top: 27px;
+      padding-inline: 30px;
+      border-radius: 14px;
+      padding-bottom: 29px;
+    }
+    @include respond-to(desktop) {//1200px
+      padding-bottom: 27px;
+      width: 528px;
+      height: 346px;
+      }
+
+      &--no-header {
+        height: 100%; /* Меньшая высота для слайдов без заголовка */
+
+        @include respond-to(mobile-portrait) {//0px
+          height: 100%;
+          padding-top: 23px;
+        }
+        @include respond-to(tablet-portrait) {//768px
+          height: 100%;
+          padding-bottom: 29px;
+        }
+        @include respond-to(desktop) {//1200px
+          padding-bottom: 27px;
+        }
     }
 
     .slide-header {
       display: flex;
       margin-bottom: 38px;
+
+      @include respond-to(mobile-portrait) {//0px
+        margin-bottom: 19px;
+      }
     }
 
     .slide-header-wrap {
       display: flex;
       flex-direction: column;
-    }
 
-    .avatar {
-      width: 71px;
-      height: 71px;
-      border-radius: 50%;
-      margin-right: 21px;
+      @include respond-to(mobile-portrait) {//0px
+        margin-left: 12px;
+      }
+    }
     }
 
     h3 {
@@ -63,6 +116,17 @@
       font-size: 20px;
       line-height: 1.5;
       color: #030314;
+
+      @include respond-to(mobile-portrait) {//0px
+        font-size: 12px;
+      }
+
+      @include respond-to(tablet-portrait) {//768px
+        font-size: 14px;
+      }
+      @include respond-to(desktop) {//1200px
+        font-size: 20px;
+        }
     }
 
     p {
@@ -70,16 +134,39 @@
       font-size: 16px;
       line-height: 1.5625;
       color: #5e5d5d;
+
+      @include respond-to(mobile-portrait) {//0px
+        font-size: 9px;
+      }
+      @include respond-to(tablet-portrait) {//768px
+        font-size: 11px;
+      }
+      @include respond-to(desktop) {//1200px
+        font-size: 16px;
+        }
     }
 
     .img-blockqoute {
       width: 59px;
       height: 44px;
       margin-left: 155px;
+
+      @include respond-to(mobile-portrait) {//0px
+        width: 35px;
+        height: 26px;
+        margin-left: 92px;
+      }
+      @include respond-to(tablet-portrait) {//768px
+        width: 42px;
+        height: 42px;
+      }
+      @include respond-to(desktop) {//1200px
+        width: 59px;
+        height: 44px;
+        }
     }
 
     blockquote {
-      
       margin-bottom: 40px;
       max-width: 442px;
       font-family: $font-family-brand;
@@ -89,12 +176,32 @@
       line-height: 1.45094;
       text-align: justify;
       color: #636363;
+
+      @include respond-to(mobile-portrait) {//0px
+        font-size: 10px;
+      }
+      @include respond-to(tablet-portrait) {//768px
+        font-size: 12px;
+      }
+      @include respond-to(desktop) {//1200px
+        font-size: 18px;
+        }
     }
 
     .rating {
       span {
         color: gold;
         font-size: 20px;
+
+        @include respond-to(mobile-portrait) {//0px
+          font-size: 10px;
+        }
+        @include respond-to(tablet-portrait) {//768px
+          font-size: 16px;
+        }
+      @include respond-to(desktop) {//1200px
+        font-size: 20px;
+        }
       }
     }
   }
@@ -111,10 +218,19 @@
     border-radius: 2.5px;
     overflow: hidden;
 
+    @include respond-to(mobile-portrait) {//0px
+      height: 5px;
+    }
+    @include respond-to(tablet-portrait) {//768px
+      height: 8px;
+    }
+    @include respond-to(desktop) {//1200px
+      height: 11px;
+      }
+
     .pagination-indicator {
       height: 100%;
       background: #6c5fbc;
       transition: width 0.5s;
     }
   }
-}

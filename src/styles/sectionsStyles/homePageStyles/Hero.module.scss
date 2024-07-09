@@ -170,8 +170,6 @@
     display: flex;
     gap: 18px;
     margin-bottom: 33px;
-   
-
 
       @include respond-to(mobile-portrait) {//0px
         justify-content: center;
@@ -198,8 +196,8 @@
         text-transform: capitalize;
         color: $font-color-white;
         opacity: 0;
-    animation: slideInLeft 1s forwards ease-in-out; /* Анимация для кнопки */
-    animation-delay: 1s; /* Задержка для анимации кнопки */
+        animation: slideInLeft 1s forwards ease-in-out; /* Анимация для кнопки */
+        animation-delay: 1s; /* Задержка для анимации кнопки */
 
         @include button-hover(transparent,#6c5fbc, $color-brand);
 
@@ -232,8 +230,8 @@
         text-transform: capitalize;
         color: $color-brand;
         opacity: 0;
-    animation: slideInLeft 1s forwards ease-in-out; /* Анимация для кнопки */
-    animation-delay: 1s; /* Задержка для анимации кнопки */
+        animation: slideInLeft 1s forwards ease-in-out; /* Анимация для кнопки */
+        animation-delay: 1s; /* Задержка для анимации кнопки */
 
         @include button-hover($color-brand,#6c5fbc, $font-color-white);
 
@@ -252,7 +250,7 @@
     }
 
     &__rating {
-      width: 100%;
+        width: 100%;
         display: flex;
         align-items: center;
         gap: 20px;
@@ -270,7 +268,7 @@
           height: 24px;
         }
         @include respond-to(tablet-landscape) {//992px
-              width: 87px;
+            width: 87px;
             height: 21px;
         }
         @include respond-to(desktop) {//1200px
@@ -325,13 +323,13 @@
           margin-top: 0;
         }
         @include respond-to(tablet-landscape) {//992px
-            height: 431px;
-            width: auto;
-            margin-top: 0;
+          height: 431px;
+          width: auto;
+          margin-top: 0;
           }
         @include respond-to(large-desktop) {//1600px
-            height: 607px;
-            width: auto;
+          height: 607px;
+          width: auto;
           }
     }
 
@@ -380,10 +378,10 @@
       }
       @include respond-to(tablet-portrait) {//768px
         top: 50px;
-      }
-    @include respond-to(tablet-landscape) {//992px
-      top: 50px;
-      }
+        }
+      @include respond-to(tablet-landscape) {//992px
+        top: 50px;
+        }
       }
   }
 .food-image {
@@ -424,22 +422,22 @@
       left: -22px;
     }
     @include respond-to(tablet-landscape) {//992px
-        width: 147px;
-        height: 146px;
-        bottom:-80px;
-        left: -75px;
+      width: 147px;
+      height: 146px;
+      bottom:-80px;
+      left: -75px;
       }
     @include respond-to(desktop) {//1200px
-        width: 207px;
-        height: 205px;
-        bottom:-102px;
-        left: -94px;
+      width: 207px;
+      height: 205px;
+      bottom:-102px;
+      left: -94px;
       }
     @include respond-to(large-desktop) {//1600px
-        width: 207px;
-        height: 205px;
-        bottom:-102px;
-        left: -94px;
+      width: 207px;
+      height: 205px;
+      bottom:-102px;
+      left: -94px;
   }
 }
 
@@ -530,10 +528,10 @@
   right: -50px;
   }
   @include respond-to(mobile-landscape) {//480px
-      width: 20px;
-      height: 12px;
-      top: -25px;
-      right: -77px;
+    width: 20px;
+    height: 12px;
+    top: -25px;
+    right: -77px;
     }
   @include respond-to(tablet-portrait) {//768px
     right: -43px;
@@ -562,7 +560,6 @@
   top: 142px;
   right: -60px;
   z-index: 5;
-  // transform: scale(1.5); /* Увеличить штрих в 1.5 раза */
 
   @include respond-to(mobile-portrait) {//0px
     width: 48px;

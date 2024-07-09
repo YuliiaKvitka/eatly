@@ -65,7 +65,7 @@ const Dashboard = () => {
                                     <ProgressBar progress={stat.progress} color={stat.color} />
                                     
                                 </div>
- 
+
                             ))}
                         </div>
                     </div>

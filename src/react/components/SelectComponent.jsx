@@ -12,12 +12,13 @@ const SelectComponent = () => {
 
     return (
     
-                <div className={styles['select']}>
-                    <select className={styles['select-list']} value={value} onChange={(event) => setValue(event.target.value)}>
-                        {options}
-                </select>
-                
-                </div>
+        <div className={styles['select']}>
+
+            <select className={styles['select-list']} value={value} onChange={(event) => setValue(event.target.value)}>
+                {options}
+            </select>
+        
+        </div>
     );
 };
 

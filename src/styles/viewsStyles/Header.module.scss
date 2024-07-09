@@ -28,17 +28,15 @@ padding: 0;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      // padding-bottom: 24px;
-      // border-bottom: 1px solid $color-border;
 
       @include respond-to(mobile-portrait) {//0px
         padding-bottom: 30px;
       }
       @include respond-to(tablet-landscape) {//992px
       padding-bottom: 17px;
-       }
+      }
       @include respond-to(desktop) {//1200px
-         padding-bottom: 24px;
+        padding-bottom: 24px;
       }
       @include respond-to(large-desktop) {//1600px
         max-width: 1248px;
@@ -54,7 +52,6 @@ padding: 0;
       @include respond-to(tablet-portrait) {//768px
         margin-right: 0px;
       }
-
       @include respond-to(tablet-landscape) {//992px
           margin-right: 50px;
         }
@@ -181,13 +178,11 @@ padding: 0;
 
         @include button-hover(transparent,#6c5fbc, #606060);
 
-
         @include respond-to(tablet-portrait) {//768px
           width: 86px;
           height: 45px;
           border-radius: 13px;
         }
-
         @include respond-to(desktop) {//1200px
           border-radius: 18px;
           width: 121px;
