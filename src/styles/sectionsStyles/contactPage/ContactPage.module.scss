@@ -1,0 +1,214 @@
+@import '/src/styles/utils/variables.scss';
+@import '/src/styles/utils/mixinsMobile';
+
+
+.contact {
+    margin-left: -96px;
+
+    @include respond-to(mobile-portrait) {//0px
+        margin-inline:auto;
+    }
+    @include respond-to(desktop) {//1200px
+        margin-inline:0;
+        margin-left: -96px;
+    }
+
+    &__inner {
+        padding-top: 208px;
+        margin-bottom: 212px;
+        display: flex;
+        gap: 317px;
+
+        @include respond-to(mobile-portrait) {//0px
+            flex-direction: column;
+            gap: 46px;
+            justify-content: center;
+            padding-top: 51px;
+            margin-bottom: 100px;
+            width: 100%;
+        }
+        @include respond-to(desktop) {//1200px
+            padding-top: 208px;
+                margin-bottom: 212px;
+                display: flex;
+                flex-direction: row;
+                gap: 317px;
+                justify-content: space-between;
+        }
+    }
+
+    &__wrapper-left {
+        position: relative;
+        box-sizing: border-box;
+        background: rgb(108, 95, 188);
+        width: 531px;
+        height: 818px; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 84px;
+
+        @include respond-to(mobile-portrait) {//0px
+            width: 100%;
+            max-width: 493px;
+            height: auto;
+            padding-top: 24px;
+            padding-bottom: 97px;
+            margin-inline:auto;
+        }
+        @include respond-to(desktop) {//1200px
+            width: 531px;
+            height: 818px;
+            padding-bottom: 0;
+            margin-inline:0;
+        }
+
+        &::before {
+            content: url('/assets/contact/stroke.png');
+            position: absolute;
+            top: 47px;
+            left: 82px;
+            width: 30px;
+            height: 56px;
+            z-index: 20;
+
+            @include respond-to(mobile-portrait) {//0px
+                display: none;
+            }
+            @include respond-to(desktop) {//1200px
+                display: block;
+            }
+        }
+    }
+
+    &__wrapper-left-img-desktop {
+            @include respond-to(mobile-portrait) {//0px
+            display: none;
+        }
+        @include respond-to(desktop) {//1200px
+            display: block;
+        }
+    }
+
+        &__wrapper-left-img-mobile {
+            @include respond-to(mobile-portrait) {//0px
+                position: absolute;
+                content: '';
+                top: 17px;
+                left: 7px;
+                width: 80px;
+            }
+
+            @include respond-to(mobile-landscape) {//480px
+                left: 90px;
+            }
+            @include respond-to(tablet-portrait) {//768px
+                left: 113px;
+            }
+            @include respond-to(tablet-landscape) {//992px
+                left: 113px;
+            }
+            @include respond-to(desktop) {//1200px
+                display: none;
+            }
+        }
+
+    &__text-left {
+        font-family: $font-family-brand;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 1.05;
+        color: #f9f9f9;
+        text-align: center;
+
+        @include respond-to(mobile-portrait) {//0px
+            display: none;
+        }
+        @include respond-to(desktop) {//1200px
+            display: block;
+        }
+    }
+
+    &__text-left-mobile {
+
+        @include respond-to(mobile-portrait) {//0px
+            font-family: $font-family-brand;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            text-align: center;
+            color: #f9f9f9;
+        }
+        @include respond-to(desktop) {//1200px
+            display:none;
+        }
+    }
+
+    &__wrapper-left-after {
+        position: absolute;
+        box-sizing: border-box;
+        top: 285px;
+        left: 375px;
+        width: 371px;
+        height: 625px;
+        border: 1px solid black;
+
+        @include respond-to(mobile-portrait) {//0px
+            display: none;
+        }
+        @include respond-to(desktop) {//1200px
+            display: block;
+            position: absolute;
+            box-sizing: border-box;
+            top: 285px;
+            left: 295px;
+            width: 371px;
+            height: 625px;
+            border: 1px solid black;
+        }
+
+        @include respond-to(large-desktop) {//1600px
+            left: 375px;
+        }
+    }
+    &__wrapper-image{
+        width: 371px;
+        height: 625px;
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: url('/assets/contact/stroke-2.png');
+            top: 0;
+            right: 0;
+            width: 52px;
+            height: 62px;
+        }
+
+        &::after {
+            position: absolute;
+            content: url('/assets/contact/arrow-2.png');
+            top: 482px;
+            left: 345px;
+            width: 123px;
+            height: 123px;
+        }
+    }
+
+    &__wrapper-right {
+
+        @include respond-to(mobile-portrait) {//0px
+            height: auto;
+        }
+
+        h2 {
+            @include respond-to(mobile-portrait) {//0px
+                display: none;
+            }
+            @include respond-to(desktop) {//1200px
+                display: block;
+            }
+        }
+    }
+}
