@@ -1,15 +1,38 @@
-import Link from 'next/link'
-import styles from '../../styles/componentsStyles/Menu.module.scss'
+'use client'
+import Link from 'next/link';
+import { usePathname } from 'next/navigation'; // Изменено на 'next/navigation'
+import styles from '../../styles/componentsStyles/Menu.module.scss';
 
 const Menu = () => {
-    return (
-            <ul className={styles['list']}>
-                <li className={styles['item']}><Link href='##'>menu</Link></li>
-                <li className={styles['item']}><Link href='/blog'>blog</Link></li>
-                <li className={styles['item']}><Link href='##'>pricing</Link></li>
-                <li className={styles['item']}><Link href='/contact'>contact</Link></li>
-            </ul>
-    )
-}
+    const pathname = usePathname();
 
-export default Menu
+    return (
+        <ul className={styles['list']}>
+            <li className={`${styles['item']} ${pathname === '/' ? styles['active'] : ''}`}>
+                <Link href="/" legacyBehavior>
+                    <a>menu</a>
+                </Link>
+            </li>
+            <li className={`${styles['item']} ${pathname === '/blog' ? styles['active'] : ''}`}>
+                <Link href="/blog" legacyBehavior>
+                    <a>blog</a>
+                </Link>
+            </li>
+            <li className={`${styles['item']} ${pathname === '/pricing' ? styles['active'] : ''}`}>
+                <Link href="/pricing" legacyBehavior>
+                    <a>pricing</a>
+                </Link>
+            </li>
+            <li className={`${styles['item']} ${pathname === '/contact' ? styles['active'] : ''}`}>
+                <Link href="/contact" legacyBehavior>
+                    <a>contact</a>
+                </Link>
+            </li>
+        </ul>
+    );
+};
+
+export default Menu;
+
+
+

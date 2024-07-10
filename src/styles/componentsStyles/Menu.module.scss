@@ -57,9 +57,16 @@
 
 	&:hover {
 		opacity: 1;
+		color: #6c5fbc;
 	}
 
 	&:hover::after {
 		--scale: 1;
+		color: #6c5fbc;
 	}
+
+}
+
+.active {
+    color: #6c5fbc;
 }
