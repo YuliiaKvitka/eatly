@@ -8,8 +8,8 @@ const Menu = () => {
 
     return (
         <ul className={styles['list']}>
-            <li className={`${styles['item']} ${pathname === '/' ? styles['active'] : ''}`}>
-                <Link href="/" legacyBehavior>
+            <li className={`${styles['item']} ${pathname === '/menu' ? styles['active'] : ''}`}>
+                <Link href="/menu" legacyBehavior>
                     <a>menu</a>
                 </Link>
             </li>

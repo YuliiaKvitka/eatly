@@ -1,0 +1,176 @@
+@import '../../utils/variables';
+
+
+
+.post {
+    width: 100%;
+    margin-top: 126px;
+
+    &__inner {
+        max-width: 1248px;
+        margin-bottom: 168px;
+    }
+
+    &__author {
+        margin-top: 32px;
+        display: flex;
+        height: 56px;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 62px;
+    }
+    
+    &__wrapper-author {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__avatar {
+        width: 56px;
+        height: 56px;
+    }
+
+    &__image {
+        width: 1248px;
+        height: 403px;
+    }
+
+    &__container {
+    max-width: 890px;
+    border-inline-end: solid 1px #9b9b9b;
+    padding-right: 75px;
+    }
+
+    &__article {
+        margin-bottom: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        list-style-type:disc;
+        list-style-position: inside;
+    }
+    &__button{
+        border-radius: 16px;
+        width: 245px;
+        height: 80px;
+        background-color: #6c5fbc;
+        font-family: $font-family-brand;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 125%;
+        text-transform: capitalize;
+        text-align: center;
+        color: #f4f4f4;
+        padding: 25px 35px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__wrapper {
+        margin-top: 80px;
+        display: flex;
+    }
+
+    &__sidebar {
+        margin-left: 35px;  
+    }
+
+    &__sidebar-title {
+        margin-bottom: 34px;
+    }
+    
+}
+// -----------------------
+
+.cardsContainer {
+
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+}
+.card {
+    box-sizing: border-box;
+    padding-top: 21px;
+    padding-inline: 17px;
+    box-shadow: 0 4px 47px 0 rgba(197, 197, 197, 0.25);
+    background: #fff;
+    overflow: hidden;
+    transition: transform 0.3s;
+    border-radius: 14px;
+    width: 298px;
+    height: 376px;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+        transform: translateY(-10px);
+    }
+
+    &__image {
+        border-radius: 12px;
+        width: 265px;
+        height: 233px;
+        object-fit: cover;
+    }
+
+    &__content {
+        margin-top: 18px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__title {
+        font-family: $font-family-brand;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 119%;
+        color: #252525;
+    }
+
+    &__meta {
+      display: flex;
+      align-items: center;
+      width: 141px;
+      margin-top: 18px;
+    }
+
+    &__titleAuthor {
+      font-family: $font-family-brand;
+      font-weight: 400;
+      font-size: 10px;
+      color: #8d8d8d;
+    }
+
+    &__avatar {
+      width: 37px;
+      height: 37px;
+      margin-right: 12px;
+    }
+
+    &__author {
+      font-family: $font-family-brand;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 1.53333;
+      color: #000;
+    }
+
+    &__date {
+      font-family: $font-family-brand;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 1.98;
+      color: #b7b4b4;
+      width: 84px;
+      margin-left: 65px;
+    }
+}

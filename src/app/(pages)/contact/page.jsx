@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from '../../styles/sectionsStyles/contactPage/ContactPage.module.scss'
+import styles from '../../../styles/sectionsStyles/contactPage/ContactPage.module.scss'
 import AnimatedForm from '@/react/components/AnimatedForm';
 
 export const metadata = {

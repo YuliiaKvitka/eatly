@@ -1,0 +1,120 @@
+@import '/src/styles/utils/variables';
+
+.accordion {
+    border: 1px solid black;
+    max-width: 1440px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: auto;
+    
+
+    &__container {
+        border: 1px solid black;
+        width: 1152px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        // gap: 29px;
+    }
+
+    &__item {
+        // padding-bottom: 43px;
+        border-bottom: 1.06px solid #adadad;
+    }
+
+    &__title {
+        font-family: $font-family-brand;
+        font-weight: 600;
+        font-size: 23px;
+        line-height: 2.53;
+        color: #323142;
+    }
+
+    &__content {
+        font-family: $font-family-brand;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.6;
+        letter-spacing: 0.01em;
+        color: #686868;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+        opacity: 0;
+        
+    }
+
+    & button {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        text-align: left;
+        width: 100%;
+        border: none;
+        background: none;
+        outline: none;
+        cursor: pointer;
+        padding: 0;
+        padding-top: 29px;
+        padding-left: 6px;
+    }
+
+    & button:hover, & button:focus {
+        opacity: 0.8;
+    }
+
+    &__icon {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid;
+        border-radius: 50%;
+        background-color: #6C5FBC;
+        color: #fff;
+        transform: translateY(-50%);
+
+        &::before, &::after {
+            display: block;
+            position: absolute;
+            content: "";
+            background-color: currentColor;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &::before {
+            width: 10px;
+            height: 2px;
+        }
+
+        &::after {
+            width: 2px;
+            height: 10px;
+        }
+    }
+
+    & button[aria-expanded="true"] {
+        color: #4D4D4D;
+
+        & ~ .accordion__content {
+            max-height: 200px; // При необходимости отрегулируйте максимальную высоту
+            opacity: 1;
+        }
+
+        & .accordion__icon::after {
+            width: 0;
+        }
+    }
+
+    &__content p {
+        max-width: 1084px;
+        padding-bottom: 43px;
+        padding-top: 20px;
+    }
+}

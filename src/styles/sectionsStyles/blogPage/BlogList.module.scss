@@ -1,0 +1,152 @@
+
+@import '/src/styles/utils/variables';
+
+.blogPostsContainer {
+  max-width: 1440px;
+  // padding-inline: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 1248px;
+  box-sizing: border-box;
+  row-gap: 116px;
+  margin-bottom: 144px;
+  column-gap: 60px;
+  row-gap: 120px;
+}
+
+.card {
+  box-sizing: border-box;
+  padding-top: 25px;
+  padding-inline: 19px;
+  box-shadow: 0 4px 47px 0 rgba(197, 197, 197, 0.25);
+  background: #fff;
+  overflow: hidden;
+  transition: transform 0.3s;
+  border-radius: 16px;
+  width: 348px;
+  height: 440px;
+  display: flex;
+  flex-direction: column;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    &__image {
+      border-radius: 12px;
+      width: 309px;
+      height: 272px;
+      object-fit: cover;
+    }
+
+    &__content {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &__title {
+      font-family: $font-family-brand;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 119%;
+    color: #252525;
+    }
+
+    &__meta {
+      display: flex;
+      align-items: center;
+      width: 141px;
+      margin-top: 21px;
+    }
+
+    &__titleAuthor {
+      font-family: $font-family-brand;
+      font-weight: 400;
+      font-size: 11px;
+      color: #8d8d8d;
+    }
+
+    &__avatar {
+      width: 44px;
+      height: 44px;
+      margin-right: 12px;
+    }
+
+    &__author {
+      font-family: $font-family-brand;
+      font-weight: 600;
+      font-size: 17px;
+      line-height: 1.53333;
+      color: #000;
+    }
+
+    &__date {
+      font-family: $font-family-brand;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 1.97965;
+      color: #b7b4b4;
+      width: 97px;
+      margin-left: 74px;
+    }
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  // margin-top: 20px;
+  gap: 56px;
+  box-sizing: border-box;
+  width: 1248px;
+}
+
+.navButton {
+  
+  box-sizing: border-box;
+  background: none;
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+
+  &.disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+      &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+      .arrow-prev,
+  .arrow-next {
+    width: 30px;
+    aspect-ratio: 1;
+  }
+}
+
+.arrow-prev {
+  transform: rotate(180deg);
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+
+
+

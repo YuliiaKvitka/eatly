@@ -19,10 +19,10 @@ const Header = () => {
                   <Menu />
                 </nav>
                 <nav className={styles['header__burger']}>
-                  <div class={styles["header__burger--item"]} tabindex="1">
-                      <div class={`${styles["header__burger-line"]} ${styles['line']}`}></div>
-                      <div class={`${styles["header__burger-line"]} ${styles['line']}`}></div>
-                      <div class={`${styles["header__burger-line"]} ${styles['line']}`}></div>
+                  <div className={styles["header__burger--item"]} tabIndex="1">
+                      <div className={`${styles["header__burger-line"]} ${styles['line']}`}></div>
+                      <div className={`${styles["header__burger-line"]} ${styles['line']}`}></div>
+                      <div className={`${styles["header__burger-line"]} ${styles['line']}`}></div>
                   </div>
                 </nav>
       
