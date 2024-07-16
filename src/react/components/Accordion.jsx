@@ -1,3 +1,5 @@
+
+"use client"
 import { useState } from 'react';
 import styles from '../../styles/componentsStyles/Accordion.module.scss';
 import items from '../../data/items.js'
@@ -13,10 +15,13 @@ const Accordion = () => {
 
     return (
         <div className={styles['accordion']}>
+            <div className={styles['accordion__title-main']}>
+                <h2 className="section-title-second">Frequently Asked <span className="accent">Questions</span></h2>
+            </div>
             <div className={styles['accordion__container']}>
                 {items.map((item, index) => (
                     <div className={styles["accordion__item"]} key={index}>
-                        <button 
+                        <button className={styles['accordion__button']}
                             id={`accordion-button-${index}`} 
                             aria-expanded={expanded === index}
                             onClick={() => toggleAccordion(index)}
@@ -25,7 +30,7 @@ const Accordion = () => {
                             <span className={styles["accordion__icon"]} aria-hidden="true"></span>
                         </button>
                         <div className={`${styles["accordion__content"]} ${expanded === index ? styles["expanded"] : ""}`}>
-                            <p>{item.content}</p>
+                            <p className={styles['accordion__answer']}>{item.content}</p>
                         </div>
                     </div>
                 ))}

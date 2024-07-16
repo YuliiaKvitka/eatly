@@ -16,7 +16,7 @@ const TopDishes = () => {
             <div className='container'>
                 <div className={styles['top-dishes__wrapper']}>
                     <div className={styles['top-dishes__inner']}>
-                        <h2 className='section-title-second'>Our Top <span className='accent'>Dishes</span></h2>
+                       <div className={styles['top-dishes__title']}> <h2 className='section-title-second'>Our Top <span className='accent'>Dishes</span></h2></div>
                     
                         <div className={styles['top-dishes__cards']}>
     

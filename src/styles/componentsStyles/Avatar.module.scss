@@ -2,6 +2,8 @@
 @import '/src/styles/utils/variables';
 @import '/src/styles/utils/mixinsMobile';
 
+$color1: #ffffff;
+
 .avatarContainer {
 position: relative;
   width: 70px;
@@ -11,7 +13,7 @@ position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff; // можно задать цвет фона для видимости границ
+  background-color: $color1; // можно задать цвет фона для видимости границ
 
   @include respond-to(mobile-portrait) {//0px
     width: 42px;

@@ -27,6 +27,7 @@
         width: 100%;
         padding: 0;
         margin-top: 100px;
+        text-align: center;
 
         @include respond-to(mobile-portrait) {//0px
             margin-top: 85px;
@@ -37,6 +38,11 @@
         @include respond-to(large-desktop) {//1600px
             margin-top: 100px;
         }
+    }
+    &__title {
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
     &__cards {

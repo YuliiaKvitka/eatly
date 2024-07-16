@@ -1,10 +1,13 @@
 @import '../utils/variables.scss';
 @import '../utils/_mixinsMobile.scss';
 
+$color1:  #EAEAEA;
+$color2:  rgb(153, 153, 153);
+
 .footer {
     box-sizing: border-box;
-    background-color: #EAEAEA;
-    border: 1px solid black;
+    background-color: $color1;
+    // border: 1px solid black;
     height: 345px;
 
         @include respond-to(mobile-portrait) {//0px
@@ -21,19 +24,19 @@
         max-width: 1248px;
         box-sizing: border-box;
         // border: 1px solid black;
-        margin-top: 96px;
+        padding-top: 96px;
 
         @include respond-to(mobile-portrait) {//0px
-            margin-top: 55px;
+            padding-top: 55px;
         }
         @include respond-to(tablet-portrait) {//768px
-            margin-top: 50px;
+            padding-top: 50px;
         }
         @include respond-to(tablet-landscape) {//992px
-            margin-top: 68px;
+            padding-top: 68px;
         }
         @include respond-to(desktop) {//1200px
-            margin-top: 96px;
+            padding-top: 96px;
         }
     }
     &__wrapper {
@@ -96,11 +99,12 @@
             margin: 0 auto;
         }
         @include respond-to(tablet-portrait) {//768px
-            margin: 0;}
+            margin: 0;
+        }
 
         
         p {
-            color: rgb(153, 153, 153);
+            color: $color2;
             font-family: $font-family-second;
             font-size: 17px;
             font-weight: 500;

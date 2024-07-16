@@ -1,6 +1,8 @@
 @import '/src/styles/utils/variables';
 @import '/src/styles/utils/mixinsMobile';
 
+$color1: rgb(172, 173, 185);
+
 
 $ease_out: cubic-bezier(0.165, 0.84, 0.44, 1);
 
@@ -57,7 +59,7 @@ $ease_out: cubic-bezier(0.165, 0.84, 0.44, 1);
         font-size: 20px;
         line-height: 2.26;
         letter-spacing: -0.01em;
-        color: rgb(172, 173, 185);
+        color: $color1;
         display: flex;
         gap: 18px;
         align-items: center;

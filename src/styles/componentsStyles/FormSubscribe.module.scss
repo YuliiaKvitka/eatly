@@ -2,17 +2,25 @@
 @import '../utils/mixinsMobile.scss';
 @import '../utils/mixinHoverButton';
 
+$color1: #59546A;
+$color2: #ffffff;
+$color3: #878787;
+$color4: #6c5fbc;
+$color41: #614CE6;
+$color5: #f7f8fa;
+
+$box-shadow: 0 7px 45px 0 rgba(0, 0, 0, 0.1);
 .input__email, .input__submit {
     border-radius: 14px;
     padding-left: 15px;
     padding-right: 15px;
 }
 .input__email {
-    color: #59546A;
+    color: $color1;
     width: 440px;
     height: 68px;
-    box-shadow: 0 7px 45px 0 rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    box-shadow:$box-shadow;
+    background-color: $color2;
     border:none;
 
     @include respond-to(mobile-portrait) {//0px
@@ -34,7 +42,7 @@
         font-size: 16px;
         letter-spacing: 0.03em;
         text-transform: capitalize;
-        color: #878787;
+        color: $color3;
 
         @include respond-to(mobile-portrait) {//0px
             font-size: 10px;
@@ -52,7 +60,7 @@
     border-radius: 11px;
     width: 132px;
     height: 53px;
-    background-color: #6c5fbc;
+    background-color: $color4;
     margin-left: -140px;
     border: none;
     //--------------------
@@ -61,7 +69,7 @@
     font-size: 14px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #f7f8fa;
+    color: $color5;
 
     @include respond-to(mobile-portrait) {//0px
         width: 86px;
@@ -84,5 +92,5 @@
 }
 
 .input__email::selection {
-    background-color: #614CE6;
+    background-color: $color41;
 }

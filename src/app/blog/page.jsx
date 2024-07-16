@@ -31,9 +31,7 @@ export default function BlogPage() {
             </div>
         
             <div className={styles['blog__wrapper-accordion']}>
-              <div className={styles['blog__accordion-title']}>
-                <h2 className="section-title-second">Frequently Asked <span className="accent">Questions</span></h2>
-              </div>
+              
               <Accordion/>
             </div>
           </div>

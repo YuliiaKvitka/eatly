@@ -1,10 +1,24 @@
 
 @import '/src/styles/utils/variables';
 
+$color1: #ffffff;
+$color2: #6e757c;
+$color3: #282828;
+$color4: #272e35;
+$color5: #606060;
+$color6: rgb(249, 249, 249);
+$color7: #574B90;
+
+ $box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+
+ $border: 1px solid #cbcbcb;
+ $border1: 3px solid $color-brand;
+
+
 .pricing {
-    background: #fff;
+    background-color: $color1;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: $box-shadow;
     padding-top: 51px;
     width: 1248;
     height: 1171px;
@@ -12,7 +26,7 @@
 
     hr {
         margin-block: 40px;
-        border: 1px solid #cbcbcb;
+        border:  $border;
         width: 1246px;
         height: 0px;
     }
@@ -38,7 +52,7 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 150%;
-        color: #6e757c;
+        color: $color2;
         text-align: left;
     }
 
@@ -48,7 +62,7 @@
         font-size: 40px;
         line-height: 120%;
         letter-spacing: -0.03em;
-        color: #282828;
+        color: $color3;
         text-align: left;
     }
 
@@ -75,7 +89,7 @@
             font-size: 35px;
             line-height: 120%;
             letter-spacing: -0.03em;
-            color: #282828;
+            color: $color3;
             text-align: left; 
         }
     }
@@ -85,7 +99,7 @@
         font-weight: 600;
         font-size: 24px;
         line-height: 133%;
-        color: #272e35;
+        color: $color4;
         align-self: flex-start; // выравнивание по верхней границе
     }
 
@@ -96,7 +110,7 @@
         font-weight: 600;
         font-size: 64px;
         line-height: 112%;
-        color: #272e35;
+        color: $color4;
         height: 72px;
         width: 112px;
     }
@@ -111,7 +125,7 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 150%;
-        color: #6e757c;
+        color: $color2;
     }
 
     &__core-features {
@@ -131,7 +145,7 @@
         font-weight: 600;
         font-size: 24px;
         line-height: 133%;
-        color: #272e35;
+        color: $color4;
     }
         &__list {
         width: 971px;
@@ -150,7 +164,7 @@
             font-weight: 500;
             font-size: 22px;
             line-height: 145%;
-            color: #606060;
+            color: $color5;
         }
 
         &__ticks {
@@ -175,20 +189,20 @@ justify-content: space-between;
     width: 146px;
     height: 58px;
     box-sizing: border-box;
-    border: 3px solid rgb(108, 95, 188);
+    border: $border1;
     border-radius: 12.41px;
-    background: rgb(108, 95, 188);
+    background-color: $color-brand;
     font-family: $font-family-brand;
     font-weight: 500;
     font-size: 16px;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: rgb(249, 249, 249);
+    color: $color6;
     cursor: pointer;
     transition: background 0.3s ease;
 
     &:hover {
-        background: #574B90;
+        background-color: $color7;
 }
 }
 }

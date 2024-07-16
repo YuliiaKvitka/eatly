@@ -13,9 +13,9 @@ const TopRestaurants = () => {
             <div className='container'>
                 <div className={styles['top-restaurants__wrapper']}>
                     <div className={styles['top-restaurants__inner']}>
-                        <h2 className='section-title-second'>Our Top
+                        {/* <h2 className='section-title-second'>Our Top
                             <span className='accent'>Restaurants</span>
-                        </h2>
+                        </h2> */}
                     
                         <div className={styles['top-restaurants__cards']}>
     
@@ -35,7 +35,7 @@ const TopRestaurants = () => {
                             <ArrowView />
                         </div>
                     </div>
-                    <hr className='section-line'/>
+                    {/* <hr className='section-line'/> */}
                 </div>
             </div>
         </section>

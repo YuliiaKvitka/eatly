@@ -2,13 +2,37 @@
 @import '/src/styles/utils/variables';
 @import '/src/styles/utils/mixinsMobile';
 
+$color1: #f4f4f6 ;
+$color2: rgba(229, 229, 229, 0.7);
+$color3: #ffffff ;
+$color4: #daa31a;
+$color5: rgb(247, 237, 208);
+$color6:#c3e6cb;
+$color7:#0b2e13;
+$color8:#f5c6cb;
+$color9:#491217;
+$color10:#FB471D;
+$color11:#F7C5BA;
+$color12:rgb(50, 49, 66);
+$color13:rgb(142, 151, 166);
+$color14:#323142;
+$color15:#8e97a6;
+$color16:rgb(142, 151, 166);
+$color17:#F7EDD0;
+$color18:#DAA31A;
+$color19: #b9e3ca;
+$color20: #309D5B;
+
+$box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+$border-radius: 21px 21px 0 0;;
+
 .card {
-    border: 1.44px solid #f4f4f6;
+    border: 1.44px solid $color1;
     border-radius: 35px;
     width: 224px;
     height: 390px;
-    box-shadow: 7px 82px 41px 0 rgba(229, 229, 229, 0.7);
-    background: #fff;
+    box-shadow: 7px 82px 41px 0 $color2;
+    background-color: $color3;
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
     flex-direction: column;
@@ -44,7 +68,7 @@
 
     &:hover {
         transform: translateY(-10px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        box-shadow: $box-shadow;
     }
 
     &__figure {
@@ -60,17 +84,7 @@
         @include respond-to(mobile-portrait) {//0px
             width: 131px;
             height: 131px;
-            border-radius: 21px 21px 0 0;
-        }
-        @include respond-to(tablet-portrait) {//768px
-            width: 131px;
-            height: 131px;
-            border-radius: 21px 21px 0 0;
-        }
-        @include respond-to(tablet-landscape) {//992px
-            width: 131px;
-            height: 131px;
-            border-radius: 21px 21px 0 0;
+            border-radius: $border-radius;
         }
         @include respond-to(desktop) {//1200px
             width: 180px;
@@ -97,9 +111,9 @@
         font-family: $font-family-brand;
         font-weight: 400;
         font-size: 12px;
-        color: #daa31a;
+        color: $color4;
         border-radius: 5.4px;
-        background-color: rgb(247, 237, 208);
+        background-color: $color5;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -137,23 +151,23 @@
         }
 
         &.healthy:hover {
-            background-color: #c3e6cb;
-            color: #0b2e13;
+            background-color: $color6;
+            color: $color7;
         }
 
         &.supreme:hover {
-            background-color: #f5c6cb;
-            color: #491217;
+            background-color: $color8;
+            color: $color9;
         }
 
         &.trending:hover {
-            background-color: #FB471D;
-            color: #F7C5BA;
+            background-color: $color10;
+            color: $color11;
         }
     }
 
     &__title {
-        color: rgb(50, 49, 66);
+        color: color12;
         font-family: $font-family-brand;
         font-size: 25.79px;
         font-weight: 600;
@@ -255,7 +269,7 @@
     }
 
     &__deadline {
-        color: rgb(142, 151, 166);
+        color: $color13;
         font-family: $font-family-deadline;
         font-size: 19px;
         font-weight: 400;
@@ -276,7 +290,7 @@
     }
 
     &__rating {
-        color: rgb(142, 151, 166);
+        color: $color13;
         font-family: $font-family-deadline;
         font-size: 19px;
         font-weight: 400;
@@ -326,39 +340,39 @@
 }
 // -----------------------
 .integer-part {
-    font-family: "Manrope", sans-serif;
+    font-family: $font-family-deadline;
     font-weight: 700;
     font-size: 25px;
     line-height: 1.56;
-    color: #323142;
+    color: $color14;
     white-space: nowrap;
     }
 
 .decimal-part {
     font-size: 18px;
-    color: #8e97a6;
+    color: $color15;
 }
 
 .dot {
     display: block;
     width: 4px;
     height: 4px;
-    background-color: rgb(142, 151, 166);
+    background-color: $color16;
     border-radius: 50%;
     margin-left: 4px;
 }
 
 .healthy {
-    background-color: #F7EDD0;
-    color: #DAA31A
+    background-color: $color17;
+    color: $color18;
     }
 
 .trending {
-    background-color: #F7C5BA;
-    color: #FB471D;
+    background-color: $color11;
+    color: $color10;
     }
 
 .supreme {
-    background-color: #b9e3ca;
-    color: #309D5B;
+    background-color: $color19;
+    color: $color20;
 }

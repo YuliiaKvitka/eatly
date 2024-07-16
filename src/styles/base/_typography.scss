@@ -2,21 +2,33 @@
 @import '../utils/variables';
 @import '../utils/mixinsMobile.scss';
 
+$color1:#201f1f33;
+$color2:#201f1f;
+$color3:#676767;
+$color4:#18181b;
+$color5:#ffffff;
+$color6:#252525;
+$color7:#8d8d8d;
+$color8:#000;
+
 .accent {
   color: $color-brand-dark;
 }
 
+.text-centered {
+text-align: center;
+}
 .hero-subtitle {
-  font-family: $font-family-brand;
+  font-family: $font-poppins;
   font-weight: 600;
   font-size: 10px;
   line-height: 1.2;
   letter-spacing: 0.13em;
-  color: #201f1f33;
+  color: $color1;
 
   @include respond-to(mobile-portrait) {//0px
     font-size: 9px;
-    color: #201f1f;
+    color: $color2;
     text-align: center;
   }
   @include respond-to(tablet-portrait) {//768px
@@ -25,13 +37,13 @@
 }
 
 .hero-title {
-  font-family: $font-family-brand;
+  font-family:$font-poppins;
 font-size: 75px;
 font-weight: 600;
 line-height: 1.2;
 letter-spacing: -3px;
 text-align: left;
-color: rgb(32, 31, 31);
+color: $color2;
 
   @include respond-to(mobile-portrait) {//0px
     font-size: 46px;
@@ -52,12 +64,12 @@ color: rgb(32, 31, 31);
 }
 
 .text {
-  font-family: $font-family-second;
+  font-family: $font-inter;
 font-weight: 400;
 font-size: 18px;
 line-height: 1.55556;
 text-align: justify;
-color: #676767;
+color: $color3;
 
   @include respond-to(mobile-portrait) {//0px
     font-size: 11px;
@@ -71,12 +83,12 @@ color: #676767;
 }
 
 .section-title {
-  font-family: $font-family-brand;
+  font-family: $font-poppins;
   font-weight: 700;
   font-size: 50px;
   line-height: 1.14;
   text-transform: capitalize;
-  color: rgb(24, 24, 27);
+  color: $color4;
 
   @include respond-to(mobile-portrait) {//0px
     font-size: 30px;
@@ -93,11 +105,11 @@ color: #676767;
 }
 
 .section-text {
-  font-family: $font-family-second;
+  font-family: $font-inter;
   font-weight: 400;
   font-size: 20px;
   line-height: 1.5;
-  color: rgb(103, 103, 103);
+  color: $color3;
 
   @include respond-to(mobile-portrait) {//0px
     font-size: 12px;
@@ -111,13 +123,13 @@ color: #676767;
 }
 
 .text-button {
-  font-family: $font-family-brand;
+  font-family: $font-poppins;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.25;
   text-transform: capitalize;
   text-align: center;
-  color: #fff;
+  color: $color5;
 
   @include respond-to(mobile-portrait) {//0px
     font-size: 12px;
@@ -131,7 +143,7 @@ color: #676767;
 }
 
 .section-title-second {
-  font-family: "Poppins", sans-serif;
+  font-family: $font-poppins;
   font-weight: 600;
   font-size: 45px;
   line-height: 0.56797;
@@ -155,60 +167,60 @@ color: #676767;
 }
 
 .section-title-contact {
-  font-family: $font-family-brand;
+  font-family: $font-poppins;
   font-weight: 600;
   font-size: 40px;
   line-height: 1.38512;
-  color: rgb(37, 37, 37);
+  color: $color6;
 }
 
 // -----------Blog-------------------
 
 .post-title {
-  font-family: $font-family-brand;
+  font-family: $font-poppins;
   font-weight: 600;
   font-size: 37px;
   line-height: 1.19;
-  color: #252525;
+  color: $color6;
 }
 
 .post-written {
-  font-family: $font-family-brand;
+  font-family: $font-poppins;
   font-weight: 400;
   font-size: 15px;
-  color: #8d8d8d;
+  color: $color7;
 }
 
 .post-author {
-  font-family: $font-family-brand;
+  font-family: $font-poppins;
   font-weight: 500;
   font-size: 21px;
   line-height: 153%;
-  color: #000;
+  color: $color8;
 }
 
 .article-title {
-  font-family: $font-family-brand;
+  font-family: $font-poppins;
   font-weight: 600;
   font-size: 33px;
   line-height: 135%;
   text-transform: capitalize;
-  color: #252525;
+  color: $color6;
 }
 
 .post-description {
-  font-family: $font-family-brand;
+  font-family: $font-poppins;
   font-weight: 400;
   font-size: 22px;
   line-height: 202%;
   text-align: justify;
-  color: #252525;
+  color: $color6;
 }
 
 .sidebar-title {
-  font-family: $font-family-brand;
+  font-family: $font-poppins;
   font-weight: 600;
   font-size: 30px;
   line-height: 148%;
-  color: #252525;
+  color: $color6;
 }

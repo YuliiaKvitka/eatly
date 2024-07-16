@@ -2,13 +2,31 @@
 @import '/src/styles/utils/variables';
 @import '/src/styles/utils/mixinsMobile';
 
+$color1: #f4f4f6;
+$color2: #ffffff;
+$color3: #daa31a;
+$color4: rgb(247, 237, 208);
+$color5: #c3e6cb;
+$color6: #0b2e13;
+$color7: #f5c6cb;
+$color8: #491217;
+$color9: rgb(50, 49, 66);
+$color10: rgb(142, 151, 166);
+$color11: #F7EDD0;
+$color12: rgb(218, 163, 26);
+$color13: #F7C5BA;
+$color14: rgb(251, 71, 29);
+$color15: #ffa502;
+
+$box-shadow:  6px 71px 36px 0 rgba(229, 229, 229, 0.7);
+$box-shadow-hover:  0 8px 16px rgba(0, 0, 0, 0.2);
 .card {
-    border: 1.25px solid #f4f4f6;
+    border: 1.25px solid $color1;
     border-radius: 30px;
     width: 395px;
     height: 315px;
-    box-shadow: 6px 71px 36px 0 rgba(229, 229, 229, 0.7);
-    background: #fff;
+    box-shadow: $box-shadow;
+    background: $color2;
     padding-bottom: 18px;
     transition: transform 0.3s, box-shadow 0.3s;
 
@@ -35,7 +53,7 @@
 
     &:hover {
         transform: translateY(-10px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        box-shadow: $box-shadow-hover;
     }
 
     &__image {
@@ -83,9 +101,9 @@
         font-family: $font-family-brand;
         font-weight: 400;
         font-size: 12px;
-        color: #daa31a;
+        color: $color3;
         border-radius: 5.4px;
-        background-color: rgb(247, 237, 208);
+        background-color: $color4;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -111,18 +129,18 @@
         }
 
         &.healthy:hover {
-            background-color: #c3e6cb;
-            color: #0b2e13;
+            background-color: $color5;
+            color: $color6;
         }
 
         &.trending:hover {
-            background-color: #f5c6cb;
-            color: #491217;
+            background-color: $color7;
+            color: $color8;
         }
 
     }
     &__title {
-        color: rgb(50, 49, 66);
+        color: $color9;
         font-family: $font-family-brand;
         font-size: 25.79px;
         font-weight: 600;
@@ -210,7 +228,7 @@
     }
 
     &__deadline {
-        color: rgb(142, 151, 166);
+        color: $color10;
         font-family: $font-family-deadline;
         font-size: 19px;
         font-weight: 400;
@@ -230,7 +248,7 @@
         }
     }
     &__rating {
-        color: rgb(142, 151, 166);
+        color: $color10;
         font-family: $font-family-deadline;
         font-size: 19px;
         font-weight: 400;
@@ -270,21 +288,21 @@
     display: block;
     width: 4px;
     height: 4px;
-    background-color: rgb(142, 151, 166);
+    background-color: $color10;
     border-radius: 50%;
     margin-right: 4px;
 }
 
 .healthy {
-    background-color: #F7EDD0;
-    color: rgb(218, 163, 26);
+    background-color: $color11;
+    color: $color12;
     }
 
 .trending {
-    background-color: #F7C5BA;
-    color: rgb(251, 71, 29);
+    background-color: $color13;
+    color: $color14;
     }
 
 .featured {
-    background-color: #ffa502;
+    background-color: $color15;
 }

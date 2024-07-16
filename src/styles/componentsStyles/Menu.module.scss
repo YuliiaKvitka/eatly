@@ -57,12 +57,12 @@
 
 	&:hover {
 		opacity: 1;
-		color: #6c5fbc;
+		color: $color-brand;
 	}
 
 	&:hover::after {
 		--scale: 1;
-		color: #6c5fbc;
+		color: $color-brand;
 	}
 
 }

@@ -21,8 +21,8 @@ export const metadata = {
     template: '%s - Eatly'
   },
   description: "Eatly",
-  twitter: {
-    card: 'summary_large_image'
+    twitter: {
+      card: 'summary_large_image'
   }
 };
 
@@ -37,6 +37,12 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
       </Head>
       <body className={inter.className}>
+        <noscript>
+          <div style={{ color: 'red', fontWeight: 'bold' }}>
+            Attention! Your browser does not support JavaScript or JavaScript is disabled.
+            For full functionality of this site, please enable JavaScript in your browser settings.
+          </div>
+        </noscript>
         <Header />
           <main className="main">{children}</main>
         <Footer/>

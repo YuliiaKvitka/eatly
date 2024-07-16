@@ -2,13 +2,27 @@
 @import '/src/styles/utils/mixinsMobile';
 // components/SelectComponent.module.scss
 
+$color1:  #444;
+$color2: #fafafa;
+$color3: #1a202c;
+$color4: #f0f0f0;
+
+$border: 1px solid #bcbcbc;
+$border1: 1px solid #d3d3d3;
+$border2: 1px solid #007BFF;
+
+$box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+$box-shadow1: 0 6px 8px rgba(0, 0, 0, 0.15);
+$box-shadow2: 0 0 0 3px rgba(0, 123, 255, 0.25);
+
+
 .select-wrapper {
     width: 300px;
     position: relative;
     height: 38px;
-    color: #444;
+    color: $color1;
     background: transparent;
-    border: 1px solid #bcbcbc;
+    border: $border;
     border-radius: 0;
 
     @include respond-to(mobile-portrait) {//0px
@@ -25,16 +39,16 @@
     padding: 12px 18px;
     width: 175px; /* Устанавливаем фиксированную ширину */
     height: 53px;
-    background: #fafafa;
-    border: 1px solid #d3d3d3;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-family: "Manrope", sans-serif;
+    background-color: $color2;
+    border: $border1;
+    box-shadow: $box-shadow;
+    font-family: $font-family-deadline;
     font-weight: 600;
     font-size: 18px;
     line-height: 1.5;
     letter-spacing: 0.03em;
     text-align: center;
-    color: #1a202c;
+    color: $color3;
     transition: all 0.3s ease;
     -webkit-appearance: none; /* Убираем стандартную стрелку */
     -moz-appearance: none; /* Убираем стандартную стрелку */
@@ -62,14 +76,14 @@
     }
     
     &:hover {
-        background: #f0f0f0;
-        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        background-color: $color4;
+        box-shadow: $box-shadow1;
     }
 
     &:focus {
         outline: none;
-        border: 1px solid #007BFF;
-        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+        border: $border2;
+        box-shadow: $box-shadow2;
     }
 }
 
