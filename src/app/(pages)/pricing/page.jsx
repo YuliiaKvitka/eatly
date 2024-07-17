@@ -14,7 +14,8 @@ const Pricing = () => {
           <div className={styles['pricing__container-first']}>
             <div className={styles['pricing__header']}>
               <h2 className={styles['pricing__header-title']}>Our Pricing</h2>
-              <div className={['pricing__header-image']}><Image src='/assets/pricing/dashboard-image.png' alt='' width={887} height={631} loading='lazy'/></div>
+              <div className={['pricing__header-image']}>
+                <Image src='/assets/pricing/dashboard-image.png' alt='' width={887} height={631} loading='lazy' layout='responsive' /></div>
             </div>
           </div>
   

@@ -1,7 +1,12 @@
 import Image from 'next/image';
 import styles from '../../../styles/sectionsStyles/pricing/PricingSection.module.scss';
+import PricingCard from './PricingCard';
 
 const PricingSection = () => {
+
+  const basicFeatures = ['Support 24/7', 'Fast Delivery', '20% Off Food Deals', 'Transaction History'];
+  const premiumFeatures = ['Support 24/7', 'Fast Delivery', '20% Off Food Deals', 'Transaction History', 'Premium Support'];
+
   return (
     <section className={styles['pricing']}>
       <div className={styles['pricing__container']}>
@@ -33,14 +38,21 @@ const PricingSection = () => {
         <div className={styles['pricing__header-inner']}>
           <div className={styles['pricing__header']}></div>
         <div className={styles['pricing__plans-price']}>
-            <div className={styles['pricing__price']}><span className={styles['pricing__sign']}>$</span>0<span className={styles['pricing__month']}>/month</span></div>
+            <div className={styles['pricing__price']}>
+              <span className={styles['pricing__sign']}>$</span>
+              <div className={styles['pricing__amount']}>
+              0
+              <span className={styles['pricing__month']}>/month</span>
+              </div>
+              </div>
             
             <div className={styles['pricing__price']}>
               <span className={styles['pricing__sign']}>$</span>
               <div className={styles['pricing__amount']}>
                 5
                 <span className={styles['pricing__month']}>/month</span>
-              </div>
+                </div>
+                
             </div>
         </div>
         </div>
@@ -66,10 +78,10 @@ const PricingSection = () => {
             </li>
             <li className={styles['pricing__item']}>
               20% Off Food Deals
-             <div className={styles['pricing__ticks']}>
+            <div className={styles['pricing__ticks']}>
                 <Image src='/assets/pricing/tick.png' alt='' width={35} height={35}/>
                 <Image src='/assets/pricing/tick.png' alt='' width={35} height={35}/>
-             </div>
+            </div>
             </li>
             <li className={styles['pricing__item']}>
               Transaction History
@@ -111,6 +123,11 @@ const PricingSection = () => {
             <button className={styles['pricing__btn']}>START PRO</button>
           </div>
         </div>
+      </div>
+
+      <div className={styles['pricing__container-mobile']}>
+        <PricingCard plan="Basic" price="0" description="Completely 100% Free Plan" features={basicFeatures} />
+          <PricingCard plan="Premium" price="9" description="Amazing Premium Features Plan" features={premiumFeatures} />
       </div>
     </section>
   );

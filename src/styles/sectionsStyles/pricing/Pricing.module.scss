@@ -1,4 +1,5 @@
 @import '/src/styles/utils/_variables';
+@import '/src/styles/utils/mixinsMobile';
 
 $color1: #5c4eae;
 $color2: #f9f9f9;
@@ -13,10 +14,38 @@ $box-shadow: 8px 21px 100px 0 rgba(0, 0, 0, 0.1);
         position: relative;
         margin-top: 67px;
         margin-bottom: 150px;
-        height: 823px;
-        width: 1248px;
+        height: 830px;
+        max-width: 1248px;
         padding-bottom: 50px;
-        border: 1px solid black;
+        
+
+        @include respond-to(mobile-portrait) {//0px
+            height: 406px;
+            margin-bottom: 90px;
+        }
+
+        @include respond-to(mobile) {//320px
+        } 
+
+        @include respond-to(mobile-landscape) {//480px
+        }
+
+        @include respond-to(tablet-portrait) {//768px
+            margin-bottom: 150px;
+            height: 555px;
+        }
+
+        @include respond-to(tablet-landscape) {//992px
+            height: 585px;
+        }
+        @include respond-to(desktop) {//1200px
+            height: 635px;
+        }
+        @include respond-to(large-desktop) {//1600px
+            height: 830px;
+        }
+        @include respond-to(tv) {//1920px
+        }
 
         &::before {
             content: url('/assets/pricing/stroke.png');
@@ -25,17 +54,83 @@ $box-shadow: 8px 21px 100px 0 rgba(0, 0, 0, 0.1);
             height: 40px;
             bottom: 0px;
             left: 137px;
+
+            @include respond-to(mobile-portrait) {//0px
+                bottom: -10px;
+                left: 10px;
+                scale:.5;
+            }
+
+            @include respond-to(mobile) {//320px
+            } 
+
+            @include respond-to(mobile-landscape) {//480px
+            }
+
+            @include respond-to(tablet-portrait) {//768px
+                bottom: 20px;
+                left: 36px;
+                scale: .7;
+            }
+
+            @include respond-to(tablet-landscape) {//992px
+                left: 66px;
+            }
+            @include respond-to(desktop) {//1200px
+                bottom: 0px;
+                left: 200px;
+                scale: .9;
+            }
+            @include respond-to(large-desktop) {//1600px
+                bottom: 0px;
+                left: 137px;
+                scale: 1;
+            }
+            @include respond-to(tv) {//1920px
+            }
         }
     }
     &__header {
         position: relative;
-        width: 1248px;
+        max-width: 1248px;
+        width: 100%;
         height: 334px;
         background-color: $color1;
         padding-top: 44px;
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @include respond-to(mobile-portrait) {//0px
+            padding-top: 21px;
+            height: 180px;
+        }
+
+        @include respond-to(mobile) {//320px
+        } 
+
+        @include respond-to(mobile-landscape) {//480px
+        }
+
+        @include respond-to(tablet-portrait) {//768px
+            padding-top: 30px;
+            height: 237px;
+
+            
+
+        }
+
+        @include respond-to(tablet-landscape) {//992px
+            left: 0;
+        }
+        @include respond-to(desktop) {//1200px
+            padding-top: 44px;
+            
+        }
+        @include respond-to(large-desktop) {//1600px
+        }
+        @include respond-to(tv) {//1920px
+        }
 
         &::before {
             content: url('/assets/pricing/arrow.png');
@@ -44,6 +139,51 @@ $box-shadow: 8px 21px 100px 0 rgba(0, 0, 0, 0.1);
             height: 78px;
             top: 43px;
             left: 422px;
+            
+
+            @include respond-to(mobile-portrait) {//0px
+                left: 50px;
+                top: 20px;
+                width: 33px!important;
+                height: 31px!important;
+                scale: .5;
+            }
+
+            @include respond-to(mobile) {//320px
+            } 
+
+            @include respond-to(mobile-landscape) {//480px
+                left: 120px;
+            }
+
+            @include respond-to(tablet-portrait) {//768px
+                width: 59px;
+                height: 55px;
+                left: 200px;
+                top: 30px;
+                scale: .6;
+                
+            }
+
+            @include respond-to(tablet-landscape) {//992px
+                left: 260px;
+                top: 20px;
+            }
+            @include respond-to(desktop) {//1200px
+                left: 390px;
+                top: 63px;
+                width: 83px;
+                height: 78px;
+                scale: .8;
+            
+            }
+            @include respond-to(large-desktop) {//1600px
+                top: 43px;
+                left: 422px;
+                scale: 1;
+            }
+            @include respond-to(tv) {//1920px
+            }
         }
         &::after {
             content: url('/assets/pricing/stroke-white.png');
@@ -52,6 +192,75 @@ $box-shadow: 8px 21px 100px 0 rgba(0, 0, 0, 0.1);
             height: 36px;
             top: 104px;
             right: 121px;
+
+            @include respond-to(mobile-portrait) {//0px
+                display: none;
+            }
+
+            @include respond-to(mobile) {//320px
+            } 
+
+            @include respond-to(mobile-landscape) {//480px
+            }
+
+            @include respond-to(tablet-portrait) {//768px
+                top: 64px;
+                right: 46px;
+                display: block;
+                scale: .7;
+            }
+
+            @include respond-to(tablet-landscape) {//992px
+                 top: 44px;
+                right: 66px;
+            }
+            @include respond-to(desktop) {//1200px
+                top: 104px;
+                right: 196px;
+                scale:.9;
+            }
+            @include respond-to(large-desktop) {//1600px
+                top: 104px;
+                right: 121px;
+                scale:1;
+            }
+            @include respond-to(tv) {//1920px
+            }
+        }
+
+        img {
+           max-width: 887px;
+           display: block;
+            
+            @include respond-to(mobile-portrait) {//0px
+              width: 422px;
+                height: 300px!important;
+                margin-left: 38px;
+            }
+
+            @include respond-to(mobile) {//320px
+            } 
+
+            @include respond-to(mobile-landscape) {//480px
+            }
+
+            @include respond-to(tablet-portrait) {//768px
+                width: 630px;
+                height: 400px!important;
+                margin-left: 0;
+            }
+
+            @include respond-to(tablet-landscape) {//992px
+                width: 630px;
+                height: 448px!important;
+            }
+            @include respond-to(desktop) {//1200px
+            }
+            @include respond-to(large-desktop) {//1600px
+                height: 637px!important;
+            }
+            @include respond-to(tv) {//1920px
+            }
         }
     }
 
@@ -65,6 +274,34 @@ $box-shadow: 8px 21px 100px 0 rgba(0, 0, 0, 0.1);
         text-align: center;
         margin-bottom: 47px;
 
+        @include respond-to(mobile-portrait) {//0px
+            font-size: 15px;
+            margin-bottom: 41px;
+
+        }
+
+        @include respond-to(mobile) {//320px
+        } 
+
+        @include respond-to(mobile-landscape) {//480px
+        }
+
+        @include respond-to(tablet-portrait) {//768px
+            font-size: 28px;
+            margin-bottom: 34px;
+        }
+
+        @include respond-to(tablet-landscape) {//992px
+        }
+        @include respond-to(desktop) {//1200px
+            font-size: 40px;
+            margin-bottom: 47px;
+        }
+        @include respond-to(large-desktop) {//1600px
+        }
+        @include respond-to(tv) {//1920px
+        }
+
     }
     &__header-image {
         width: 887px;
@@ -77,19 +314,20 @@ $box-shadow: 8px 21px 100px 0 rgba(0, 0, 0, 0.1);
     }
 
     &__container-second {
-        width: 1248px;
-        height: 1232px;
-        border: 1px solid black;
+        max-width: 1248px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 220px;
+       
     }
 
     &__dashboard {
         margin-left: -96px;
-        border: 1px solid black;
     }
 
     &__customer-say {
         margin-left: -96px;
-        border: 1px solid black;
+        
     }
 }
 
