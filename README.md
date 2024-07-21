@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Eatly
 
-## Getting Started
+# Eatly - это современное веб-приложение, разработанное с использованием Next.js 14, которое предлагает пользователям широкий выбор ресторанов и блюд. Этот проект создан с целью предоставить пользователям удобный и интуитивно понятный интерфейс для поиска и заказа еды онлайн.
 
-First, run the development server:
+# Основные особенности
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+# Адаптивный дизайн: Приложение выглядит и работает отлично на любых устройствах, от смартфонов до настольных компьютеров.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Реактивный интерфейс: Использование современных технологий, таких как React и Framer Motion, обеспечивает плавные анимации и отличную производительность.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+<!-- Фильтрация и сортировка: Пользователи могут легко находить рестораны и блюда, используя различные фильтры и параметры сортировки. -->
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Блог: Секция блога предоставляет пользователям полезную информацию и новости о кулинарии и ресторанах.
 
-## Learn More
+# Аутентификация: Пользователи могут регистрироваться, входить в систему и восстанавливать пароли с помощью удобных модальных окон.
 
-To learn more about Next.js, take a look at the following resources:
+<!-- Администрирование: Панель администратора позволяет управлять контентом сайта, включая добавление и редактирование ресторанов и блюд. -->
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Мобильное меню: Удобное мобильное меню для навигации на мобильных устройствах.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Технологии
 
-## Deploy on Vercel
+# Next.js 14: Фреймворк для создания серверно-рендеренных приложений React.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# React: Библиотека для создания пользовательских интерфейсов.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# SCSS: Препроцессор CSS для стилизации компонентов.
+
+# Sass: Библиотека для расширенных возможностей стилизации.
+
+# PostCSS: Инструмент для преобразования стилей с использованием JavaScript плагинов.
+
+# Prettier: Инструмент для форматирования кода, обеспечивающий его единообразие.
+
+# Flexbox: Технология для создания гибких и адаптивных макетов.
+
+# Framer Motion: Библиотека для анимации React-компонентов.
+
+# React Intersection Observer: Библиотека для отслеживания видимости элементов на экране.
+
+# ClassNames: Утилита для условного присвоения классов.
+
+# Семантическая вёрстка: Использование семантических HTML-тегов для улучшения SEO и доступности.
+
+# Слайдеры: Реализация интерактивных слайдеров для навигации и презентации контента.
+
+# Форма обратной связи: Возможность отправки сообщений пользователями через форму на сайте.
+
+# Отделение данных: Все списки данных вынесены в отдельные файлы в папку data.
+
+# Многостраничный сайт: Приложение включает несколько страниц для разных разделов и функционала.
+
+# Компонент Аккордеон: Включает аккордеон для удобного отображения и скрытия информации.
+
+# Мобильное меню: Удобное мобильное меню для навигации на мобильных устройствах.
+
+# Разделение на компоненты: Приложение построено на основе компонентов для упрощения разработки и поддержки кода.
+
+# Структура проекта
+<!-- src/app/layout.js: Главный файл макета приложения.
+src/data/combinedPosts.js: Файл данных для блога.
+src/app/blog/[id]/page.jsx: Компонент страницы блога.
+src/app/api/auth/register.js: Файл API для регистрации пользователей. -->
+# Главная страница
+
+# Menu
+
+# Blog
+
+
+# Страница поста Blog
+
+# Pricing
+
+# Contact
+
+# Auth

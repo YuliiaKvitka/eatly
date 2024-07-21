@@ -1,4 +1,5 @@
 @import '/src/styles/utils/variables';
+@import '/src/styles/utils/mixinsMobile';
 
 
 .modal {
@@ -25,6 +26,29 @@
         overflow: hidden;
         max-height: 1024px;
         height: 100%;
+
+        @include respond-to(mobile-portrait) {//0px
+        }
+
+        @include respond-to(mobile) {//320px
+        } 
+
+        @include respond-to(mobile-landscape) {//480px
+        }
+
+        @include respond-to(tablet-portrait) {//768px
+            max-height: 728px;
+        }
+
+        @include respond-to(tablet-landscape) {//992px
+        }
+        @include respond-to(desktop) {//1200px
+            max-height: 1024px;
+        }
+        @include respond-to(large-desktop) {//1600px
+        }
+        @include respond-to(tv) {//1920px
+        }
     }
 
     &__body {
@@ -44,6 +68,31 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        @include respond-to(mobile-portrait) {//0px
+        }
+
+        @include respond-to(mobile) {//320px
+        } 
+
+        @include respond-to(mobile-landscape) {//480px
+        }
+
+        @include respond-to(tablet-portrait) {//768px
+            padding-top: 23px;
+            padding-inline: 34px;
+        }
+
+        @include respond-to(tablet-landscape) {//992px
+        }
+        @include respond-to(desktop) {//1200px
+            padding-top: 32px;
+            padding-inline: 48px;
+        }
+        @include respond-to(large-desktop) {//1600px
+        }
+        @include respond-to(tv) {//1920px
+        }
 }
 
     &__logo {
@@ -60,6 +109,31 @@
         color: #323142;
         margin-top: 140px;
         text-align: center;
+
+        @include respond-to(mobile-portrait) {//0px
+        }
+
+        @include respond-to(mobile) {//320px
+        } 
+
+        @include respond-to(mobile-landscape) {//480px
+        }
+
+        @include respond-to(tablet-portrait) {//768px
+            font-size: 25px;
+            margin-top: 54px;
+        }
+
+        @include respond-to(tablet-landscape) {//992px
+        }
+        @include respond-to(desktop) {//1200px
+            font-size: 35px;
+            margin-top: 140px;
+        }
+        @include respond-to(large-desktop) {//1600px
+        }
+        @include respond-to(tv) {//1920px
+        }
     }
 
     &__soc1al-buttons {
@@ -68,7 +142,33 @@
         gap: 21px;
         margin-top: 48px;
         margin-bottom: 33px;
-        
+
+        @include respond-to(mobile-portrait) {//0px
+        }
+
+        @include respond-to(mobile) {//320px
+        } 
+
+        @include respond-to(mobile-landscape) {//480px
+        }
+
+        @include respond-to(tablet-portrait) {//768px
+            gap: 15px;
+            margin-top: 35px;
+            margin-bottom: 24px;
+        }
+
+        @include respond-to(tablet-landscape) {//992px
+        }
+        @include respond-to(desktop) {//1200px
+            gap: 21px;
+            margin-top: 48px;
+            margin-bottom: 33px;
+        }
+        @include respond-to(large-desktop) {//1600px
+        }
+        @include respond-to(tv) {//1920px
+        }
     }
 
     &__google-button, &__apple-button {
@@ -77,6 +177,35 @@
         height: 63px;
         background-color: #f5f5f5;
         border: none;
+
+        
+        @include respond-to(mobile-portrait) {//0px
+        }
+
+        @include respond-to(mobile) {//320px
+        } 
+
+        @include respond-to(mobile-landscape) {//480px
+        }
+
+        @include respond-to(tablet-portrait) {//768px
+            width: 130px;
+            height: 45px;
+            border-radius: 9px;
+        }
+
+        @include respond-to(tablet-landscape) {//992px
+        }
+        @include respond-to(desktop) {//1200px
+            width: 183px;
+            height: 63px;
+            border-radius: 13px;
+        
+        }
+        @include respond-to(large-desktop) {//1600px
+        }
+        @include respond-to(tv) {//1920px
+       }
     }
 
     &__or-text {
@@ -88,7 +217,32 @@
         color: rgba(0, 90, 100, 0.35);
         text-align: center;
         margin-bottom: 40px;
-            }
+
+        @include respond-to(mobile-portrait) {//0px
+        }
+
+        @include respond-to(mobile) {//320px
+        } 
+
+        @include respond-to(mobile-landscape) {//480px
+        }
+
+        @include respond-to(tablet-portrait) {//768px
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        @include respond-to(tablet-landscape) {//992px
+        }
+        @include respond-to(desktop) {//1200px
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        @include respond-to(large-desktop) {//1600px
+        }
+        @include respond-to(tv) {//1920px
+        }
+    }
 
     &__auth-form {
         width: 384px;
@@ -96,21 +250,44 @@
         display: flex;
         flex-direction: column;
         gap: 25px;
+
+        @include respond-to(tablet-portrait) {//768px
+            width: 273px;
+            gap: 17px;
+        }
+        @include respond-to(desktop) {//1200px
+            width: 384px;
+            gap: 25px;
+        }
     }
 
     &__form-group {
         position: relative;
-
     }
     &__form-input {
         box-sizing: border-box;
         border-radius: 14px;
-        width: 382px;
+        width: 384px;
         height: 74px;
         background-color: #f5f5f5;
         border: none;
-        padding: 24px 23px;
+        padding: 23px ;
         padding-left: 75px; /* Увеличиваем отступ слева для текста и иконки */
+
+        @include respond-to(tablet-portrait) {//768px
+            width: 272px;
+            height: 53px;
+            border-radius: 10px;
+            padding: 17px ;
+            padding-left: 56px;
+        }
+        @include respond-to(desktop) {//1200px
+            width: 384px;
+            height: 74px;
+            border-radius: 14px;
+            padding: 23px ;
+            padding-left: 75px;
+        }
 
         &::placeholder {
             font-family: $font-family-brand;
@@ -119,6 +296,13 @@
             letter-spacing: 0.07em;
             text-transform: uppercase;
             color: #c2c3cb;
+
+            @include respond-to(tablet-portrait) {//768px
+                font-size: 11px;
+            }
+            @include respond-to(desktop) {//1200px
+                font-size: 16px;
+            }
         }
 
         &:focus, &:active {
@@ -126,6 +310,31 @@
             border: 2.26px solid #6c5fbc;
             border-radius: 14px;
             color: #6c5fbc;
+
+            @include respond-to(mobile-portrait) {//0px
+            }
+
+            @include respond-to(mobile) {//320px
+            } 
+
+            @include respond-to(mobile-landscape) {//480px
+            }
+
+            @include respond-to(tablet-portrait) {//768px
+                border: 1.19px solid #6c5fbc;
+                border-radius: 10px;
+            }
+
+            @include respond-to(tablet-landscape) {//992px
+            }
+            @include respond-to(desktop) {//1200px
+                border: 2.26px solid #6c5fbc;
+                border-radius: 14px;
+            }
+            @include respond-to(large-desktop) {//1600px
+            }
+            @include respond-to(tv) {//1920px
+            }
         }
         }
 
@@ -138,6 +347,31 @@
             background-color: transparent;
             width: 23px;
             height: 18px;
+
+            @include respond-to(mobile-portrait) {//0px
+            }
+
+            @include respond-to(mobile) {//320px
+            } 
+
+            @include respond-to(mobile-landscape) {//480px
+            }
+
+            @include respond-to(tablet-portrait) {//768px
+                width: 16px;
+                height: 13px;
+            }
+
+            @include respond-to(tablet-landscape) {//992px
+            }
+            @include respond-to(desktop) {//1200px
+                width: 23px;
+                height: 18px;
+            }
+            @include respond-to(large-desktop) {//1600px
+            }
+            @include respond-to(tv) {//1920px
+            }
         }
 
         &__toggle-password {
@@ -149,6 +383,29 @@
             background: none;
             width: 88px;
             height: 80px;
+
+            @include respond-to(mobile-portrait) {//0px
+            }
+
+            @include respond-to(mobile) {//320px
+            } 
+
+            @include respond-to(mobile-landscape) {//480px
+            }
+
+            @include respond-to(tablet-portrait) {//768px
+                height: 52px;
+                width: 52px;
+            }
+
+            @include respond-to(tablet-landscape) {//992px
+            }
+            @include respond-to(desktop) {//1200px
+            }
+            @include respond-to(large-desktop) {//1600px
+            }
+            @include respond-to(tv) {//1920px
+            }
         }
 
         &__forgot-password {
@@ -158,6 +415,29 @@
             color: #6c5fbc;
             opacity: 0.7;
             text-align: right;
+
+            @include respond-to(mobile-portrait) {//0px
+            }
+
+            @include respond-to(mobile) {//320px
+            } 
+
+            @include respond-to(mobile-landscape) {//480px
+            }
+
+            @include respond-to(tablet-portrait) {//768px
+                font-size: 11px;
+            }
+
+            @include respond-to(tablet-landscape) {//992px
+            }
+            @include respond-to(desktop) {//1200px
+                font-size: 15px;
+            }
+            @include respond-to(large-desktop) {//1600px
+            }
+            @include respond-to(tv) {//1920px
+            }
         }
 
         &__submit-button {
@@ -174,6 +454,33 @@
             box-sizing: border-box;
             border: none;
             margin-bottom: 17px;
+
+            @include respond-to(mobile-portrait) {//0px
+            }
+
+            @include respond-to(mobile) {//320px
+            } 
+
+            @include respond-to(mobile-landscape) {//480px
+            }
+
+            @include respond-to(tablet-portrait) {//768px
+                width: 272px;
+                height: 53px;
+                font-size: 12px;
+            }
+
+            @include respond-to(tablet-landscape) {//992px
+            }
+            @include respond-to(desktop) {//1200px
+                width: 382px;
+                height: 74px;
+                font-size: 17px;
+            }
+            @include respond-to(large-desktop) {//1600px
+            }
+            @include respond-to(tv) {//1920px
+            }
         }
 
         &__toggle-auth-mode {
@@ -182,6 +489,29 @@
             font-size: 18px;
             letter-spacing: 0.01em;
             color: #3e3e3e;
+
+            @include respond-to(mobile-portrait) {//0px
+            }
+
+            @include respond-to(mobile) {//320px
+            } 
+
+            @include respond-to(mobile-landscape) {//480px
+            }
+
+            @include respond-to(tablet-portrait) {//768px
+                font-size: 13px;
+            }
+
+            @include respond-to(tablet-landscape) {//992px
+            }
+            @include respond-to(desktop) {//1200px
+                font-size: 18px;
+            }
+            @include respond-to(large-desktop) {//1600px
+            }
+            @include respond-to(tv) {//1920px
+            }
         }
 
         &__toggle-auth-link {
@@ -197,6 +527,30 @@
             display: flex;
             justify-content: space-between;
 
+            @include respond-to(mobile-portrait) {//0px
+            }
+
+            @include respond-to(mobile) {//320px
+            } 
+
+            @include respond-to(mobile-landscape) {//480px
+            }
+
+            @include respond-to(tablet-portrait) {//768px
+                margin-top: 68px;
+                margin-bottom: 34px;
+            }
+
+            @include respond-to(tablet-landscape) {//992px
+            }
+            @include respond-to(desktop) {//1200px
+                margin-top: 140px;
+            }
+            @include respond-to(large-desktop) {//1600px
+            }
+            @include respond-to(tv) {//1920px
+            }
+
                 a, span {
                     font-family: $font-family-brand;
                     font-weight: 500;
@@ -204,6 +558,29 @@
                     line-height: 150%;
                     letter-spacing: 0.01em;
                     color: #718096;
+
+                    @include respond-to(mobile-portrait) {//0px
+                    }
+
+                    @include respond-to(mobile) {//320px
+                    } 
+
+                    @include respond-to(mobile-landscape) {//480px
+                    }
+
+                    @include respond-to(tablet-portrait) {//768px
+                        font-size: 11px;
+                    }
+
+                    @include respond-to(tablet-landscape) {//992px
+                    }
+                    @include respond-to(desktop) {//1200px
+                        font-size: 16px;
+                    }
+                    @include respond-to(large-desktop) {//1600px
+                    }
+                    @include respond-to(tv) {//1920px
+                    }
                 }
         }
 
@@ -213,9 +590,59 @@
             padding-top: 249px;
             padding-left: 78px;
 
+            @include respond-to(mobile-portrait) {//0px
+                display: none;
+            }
+
+            @include respond-to(mobile) {//320px
+            } 
+
+            @include respond-to(mobile-landscape) {//480px
+            }
+
+            @include respond-to(tablet-portrait) {//768px
+                padding-top: 177px;
+                padding-left: 55px;
+                display: block;
+            }
+
+            @include respond-to(tablet-landscape) {//992px
+            }
+            @include respond-to(desktop) {//1200px
+                padding-top: 249px;
+                padding-left: 78px;
+            }
+            @include respond-to(large-desktop) {//1600px
+            }
+            @include respond-to(tv) {//1920px
+            }
+
             &-image-content {
                 position: relative;
                 margin-bottom: 75px;
+
+                @include respond-to(mobile-portrait) {//0px
+                }
+
+                @include respond-to(mobile) {//320px
+                } 
+
+                @include respond-to(mobile-landscape) {//480px
+                }
+
+                @include respond-to(tablet-portrait) {//768px
+                    margin-bottom: 53px;
+                }
+
+                @include respond-to(tablet-landscape) {//992px
+                }
+                @include respond-to(desktop) {//1200px
+                    margin-bottom: 75px;
+                }
+                @include respond-to(large-desktop) {//1600px
+                }
+                @include respond-to(tv) {//1920px
+                }
 
                 &:before {
                     content: url('/assets/modal/before.png');
@@ -233,6 +660,31 @@
                     right: 15%;
                     width: 114px;
                     height: 114px;
+
+                    @include respond-to(mobile-portrait) {//0px
+                    }
+
+                    @include respond-to(mobile) {//320px
+                    } 
+
+                    @include respond-to(mobile-landscape) {//480px
+                    }
+
+                    @include respond-to(tablet-portrait) {//768px
+                        bottom: -10%;
+                        right: 3%;
+                    }
+
+                    @include respond-to(tablet-landscape) {//992px
+                    }
+                    @include respond-to(desktop) {//1200px
+                        bottom: -10%;
+                        right: 15%;
+                    }
+                    @include respond-to(large-desktop) {//1600px
+                    }
+                    @include respond-to(tv) {//1920px
+                    }
                 }
 
                 img {
@@ -247,6 +699,28 @@
             width: 100%;
             margin-bottom: 32px;
 
+            @include respond-to(mobile-portrait) {//0px
+            }
+
+            @include respond-to(mobile) {//320px
+            } 
+
+            @include respond-to(mobile-landscape) {//480px
+            }
+
+            @include respond-to(tablet-portrait) {//768px
+                margin-bottom: 27px;
+            }
+
+            @include respond-to(tablet-landscape) {//992px
+            }
+            @include respond-to(desktop) {//1200px
+                margin-bottom: 32px;
+            }
+            @include respond-to(large-desktop) {//1600px
+            }
+            @include respond-to(tv) {//1920px
+            }
         }
         &-title {
                 font-family: $font-family-deadline;
@@ -256,6 +730,31 @@
                 text-align: center;
                 color: #fff;
                 margin-bottom: 20px;
+
+                @include respond-to(mobile-portrait) {//0px
+                }
+
+                @include respond-to(mobile) {//320px
+                } 
+
+                @include respond-to(mobile-landscape) {//480px
+                }
+
+                @include respond-to(tablet-portrait) {//768px
+                    font-size: 28px;
+                    margin-bottom: 14px;
+                }
+
+                @include respond-to(tablet-landscape) {//992px
+                }
+                @include respond-to(desktop) {//1200px
+                    font-size: 40px;
+                    margin-bottom: 20px;
+                }
+                @include respond-to(large-desktop) {//1600px
+                }
+                @include respond-to(tv) {//1920px
+                }
             }
 
             &-text {
@@ -267,6 +766,29 @@
                 text-align: center;
                 color: #fff;
                 opacity: 0.7;
+
+                @include respond-to(mobile-portrait) {//0px
+                }
+
+                @include respond-to(mobile) {//320px
+                } 
+
+                @include respond-to(mobile-landscape) {//480px
+                }
+
+                @include respond-to(tablet-portrait) {//768px
+                    font-size: 9px;
+                }
+
+                @include respond-to(tablet-landscape) {//992px
+                }
+                @include respond-to(desktop) {//1200px
+                    font-size: 14px;
+                }
+                @include respond-to(large-desktop) {//1600px
+                }
+                @include respond-to(tv) {//1920px
+                }
             }
         }
 }

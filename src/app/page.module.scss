@@ -1,47 +1,47 @@
 @import '/src/styles/utils/variables';
 @import '/src/styles/utils/mixinsMobile';
+@import '/src/styles/utils/animations';
 
 .top-restaurants {
     margin-top: 100px;
 
+  
     h2 {
         margin-bottom: 86px;
         text-align: center;
         width: 100%;
 
             @include respond-to(mobile-portrait) {//0px
-                 margin-bottom: 59px;
-            
-             
+                margin-bottom: 59px;
+            }
+            @include respond-to(tablet-portrait) {//768px
+                margin-bottom: 59px;
+            }
         }
-        @include respond-to(tablet-portrait) {//768px
-            margin-bottom: 59px;
-          
-        }
-        @include respond-to(tablet-landscape) {//992px
-           
-        
-        }
-        @include respond-to(large-desktop) {//1600px
-            
-            
-        }
-    }
 
     @include respond-to(mobile-portrait) {//0px
-            
-             margin-top: 84px;
+            margin-top: 84px;
         }
         @include respond-to(tablet-portrait) {//768px
-            
-           margin-top: 120px;
+            margin-top: 120px;
         }
         @include respond-to(tablet-landscape) {//992px
-           
-           margin-top: 120px;
+            margin-top: 120px;
         }
         @include respond-to(large-desktop) {//1600px
-            
-             margin-top: 100px;
+            margin-top: 100px;
         }
+
+        
+
+}
+
+
+.title {
+        opacity: 0;  // Начальное состояние для анимации
+        transform: translateY(20px);  // Начальное состояние для движения снизу вверх
+    }
+
+.fadeIn {
+  animation: fadeIn 1s forwards ease-in-out;  // Применение анимации
 }

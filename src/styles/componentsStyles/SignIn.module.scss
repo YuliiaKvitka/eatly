@@ -1,0 +1,199 @@
+@import '/src/styles/utils/variables.scss';
+@import '/src/styles/utils/mixinsMobile';
+
+
+.container {
+    margin-block: 100px;
+    margin-inline: auto;
+    max-width: 315px;
+
+
+    @include respond-to(tablet-landscape) {//992px
+        display: none;
+  }
+}
+    .title {
+        font-family: $font-family-brand;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 125%;
+        letter-spacing: -0.04em;
+        color: #323142;
+        text-align: center;
+    }
+
+    .soc1al-buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin-top: 38px;
+        margin-bottom: 27px;
+        max-width: 315px;
+        width: 100%;
+    }
+
+    .google-button, 
+    .apple-button {
+        box-sizing: border-box;
+        border-radius: 11px;
+        max-width: 147px;
+        width: 100%;
+        height: 51px;
+        background: #f1f1f1;
+        border: none;
+
+        &:hover {
+            border: 1px solid #323142 ;
+        }
+    }
+
+    .or-text {
+        font-family:  $font-family-brand;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: rgba(0, 90, 100, 0.35);
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .auth-form {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .form-group {
+        position: relative;
+    }
+
+    .form-input {
+        box-sizing: border-box;
+        border-radius: 12px;
+        max-width: 315px;
+        width: 100%;
+        height: 60px;
+        background-color: #f5f5f5;
+        border: none;
+        padding-inline: 19px ;
+        padding-left: 50px; /* Увеличиваем отступ слева для текста и иконки */
+
+        &::placeholder {
+            font-family: $font-family-brand;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            color: #c2c3cb;
+    }
+
+    &:focus, &:active {
+            outline: none; /* Убираем стандартное обрамление */
+            border: 2.26px solid #6c5fbc;
+            border-radius: 14px;
+            color: #6c5fbc;
+    }
+
+}
+
+
+   .input-icon {
+            position: absolute;
+            border: none;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: transparent;
+            width: 18px;
+            height: 14px;
+    }
+
+    .toggle-password {
+            position: absolute;
+            right:0px;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            background: none;
+            width: 88px;
+            height: 80px;
+            box-sizing: border-box;
+        }
+
+    .forgot-password {
+        display: block;
+        width: 100%;
+        font-family: $font-family-brand;
+        font-weight: 400;
+        font-size: 12px;
+        color: #6c5fbc;
+        opacity: 0.7;
+        text-align: right;
+        
+    }
+
+    .submit-button {
+        border-radius: 13px;
+        max-width: 315px;
+        width: 100%;
+        height: 60px;
+        background-color: #6c5fbc;
+        font-family: $font-family-brand;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        color: #f3f5f6;
+        box-sizing: border-box;
+        border: none;
+        margin-top: 24px;
+        margin-bottom: 19px;
+
+        &:hover {
+            opacity: .8;
+        }
+        }
+
+    .toggle-auth-mode {
+        font-family: $font-family-brand;
+        font-weight: 400;
+        font-size: 15px;
+        letter-spacing: 0.01em;
+        color: #3e3e3e;
+    }
+
+    .toggle-auth-link {
+        font-weight: 700;
+        color: #6c5fbc;
+    }
+
+.forgot-title {
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-family:  $font-family-brand;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 125%;
+    color: #cfcfd3;
+    text-align: center;
+    margin-bottom: 73px;
+}
+
+.forgot-btn {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.message {
+    font-family: $font-family-brand;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.01em;
+    color: #3e3e3e;
+    text-align: center;
+    margin-top: 20px;
+    }

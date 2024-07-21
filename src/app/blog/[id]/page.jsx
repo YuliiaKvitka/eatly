@@ -61,38 +61,38 @@ const BlogPostPage = ({ params: { id } }) => {
 
           <div className={styles['post__wrapper']}>
 
-            <div className={styles['post__container']}>
+            <article className={styles['post__container']}>
 
-              <article className={styles['post__article']}>
+              <div className={styles['post__article']}>
                 <h3 className='article-title'>{post.articleTitle1}</h3>
                 <p className='post-description'>{post.description1}</p>
-              </article>
+              </div>
     
-              <article className={styles['post__article']}>
+              <div className={styles['post__article']}>
                 <ul className={styles['post__list']}>
                   <li className='post-description'>{post.item1}</li>
                   <li className='post-description'>{post.item2}</li>
                 </ul>
-              </article>
+              </div>
               
-              <article className={styles['post__article']}>
+              <div className={styles['post__article']}>
                 <h3 className='article-title'>{post.articleTitle2}</h3>
                 <p className='post-description'>{post.description2}</p>
-              </article>
+              </div>
     
-              <article className={styles['post__article']}>
+              <div className={styles['post__article']}>
                 <h3 className='article-title'>{post.articleTitle3}</h3>
                 <p className='post-description'>{post.description3}</p>
-              </article>
+              </div>
     
               <Link href={`/blog/${nextPostId}`} className={styles['post__button']}>
                 Next article
                 <img src='/assets/posts/arrow-btn.png' alt=''/>
               </Link>
-            </div>
+            </article>
   
-            <div className={styles['post__sidebar']}>
-              <div className={styles['post__sidebar-title']}><h4 className='sidebar-title'>Top Articles</h4></div>
+            <aside className={styles['post__aside']}>
+              <div className={styles['post__aside-title']}><h4 className='sidebar-title'>Top Articles</h4></div>
 {/* --------------------------------------- */}
               
                 <div className={styles.cardsContainer}>
@@ -121,7 +121,7 @@ const BlogPostPage = ({ params: { id } }) => {
 
 {/* ----------------------------------------------- */}
 
-            </div>
+            </aside>
           </div>
         </div>
       

@@ -160,6 +160,10 @@ color: $color3;
     width: 100%;
     font-size: 31px;
   }
+
+  @include respond-to(tablet-landscape) {//992px
+    font-size: 36px;
+  }
   @include respond-to(large-desktop) {//1600px
     font-size: 45px;
     }

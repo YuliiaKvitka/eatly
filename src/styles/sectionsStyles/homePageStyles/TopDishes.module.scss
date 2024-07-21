@@ -1,6 +1,7 @@
 
 @import '/src/styles/utils/variables';
 @import '/src/styles/utils/mixinsMobile';
+@import '/src/styles/utils/animations';
 
 
 .top-dishes {
@@ -43,6 +44,7 @@
         display: flex;
         justify-content: center;
         width: 100%;
+        
     }
 
     &__cards {
@@ -111,4 +113,13 @@
     }
 
     
+}
+
+.title {
+        opacity: 0;  // Начальное состояние для анимации
+        transform: translateY(20px);  // Начальное состояние для движения снизу вверх
+    }
+
+.fadeIn {
+  animation: fadeIn 1s forwards ease-in-out;  // Применение анимации
 }

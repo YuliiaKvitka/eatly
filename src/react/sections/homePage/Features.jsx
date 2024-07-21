@@ -1,7 +1,16 @@
+'use client'
+
 import Image from 'next/image';
 import styles from '../../../styles/sectionsStyles/homePageStyles/Features.module.scss';
+import { useInView } from 'react-intersection-observer';
 
 const Features = () => {
+
+    const { ref, inView } = useInView({
+    triggerOnce: true,  // Анимация срабатывает только один раз
+    threshold: 0.1,     // Процент видимости элемента для срабатывания анимации
+    });
+    
     return (
         <section className={styles['features']}>
             <div className='container'>
@@ -16,7 +25,8 @@ const Features = () => {
     
                         <div className={styles['features__inner-right']}>
                             <div className={styles['features__wrapper-content']}>
-                                <h2 className='section-title'>Premium <span className='accent'>Quality</span><br />For Your Health</h2>
+                                <h2 ref={ref} className={`${styles.features__title} section-title ${inView ? styles.fadeIn : ''}`}
+    >Premium <span className='accent'>Quality</span><br />For Your Health</h2>
                                 <ul className={styles["features__list"]}>
                                     <li className={`${styles["features__item"]} section-text`}>Premium quality food is made with ingredients that are packed with essential vitamins, minerals.</li>
                                     <li  className={`${styles["features__item"]} section-text`}>These foods promote overall wellness by support healthy digestion and boosting immunity</li>

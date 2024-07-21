@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
-        <title>{metadata.title}</title>
+        <title>{metadata.title.default}</title>
         <meta name="description" content={metadata.description} />
       </Head>
       <body className={inter.className}>

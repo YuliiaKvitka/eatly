@@ -4,15 +4,13 @@ import Image from 'next/image'
 import styles from '../../styles/modalWindowStyles/AuthModal.module.scss'
 import Link from 'next/link';
 import { useState } from 'react';
-import { loginUser } from '../../app/api/auth/login.js';
-import { registerUser } from '../../app/api/auth/register.js';
 
 const AuthModal = ({ isOpen, onClose, mode, setMode,  onForgotPassword  }) => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-     const [isActive, setActive] = useState(false);
+    const [isActive, setActive] = useState(false);
 
     const [showPassword, setShowPassword] = useState(false); // Состояние для отображения пароля
 
@@ -65,7 +63,7 @@ const AuthModal = ({ isOpen, onClose, mode, setMode,  onForgotPassword  }) => {
                         <div className={styles['modal__header']}>
                         <div className={styles['modal__logo']} onClick={onClose}>
                                 <Link href='/'>
-                                    <Image src='/assets/logo/logo.png' alt='logo' width={53} height={49} />
+                                    <Image src='/assets/logo/logo.png' alt='logo' width={53} height={49} layout='intrinsic'  />
                             </Link>
                         </div>
                         </div>  
@@ -73,10 +71,10 @@ const AuthModal = ({ isOpen, onClose, mode, setMode,  onForgotPassword  }) => {
                         <h2 className={styles['modal__title']}>{isLoginMode ? 'Sign In To Eatly' : 'Sign Up To Eatly'}</h2>
                         <div className={styles['modal__soc1al-buttons']}>
                             <button className={styles['modal__google-button']}>
-                                <Image src ='/assets/modal/google-logo.png' alt='' width={19} height={21}/>
+                                <Image src ='/assets/modal/google-logo.png' alt='' width={19} height={21} layout='intrinsic' />
                                 </button>
                             <button className={styles['modal__apple-button']}>
-                                <Image src='/assets/modal/apple-logo.png' alt='' width={19} height={21} />
+                                <Image src='/assets/modal/apple-logo.png' alt='' width={19} height={21} layout='intrinsic'  />
                             </button>
                         </div>
                         <p className={styles['modal__or-text']}>OR</p>
@@ -101,7 +99,7 @@ const AuthModal = ({ isOpen, onClose, mode, setMode,  onForgotPassword  }) => {
                                     onBlur={() => setActive(false)} // Сброс состояния isActive в false при потере фокуса 
                                     />
                                     <button type="button" className={styles['modal__input-icon']} >
-                                    <img src={`/assets/modal/${isActive ? 'user-active.png' : 'user.png'}`} alt='' width={20} height={23} />
+                                    <Image src={`/assets/modal/${isActive ? 'user-active.png' : 'user.png'}`} alt='' width={20} height={23} layout='intrinsic' />
                                 </button>
                             </div>
                             )}
@@ -124,7 +122,7 @@ const AuthModal = ({ isOpen, onClose, mode, setMode,  onForgotPassword  }) => {
                                     onBlur={() => setActive(false)} // Сброс состояния isActive в false при потере фокуса 
                                 />
                                 <button type="button" className={styles['modal__input-icon']} >
-                                    <img src={`/assets/modal/${isActive ? 'email-active.png' : 'email.png'}`} alt='' width={23} height={18} />
+                                    <Image src={`/assets/modal/${isActive ? 'email-active.png' : 'email.png'}`} alt='' width={23} height={18} layout='intrinsic' />
                                 </button>
                             </div>
 
@@ -146,11 +144,11 @@ const AuthModal = ({ isOpen, onClose, mode, setMode,  onForgotPassword  }) => {
                                     onBlur={() => setActive(false)} // Сброс состояния isActive в false при потере фокуса 
                                 />
                                 <button type="button" className={styles['modal__input-icon']} >
-                                    <img src={`/assets/modal/${isActive ? 'password-active.png' : 'password.png'}`} alt='' width={19} height={24} />
+                                    <Image src={`/assets/modal/${isActive ? 'password-active.png' : 'password.png'}`} alt='' width={19} height={24} layout='intrinsic' />
                                 </button>
                                 
                                 <button type="button" className={styles['modal__toggle-password']} onClick={togglePasswordVisibility}>
-                                    <Image src='/assets/modal/eye.png' alt='' width={22} height={20} />
+                                    <Image src='/assets/modal/eye.png' alt='' width={22} height={20} layout='intrinsic'  />
                                 </button>
                             </div>
 
@@ -193,14 +191,14 @@ const AuthModal = ({ isOpen, onClose, mode, setMode,  onForgotPassword  }) => {
                     {/* --------------------------------modal right --------------------------------------- */}
                     <div className={styles['modal__right']}>
                         <div className={styles['modal__right-image-content']}>
-                            <img src="/assets/modal/modal-right-image.png" alt="Food" />
+                            <Image src="/assets/modal/modal-right-image.png" alt="Food" width={548} height={416} layout='intrinsic' />
                         </div>
 
                             <div className={styles['modal__right-content']}>
                                 <h2 className={styles['modal__right-title']}>Find Foods With Love</h2>
                                 <p className={styles['modal__right-text']}>Eatly Is The Food Delivery Dashboard And Having More Than 2K+ Dishes Including Asian, Chinese, Italians And Many More. Our Dashboard Helps You To Manage Orders And Money.</p>
                         </div>
-                        <Image src='/assets/modal/indicator.png' alt='' width={52} height={6}/>
+                        <Image src='/assets/modal/indicator.png' alt='' width={52} height={6} layout='intrinsic' />
                     </div>
 {/* ----------------------------------------------------end modal right */}
                 </div>

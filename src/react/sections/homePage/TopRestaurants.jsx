@@ -7,6 +7,7 @@ import ArrowView from '@/react/components/ArrowView';
 
 const TopRestaurants = () => {
 
+
     return (
         <section className={styles['top-restaurants']}>
 

@@ -1,14 +1,25 @@
+'use client'
+
 import Image from 'next/image';
 import styles from '../../../styles/sectionsStyles/contactPage/ContactPage.module.scss'
 import AnimatedForm from '@/react/components/AnimatedForm';
+import { useInView } from 'react-intersection-observer';
+import Head from 'next/head';
 
-export const metadata = {
-  title: "Contact",
-  description: "Contact us through this page."
-};
+// export const metadata = {
+//   title: "Contact",
+//   description: "Contact us through this page."
+// };
 
 const Contact = () => {
+
+    //   const { ref, inView } = useInView({
+    // triggerOnce: true,  // Анимация срабатывает только один раз
+    // threshold: 0.1,     // Процент видимости элемента для срабатывания анимации
+    // });
   return (
+
+    
     <section className={styles['contact']}>
       <h1 className='visually-hidden'>Contact</h1>
       <div className="container">
@@ -28,7 +39,7 @@ const Contact = () => {
         </div>
 
         <div className={styles["contact__wrapper-right"]}>
-          <h2 className='section-title-contact'>Customer <span className='accent'>Support</span></h2>
+          <h2   className= 'section-title-contact'>Customer <span className='accent'>Support</span></h2>
           <div className={styles['contact__contact-form']}>
             <AnimatedForm />
           </div>
@@ -38,7 +49,7 @@ const Contact = () => {
       </div>
       
 
-    </section>
+      </section>
   )
 }
 

@@ -1,0 +1,90 @@
+@import '/src/styles/utils/variables';
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  height: 100%;
+  width: 100%;
+}
+
+.nav__menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 100%;
+  width: 100%;
+
+
+a {
+  font-family: $font-family-brand;
+font-weight: 500;
+font-size: 28px;
+letter-spacing: 0.02em;
+text-transform: capitalize;
+color: #6c5fbc;
+}
+
+}
+
+.nav__item {
+  margin-bottom: 10px;
+  
+
+  &:hover {
+
+  }
+}
+
+.nav__link {
+  text-decoration: none;
+  color: #333;
+
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #6c5fbc;
+    transition: width 0.3s ease-in-out;
+  }
+
+   &:hover:after {
+    width: 100%;
+  }
+}
+
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 48px;
+  cursor: pointer;
+}

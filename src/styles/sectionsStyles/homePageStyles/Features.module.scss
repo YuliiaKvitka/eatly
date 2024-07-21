@@ -1,6 +1,8 @@
 @import '../../utils/variables.scss';
 @import '../../utils/mixinsMobile.scss';
 @import '../../utils/mixinHoverButton.scss';
+@import '/src/styles/utils/animations';
+
 
 
 .features {
@@ -39,6 +41,11 @@
         @include respond-to(large-desktop) {//1600px
             gap: 219px;
         }
+    }
+
+    &__title {
+        opacity: 0;  // Начальное состояние для анимации
+        transform: translateY(20px);  // Начальное состояние для движения снизу вверх
     }
 
     &__wrapper-image {
@@ -276,3 +283,6 @@
 
 }
 
+.fadeIn {
+  animation: fadeIn 1s forwards ease-in-out;  // Применение анимации
+}

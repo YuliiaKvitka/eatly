@@ -1,5 +1,6 @@
 @import '/src/styles/utils/variables.scss';
 @import '/src/styles/utils/mixinsMobile';
+@import '/src/styles/utils/animations';
 
 
 .contact {
@@ -26,6 +27,9 @@
             padding-top: 51px;
             margin-bottom: 100px;
             width: 100%;
+        }
+        @include respond-to(tablet-landscape) {//992px
+            gap: 227px;
         }
         @include respond-to(desktop) {//1200px
             padding-top: 208px;
@@ -61,6 +65,7 @@
             height: 818px;
             padding-bottom: 0;
             margin-inline:0;
+            padding-top: 84px;
         }
 
         &::before {
@@ -77,6 +82,12 @@
             }
             @include respond-to(desktop) {//1200px
                 display: block;
+                left: 53px;
+                top: 47px;
+            }
+            @include respond-to(large-desktop) {//1600px
+                top: 47px;
+            left: 82px;
             }
         }
     }
@@ -152,7 +163,7 @@
         left: 375px;
         width: 371px;
         height: 625px;
-        border: 1px solid black;
+        // border: 1px solid black;
 
         @include respond-to(mobile-portrait) {//0px
             display: none;
@@ -165,7 +176,7 @@
             left: 295px;
             width: 371px;
             height: 625px;
-            border: 1px solid black;
+            // border: 1px solid black;
         }
 
         @include respond-to(large-desktop) {//1600px
@@ -213,5 +224,14 @@
                 display: block;
             }
         }
+
+        &-title {
+        opacity: 0;  // Начальное состояние для анимации
+        transform: translateY(20px);  // Начальное состояние для движения снизу вверх
     }
+    }
+}
+
+.fadeIn {
+  animation: fadeIn 1s forwards ease-in-out;  // Применение анимации
 }

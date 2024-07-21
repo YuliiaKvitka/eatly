@@ -3,11 +3,15 @@
 import styles from '../../../styles/sectionsStyles/homePageStyles/Dashboard.module.scss';
 import purchases from '../../../data/purchases.js';
 import stats from '../../../data/stats.js';
-
+import { useInView } from 'react-intersection-observer';
 import SelectComponent from '@/react/components/SelectComponent';
 import ProgressBar from '@/react/components/ProgressBar';
 
 const Dashboard = () => {
+    const { ref, inView } = useInView({
+    triggerOnce: true,  // Анимация срабатывает только один раз
+    threshold: 0.1,     // Процент видимости элемента для срабатывания анимации
+    });
 
     return (
         <section className={styles['dashboard ']}>
@@ -16,7 +20,7 @@ const Dashboard = () => {
                     <div className={styles['dashboard__inner']}>
     
                         <div className={styles['dashboard__purchases']}>
-                            <h2 className='section-title'>Control <span className='accent'>Purchases</span><br />Via Dashboard</h2>
+                            <h2  ref={ref} className={`${styles.features__title} section-title ${inView ? styles.fadeIn : ''}`}>Control <span className='accent'>Purchases</span><br />Via Dashboard</h2>
     
                             <div className={styles['dashboard__list']}>
                                 {purchases.map((purchase, index) => (
