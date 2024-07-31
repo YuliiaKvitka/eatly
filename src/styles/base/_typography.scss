@@ -65,11 +65,11 @@ color: $color2;
 
 .text {
   font-family: $font-inter;
-font-weight: 400;
-font-size: 18px;
-line-height: 1.55556;
-text-align: justify;
-color: $color3;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55556;
+  text-align: justify;
+  color: $color3;
 
   @include respond-to(mobile-portrait) {//0px
     font-size: 11px;
@@ -181,11 +181,22 @@ color: $color3;
 // -----------Blog-------------------
 
 .post-title {
-  font-family: $font-poppins;
+  font-family: $font-family-brand;
   font-weight: 600;
-  font-size: 37px;
   line-height: 1.19;
   color: $color6;
+
+  @include respond-to(mobile-portrait) {//0px
+    font-size: 22px;
+  }
+
+  @include respond-to(tablet-portrait) {//768px
+    font-size: 26px;
+  }
+@include respond-to(desktop) {//1200px
+  font-size: 37px;
+  }
+
 }
 
 .post-written {
@@ -193,6 +204,19 @@ color: $color3;
   font-weight: 400;
   font-size: 15px;
   color: $color7;
+
+  @include respond-to(mobile-portrait) {//0px
+    font-size: 10px;
+  }
+
+  @include respond-to(tablet-portrait) {//768px
+    font-size: 10px;
+  }
+
+@include respond-to(desktop) {//1200px
+    font-size: 15px;
+  }
+
 }
 
 .post-author {
@@ -201,15 +225,39 @@ color: $color3;
   font-size: 21px;
   line-height: 153%;
   color: $color8;
+
+  @include respond-to(mobile-portrait) {//0px
+    font-size: 15px;
+  }
+
+  @include respond-to(tablet-portrait) {//768px
+    font-size: 15px;
+  }
+
+@include respond-to(desktop) {//1200px
+    font-size: 21px;
+  }
 }
 
 .article-title {
   font-family: $font-poppins;
   font-weight: 600;
-  font-size: 33px;
   line-height: 135%;
   text-transform: capitalize;
   color: $color6;
+
+  @include respond-to(mobile-portrait) {//0px
+    font-size: 17px;
+  }
+
+  @include respond-to(tablet-portrait) {//768px
+    font-size: 23px;
+  }
+
+@include respond-to(desktop) {//1200px
+  font-size: 33px;
+  }
+
 }
 
 .post-description {
@@ -219,6 +267,18 @@ color: $color3;
   line-height: 202%;
   text-align: justify;
   color: $color6;
+
+  @include respond-to(mobile-portrait) {//0px
+    font-size: 11px;
+  }
+
+  @include respond-to(tablet-portrait) {//768px
+    font-size: 15px;
+  }
+
+@include respond-to(desktop) {//1200px
+  font-size: 22px;
+  }
 }
 
 .sidebar-title {
@@ -227,4 +287,13 @@ color: $color3;
   font-size: 30px;
   line-height: 148%;
   color: $color6;
+
+  @include respond-to(tablet-portrait) {//768px
+    font-size: 21px;
+  }
+@include respond-to(desktop) {//1200px
+    font-size: 30px;
+  }
+
+
 }

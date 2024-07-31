@@ -102,6 +102,7 @@
         @include respond-to(mobile-portrait) {//0px
             max-width: 300px;
             margin-top: 61px;
+            margin-inline: auto;
         }
         @include respond-to(tablet-landscape) {//992px
             max-width: 100%;
@@ -122,4 +123,8 @@
 
 .fadeIn {
   animation: fadeIn 1s forwards ease-in-out;  // Применение анимации
+}
+
+.line {
+    margin-top: 135px;
 }

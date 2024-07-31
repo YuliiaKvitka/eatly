@@ -1,11 +1,21 @@
+'use client'
 import Accordion from '@/react/components/Accordion'
 import styles from '../../styles/sectionsStyles/menuPage/MenuPage.module.scss'
 import Image from 'next/image'
 import TopRestaurants from '@/react/sections/homePage/TopRestaurants'
+import Breadcrumbs from '@/react/components/Breadcrumbs'
+import { metadata } from "./constants.js";
+import { useEffect } from 'react'
 
 const Menu = () => {
+
+    useEffect(() => {
+    document.title = `${metadata.title} - Eatly`;
+    document.querySelector('meta[name="description"]').setAttribute("content", metadata.description);
+    }, []);
     return (
         <div className={styles['menu-page']}>
+            <Breadcrumbs/>
             <div className='container'>
                 <div className={styles['menu-page__inner']}>
                     <h1 className='visually-hidden'>Menu Page</h1>

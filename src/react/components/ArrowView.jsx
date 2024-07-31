@@ -3,7 +3,13 @@ import styles from '../../styles/componentsStyles/ArrowView.module.scss'
 
 const ArrowView = () => {
     return (
-        <Link href='##' className={`${styles['link']} ${styles["arrow-btn"]}`}>View All</Link>
+        <Link
+            className={
+                `${styles['link']} 
+                ${styles["arrow-btn"]} `}
+            href='##' >
+            View All
+        </Link>
     )
 }
 

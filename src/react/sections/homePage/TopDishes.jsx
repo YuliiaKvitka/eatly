@@ -44,7 +44,7 @@ const TopDishes = () => {
                         </div>
 
                     </div>
-                    <hr className='section-line'/>
+                    <hr className={`${styles['line']} section-line`}/>
                 </div>
             </div>
         </section>

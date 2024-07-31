@@ -29,6 +29,7 @@ export default function Home() {
         </h2>
       </div>
       <TopRestaurants />
+      <div className="container"><hr className={styles['line']} /></div>
       <TopDishes />
       <Dashboard /> 
       <CustomerSay/>

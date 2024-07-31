@@ -1,0 +1,38 @@
+// Переменные для значений по умолчанию
+$default-clickable-area-position: relative;
+$default-expandable-ratio: 0;
+
+// Миксин для ha-clickable-area
+@mixin ha-clickable-area($position: $default-clickable-area-position) {
+  position: $position;
+  isolation: isolate;
+}
+
+// Миксин для ha-clickable-area::before
+@mixin ha-clickable-area-before($expandable-ratio: $default-expandable-ratio) {
+  content: "";
+  position: absolute;
+  inset: calc(-1 * #{$expandable-ratio});
+  z-index: -1;
+}
+
+// Применение миксинов к классам
+.ha-clickable-area {
+  @include ha-clickable-area();
+
+  &::before {
+    @include ha-clickable-area-before();
+  }
+}
+
+
+
+// Если у вас есть необходимость использовать разные значения переменных в зависимости от контекста, вы можете передавать их в миксины как аргументы. Например:
+// Использование миксинов с кастомными значениями
+// .custom-clickable-area {
+//   @include ha-clickable-area(fixed);
+
+//   &::before {
+//     @include ha-clickable-area-before(10px);
+//   }
+// }

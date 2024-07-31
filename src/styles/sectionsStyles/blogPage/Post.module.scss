@@ -1,54 +1,159 @@
 @import '../../utils/variables';
+@import '../../utils/mixinsMobile';
 
 
 
 .post {
-    width: 100%;
-    margin-top: 126px;
+
+  width: 100%;
+
+  @include respond-to(mobile-portrait) {//0px
+    margin-top: 69px;
+  }
+
+  @include respond-to(tablet-portrait) {//768px
+    margin-top: 90px;
+  }
+
+@include respond-to(desktop) {//1200px
+  margin-top: 126px;
+  }
 
     &__inner {
-        max-width: 1248px;
+
+      max-width: 1248px;
+
+      @include respond-to(mobile-portrait) {//0px
+              margin-bottom: 95px;
+      }
+
+      @include respond-to(tablet-portrait) {//768px
+        margin-bottom: 120px;
+      }
+
+    @include respond-to(desktop) {//1200px
         margin-bottom: 168px;
-    }
+      }
+  }
 
     &__author {
-        margin-top: 32px;
-        display: flex;
-        height: 56px;
-        align-items: center;
-        gap: 15px;
+
+      display: flex;
+      height: 56px;
+      align-items: center;
+      gap: 15px;
+
+      @include respond-to(mobile-portrait) {//0px
+        margin-top: 25px;
+        padding-bottom: 17px;
+        border-bottom: 1px solid rgb(166, 166, 166);
+  }
+
+      @include respond-to(tablet-portrait) {//768px
+        margin-bottom: 44px;
+        margin-top: 26px;
+        padding-bottom: 0;
+        border-bottom: none;
+        margin-bottom: 0;
+      }
+      @include respond-to(desktop) {//1200px
         margin-bottom: 62px;
-    }
+        margin-top: 32px;
+      }
+}
     
     &__wrapper-author {
+
         display: flex;
         flex-direction: column;
     }
 
     &__avatar {
+
+        @include respond-to(mobile-portrait) {//0px
+          width: 40px;
+          height: 40px;
+        }
+      @include respond-to(desktop) {//1200px
         width: 56px;
         height: 56px;
+        }
     }
 
     &__image {
-        width: 1248px;
-        height: 403px;
+
+    max-width: 1248px;
+    width: 100%;
+    max-height: 403px;
+    height: 100%;
+    
+        & img {
+
+        width: 100%;
+        height: 100%;
+
+        @include respond-to(mobile-portrait) {//0px
+
+          display: block;
+          // width: 317px;
+          width: 100%;
+          height: 335px;
+          object-fit: cover;
+          object-position: 54% top;
+          margin-top: 69px;
+        }
+
+        @include respond-to(tablet-portrait) {//768px
+
+          width: 100%;
+          height: 100%;
+        }
+
+        @include respond-to(desktop) {//1200px
+        }
     }
+}
 
     &__container {
-    max-width: 890px;
-    border-inline-end: solid 1px #9b9b9b;
-    padding-right: 75px;
+        
+      max-width: 890px;
+      border-inline-end: solid 1px #9b9b9b;
+      padding-right: 75px;
+
+    @include respond-to(mobile-portrait) {//0px
+        padding-inline: 30px;
+        border-inline-end: none;
+    }
+    @include respond-to(tablet-landscape) {//992px
+
+        border-inline-end: solid 1px #9b9b9b;
+        padding-right: 75px;
+    }
     }
 
     &__article {
-        margin-bottom: 80px;
+
         display: flex;
         flex-direction: column;
+        
+
+        @include respond-to(mobile-portrait) {//0px
+          gap: 18px;
+          margin-bottom: 27px;
+        }
+
+        @include respond-to(tablet-portrait) {//768px
+          margin-bottom: 55px;
+        }
+
+      @include respond-to(desktop) {//1200px
         gap: 35px;
+        margin-bottom: 80px;
+        }
     }
 
     &__list {
+
         display: flex;
         flex-direction: column;
         gap: 4px;
@@ -56,30 +161,89 @@
         list-style-position: inside;
     }
     &__button{
-        border-radius: 16px;
-        width: 245px;
-        height: 80px;
+
         background-color: #6c5fbc;
         font-family: $font-family-brand;
         font-weight: 600;
-        font-size: 20px;
         line-height: 125%;
         text-transform: capitalize;
         text-align: center;
         color: #f4f4f4;
-        padding: 25px 35px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @include respond-to(mobile-portrait) {//0px
+          margin-top: 55px;
+          border-radius: 9px;
+          width: 137px;
+          height: 44px;
+          font-size: 11px;
+          padding: 13px 20px;
+        }
+
+        @include respond-to(tablet-portrait) {//768px
+          font-size: 14px;
+          border-radius: 12px;
+          width: 174px;
+          height: 56px;
+          padding: 25px 35px;
+          margin-top: 70px;
+        }
+
+      @include respond-to(desktop) {//1200px
+        font-size: 20px;
+        padding: 25px 35px;
+        width: 245px;
+        height: 80px;
+        border-radius: 16px;
+        }
+
+        img {
+
+          @include respond-to(mobile-portrait) {//0px
+            width: 17px;
+            height: 19px;
+  }
+
+  @include respond-to(tablet-portrait) {//768px
+    width: 22px;
+    height: 24px;
+  }
+
+@include respond-to(desktop) {//1200px
+  width: 30px;
+  height: 27px;
+  }
+        }
     }
 
     &__wrapper {
-        margin-top: 80px;
+        
         display: flex;
+
+        @include respond-to(mobile-portrait) {//0px
+          margin-top: 69px;
+        }
+
+        @include respond-to(tablet-portrait) {//768px
+        }
+
+      @include respond-to(desktop) {//1200px
+        margin-top: 80px;
+        }
     }
 
     &__aside {
         margin-left: 35px;  
+
+        @include respond-to(mobile-portrait) {//0px
+        display: none;
+  }
+
+@include respond-to(tablet-landscape) {//992px
+    display: block;
+  }
     }
 
     &__aside-title {
@@ -91,17 +255,20 @@
 
 .cardsContainer {
 
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
+  display: flex;
+  flex-direction: column;
 
+  @include respond-to(tablet-portrait) {//768px
+    gap: 43px;
+  }
+  @include respond-to(desktop) {//1200px
+    gap: 60px;
+  }
 }
 .card {
     box-sizing: border-box;
-    padding-top: 21px;
-    padding-inline: 17px;
     box-shadow: 0 4px 47px 0 rgba(197, 197, 197, 0.25);
-    background: #fff;
+    background-color: #fff;
     overflow: hidden;
     transition: transform 0.3s;
     border-radius: 14px;
@@ -110,37 +277,90 @@
     display: flex;
     flex-direction: column;
 
+    @include respond-to(tablet-portrait) {//768px
+      border-radius: 10px;
+      width: 212px;
+      height: 267px;
+      box-shadow: 0 2px 28px 0 rgba(197, 197, 197, 0.25);
+      padding-inline: 12px;
+      padding-top: 15px;
+    }
+    @include respond-to(desktop) {//1200px
+      width: 298px;
+      height: 376px;
+      border-radius: 14px;
+      box-shadow: 0 4px 47px 0 rgba(197, 197, 197, 0.25);
+      padding-inline: 17px;
+      padding-top: 21px;
+    }
+
     &:hover {
         transform: translateY(-10px);
     }
 
     &__image {
+
+      object-fit: cover;
+
+      @include respond-to(tablet-portrait) {//768px
+        
+        border-radius: 7px;
+        width: 188px;
+        height: 165px;
+      }
+
+      @include respond-to(desktop) {//1200px
+
         border-radius: 12px;
         width: 265px;
         height: 233px;
-        object-fit: cover;
+      }
     }
 
     &__content {
+
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      @include respond-to(tablet-portrait) {//768px
+        margin-top: 13px;
+      }
+
+      @include respond-to(desktop) {//1200px
         margin-top: 18px;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+      }
+
+
     }
 
     &__title {
         font-family: $font-family-brand;
         font-weight: 600;
-        font-size: 18px;
         line-height: 119%;
         color: #252525;
+
+        @include respond-to(tablet-portrait) {//768px
+          font-size: 12px;
+        }
+      @include respond-to(desktop) {//1200px
+        font-size: 18px;
+        }
     }
 
     &__meta {
       display: flex;
       align-items: center;
-      width: 141px;
-      margin-top: 18px;
+
+      @include respond-to(tablet-portrait) {//768px
+        margin-top: 14px;
+        width: 86px;
+      }
+
+      @include respond-to(desktop) {//1200px
+        margin-top: 18px;
+        width: 141px;
+      }
     }
 
     &__titleAuthor {
@@ -151,26 +371,49 @@
     }
 
     &__avatar {
-      width: 37px;
-      height: 37px;
-      margin-right: 12px;
+    
+      @include respond-to(tablet-portrait) {//768px
+        width: 27px;
+        height: 27px;
+        margin-right: 7px;
+      }
+      @include respond-to(desktop) {//1200px
+        width: 37px;
+        height: 37px;
+        margin-right: 12px;
+      }
     }
 
     &__author {
       font-family: $font-family-brand;
       font-weight: 600;
-      font-size: 14px;
       line-height: 1.53333;
       color: #000;
+
+      @include respond-to(tablet-portrait) {//768px
+        font-size: 10px;
+      }
+
+      @include respond-to(desktop) {//1200px
+        font-size: 14px;
+      }
     }
 
     &__date {
       font-family: $font-family-brand;
       font-weight: 500;
-      font-size: 13px;
       line-height: 1.98;
       color: #b7b4b4;
       width: 84px;
-      margin-left: 65px;
+      
+      @include respond-to(tablet-portrait) {//768px
+        font-size: 9px;
+        margin-left: 46px;
+      }
+
+      @include respond-to(desktop) {//1200px
+        font-size: 13px;
+        margin-left: 65px;
+      }
     }
 }

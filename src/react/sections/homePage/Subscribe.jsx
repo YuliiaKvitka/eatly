@@ -31,7 +31,7 @@ const Subscribe = () => {
 
     return (
         <section className={styles['subscribe']}>
-        <div className="container centered">
+        <div className="container start">
             <div ref={ref} className={styles["subscribe__inner"]}>
             <h2 className='visually-hidden'>Subscribe</h2>
         <motion.span

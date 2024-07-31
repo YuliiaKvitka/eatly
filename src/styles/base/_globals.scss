@@ -74,6 +74,11 @@ html, body {
       display: flex;
       justify-content: center;
   }
+
+  &.start {
+    display: flex;
+    justify-content:flex-start;
+  }
 }
 
 .main {

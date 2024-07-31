@@ -1,12 +1,23 @@
+
+'use client'
 import Image from 'next/image'
 import styles from '../../../styles/sectionsStyles/pricing/Pricing.module.scss'
 import PricingSection from '@/react/sections/pricing/PricingSection'
 import Dashboard from '@/react/sections/homePage/Dashboard'
 import CustomerSay from '@/react/sections/homePage/CustomerSay'
+import Breadcrumbs from '@/react/components/Breadcrumbs'
+import { useEffect } from 'react'
+import { metadata } from "./constants.js";
 
 const Pricing = () => {
+
+     useEffect(() => {
+    document.title = `${metadata.title} - Eatly`;
+    document.querySelector('meta[name="description"]').setAttribute("content", metadata.description);
+  }, []);
   return (
     <section className={styles['pricing']}>
+      <Breadcrumbs/>
       <div className='container'>
         <h1 className='visually-hidden'> Pricing</h1>
 
